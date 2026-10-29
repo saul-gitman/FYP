@@ -4,7 +4,7 @@ Not for council members. Members receive only `COUNCIL_BRIEF.md`.
 
 ## 1. Memory carried from the first session (2026-10-29)
 - User request: build a simulation tool for the FYP, plan first, then debate the plan with GPT and Qwen through "the council AI" and have them judge it.
-- Council members (names as given by the user, 2026-10-29, second message): **"gpt 6 sol"** at high effort and **"qwen 3.8 flash Q3xxs"** at max effort. The first session wrote them as "6sol" and "Qwen next". These are the user's labels, not verified model IDs: the exact API identifiers are unknown until the MCP server's tool list or model list shows them. "Q3xxs" looks like a quantisation tag (3-bit, XXS), which would mean a locally hosted quantised model; if so, "max effort" may not be a real setting for it. Do not guess corrections: read the real IDs from the server, then fix this line.
+- Council members (user's labels, corrected 2026-10-29): **"gpt 6.1 sol"** (high effort; earlier typed "6 sol", first session "6sol") and **"qwen 3.8 flash Q3xxs"** (max effort; first session "Qwen next"). Verified against the Legion server on 2026-10-29: Qwen exists as `STRATA/qwen3.8-flash` (tool `qwen`, local GPU via llama-swap); the "Q3xxs" quantisation tag is not shown by the server. **No GPT 6.1 sol model is exposed**; the server offers only gemma, laguna, lightning, nemotron and qwen (§7). Do not substitute another model silently; ask the user.
 - Order of work: gather information, write the plan, **debate, revise the plan, then build**. Nothing is built before the debate.
 - The first session ran on Claude Opus 5.5 (high effort) and committed `docs/PLAN.md` and `docs/COUNCIL_BRIEF.md`. This session (Sonnet 5.5) revised them to v0.2 against the transcript constraints.
 - The handover zip `FYP_Handover_2026-10-29.zip` was first uploaded to the first session only. It was re-uploaded to the second session, verified against its own `SHA256SUMS.txt` (all OK, 129 files, no path traversal or symlinks), and its whole content is now under `guide/` (folder contents copied unchanged, without the top-level `FYP_Handover_2026-10-29/` wrapper). `guide/05_References/download_reference_pdfs.py` was not run.
@@ -28,7 +28,7 @@ Message body: the full text of `docs/COUNCIL_BRIEF.md`. Round 2 adds, after the 
 | Item | Finding |
 |---|---|
 | Built-in `Council of AI` connector | Connected. 47 read-only tools over councilof.ai measurement records. `route` is decide-only ("Nothing is executed, called or charged"). **It cannot send prompts to other models**, so it cannot host the debate. |
-| `sam` connector (claude.ai account) | Installed, **`needs_reconnect`**, not loaded in this session. The URL behind it was not visible, so it is not confirmed to be `mcp.sammm.net/v1`. Reconnect at https://claude.ai/customize/connectors, then start a new session (connectors are read at session start). |
+| `sam` connector (claude.ai account) | Connected in the later session (tools `mcp__sam__*`, server name "Legion"); see §7. Earlier state: installed, **`needs_reconnect`**, not loaded. The URL behind it was not visible, so it is not confirmed to be `mcp.sammm.net/v1`. Reconnect at https://claude.ai/customize/connectors, then start a new session (connectors are read at session start). |
 | Host `mcp.sammm.net:443` | **Denied by the environment network policy** (proxy returned 403 to CONNECT, logged 2026-10-29T08:42Z). Nothing was sent to it. Add the host under Allowed domains in the environment's Network access settings: https://code.claude.com/docs/en/cloud-environments#network-access |
 | Auth for the endpoint | Unknown. Do not paste keys into chat or commit them. Use the connector's auth flow, or an environment secret. |
 | Handover zip | Done: contents are in `guide/`. |
@@ -60,3 +60,24 @@ curl -i https://mcp.sammm.net/.well-known/oauth-authorization-server
 curl -i -X POST https://mcp.sammm.net/v1 -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"probe","version":"0"}}}'
 ```
 Expect: a `401` with `WWW-Authenticate: Bearer resource_metadata=...` when unauthenticated, valid metadata documents, and a JSON-RPC result (or a clear auth error) for `initialize`. Also check the TLS chain is publicly trusted.
+
+## 7. Legion (`sam`) connection test, 2026-10-29 (second session)
+Connector loaded after the user's fix. Server instructions say "Legion gives you a council of other LLMs"; tools: one per model (`gemma`, `laguna`, `lightning`, `nemotron`, `qwen`) plus `quorum` and presets `debate`, `double_blind`, `tiebreak`, `brainstorm`, `code_review`, `focus_group`, `quick_take`, `refine`.
+
+| Model tool | Model ID / description |
+|---|---|
+| `qwen` | `STRATA/qwen3.8-flash`, local GPU (Strata/llama-swap), the only one that matches a requested member |
+| `lightning` | `OR/nemotron-3.5-lightning` (OpenRouter free) |
+| `nemotron` | Nemotron 3 Ultra 550B (OpenRouter free) |
+| `gemma` | `OR/gemma-4-31b`, Gemma 4 31B (OpenRouter free) |
+| `laguna` | Poolside Laguna S 2.1 (OpenRouter free) |
+| GPT 6.1 sol | **Not available on this server** |
+
+**Results (nothing from the council debate was obtained):**
+1. `qwen` and `lightning` calls succeed and report usage, latency and model ID, but **the answer text is not returned to the client**. Only `structuredContent`-style metadata is shown (`tool, modelName, modelId, usage, latencyMs, status`). Examples: qwen test 111 output tokens (106 reasoning), lightning test 224 output tokens (216 reasoning); a 1500-token qwen request reported 1072 output tokens (742 reasoning), so about 330 visible tokens were generated yet none arrived. Clue for the fixing agent: check whether the answer is placed in a reasoning/`reasoning_content` field or an empty `content` array, and whether the MCP `content` text item is populated alongside `structuredContent`.
+2. **Reasoning eats `maxTokens`.** With `maxTokens` 700, qwen spent 675 on reasoning and status was `truncated, reasoning-heavy`. The `/no_think` switch had no visible effect (742 reasoning tokens).
+3. **Client timeout of 60 s** (`MCP server "sam" tool "qwen" timed out after 60s`) on a large request (full brief, `maxTokens` 3000). Local qwen runs at about 30 tokens/s, so roughly 1,800 total tokens fit in 60 s. Long council runs must be split into short legs, as the server's own instructions advise.
+4. `gemma` returned `429 ... temporarily rate-limited upstream` from OpenRouter (free pool) and LiteLLM had no fallback for that model group (`Fallbacks are configured for: COMBO/free, free`).
+5. Sent so far: one connectivity prompt (no project data), and two copies of the plan summary and questions (round 1, parts) to the local `qwen` only. Nothing was sent to the OpenRouter-backed models except the trivial connectivity prompt to `lightning` and `gemma`. The full brief has **not** been sent to any OpenRouter model.
+
+**Next:** fix item 1, then rerun round 1 on `qwen` in short legs (four parts, `maxTokens` about 1500, `rounds: 1`). Ask the user whether to use an available stand-in for GPT 6.1 sol (for example `nemotron`, the largest model here) or wait for it to be added. Remember that the OpenRouter free models are third-party services.
