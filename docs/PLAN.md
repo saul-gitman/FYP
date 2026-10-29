@@ -1,7 +1,30 @@
-# Aerogel simulator: build plan (v0, for council review)
+# Aerogel simulator: build plan (v0.2, for council review)
 
-Status: **plan only, nothing built yet.** Written 2026-10-29 from the handover pack `FYP_Handover_2026-10-29.zip`.
+Status: **plan only, nothing built yet.** Written 2026-10-29 from the handover pack `FYP_Handover_2026-10-29.zip`; revised the same day against the meeting-transcript constraints in §0.
 Project: *Thermo-optically functional CFRP laminates for lightweight electrified systems* (PolyU AAE capstone 2026/27, supervisor Dr CHAN Kit-Ying).
+
+## 0. What the meeting settled, and what it did not (transcript timestamps)
+
+These constraints decide the first study. Anything not listed as "settled" is an open decision, not an instruction.
+
+| Item | Settled by the transcript | Time |
+|---|---|---|
+| Independent variable | **Pore size first.** Composition fixed (aerogel only, no carbon fibre); ratios are studied afterwards | 30:19–31:21 |
+| Density, porosity | **Follow from the geometry.** They are not swept independently | 30:19–30:51 |
+| Alignment | Fixed initially, to a reference-supported orientation | 08:21–09:17; 11:10–11:40 |
+| Pore-size distribution | One representative size per model | 10:13–11:10 |
+| Cell shape | Simple start: circular channels or a hollow cell with homogeneous walls; perfect hexagons not needed | 11:40–12:40; 27:25–29:50 |
+| Wall properties | Constituent properties must match the real materials. This does **not** mean the effective conductivity stays constant | 06:26–06:53 |
+| Carbon fibre / CFRP | Left out of the first simulation, added later | 14:56–17:04 |
+| Later composition sweep | BN:CNF is named at 17:32–17:57; BN:C and BN/CNT appear elsewhere | — |
+
+**Not settled** (treat as open, put to the council and the user):
+1. Whether wall thickness, channel spacing or overall model size stay fixed when pore size changes. Wall thickness and pore size are described as linked, but no geometric rule is given. The earlier build brief's "hold the remaining dimensions constant" was an implementation recommendation, not a meeting instruction.
+2. The starting composition ratio. None was confirmed.
+3. The exact material pair and percentage basis for the later sweep (BN:CNF vs BN:C vs BN/CNT).
+4. Freezing temperature is a literature route to plausible pore sizes (09:41–10:42), not a variable in the first simulation.
+
+**Consequence for §3.2:** mode C (fixed porosity) prescribes porosity, which conflicts with "porosity follows from the geometry". It is therefore demoted to a diagnostic, not the headline.
 
 ## 1. One-paragraph summary
 
@@ -21,11 +44,12 @@ Out of scope for now: mechanics, spectral optics (reflectance is a measured *inp
 ## 3. Model design
 
 ### 3.1 Geometry (representative cell)
-- Straight prismatic channels along axis **z** (the freezing/growth direction). Cross-section options: (a) circular pores in square or hex array; (b) **hexagonal or square honeycomb with thin walls** (needed in practice).
+- Straight prismatic channels along axis **z** (the freezing/growth direction), one representative pore size per model, alignment fixed. Cross-section options: (a) circular pores in square or hex array (the supervisor's "simple" case, kept for verification); (b) **hollow cell with a homogeneous thin wall** (square or hexagonal), which the meeting explicitly allowed and which is the **primary v0.1 cell** because it reaches realistic porosity.
 - Parameters: pitch *p*, pore size *d* (diameter or flat-to-flat), wall thickness *t*, cell length *L*. Only two of {p, d, t} are independent; porosity follows from them, never prescribed separately (S07).
 - **Key limitation:** circular pores in a hex array cannot exceed φ = π/(2√3) ≈ 90.7 %. Literature BN aerogels sit at about 97–98 %. A hex honeycomb with φ = (d/p)² reaches 98.2 % at d = 30 µm only with t ≈ 0.27 µm. So the realistic cell is a thin-walled honeycomb, possibly with **nanoporous walls** (wall-internal porosity φ_w) as a later option.
 
-### 3.2 Three sweep definitions (the user must choose one; the tool supports all three)
+### 3.2 Three sweep definitions (open decision, see §0; the tool supports all three)
+Headline candidates are **A or B**, because porosity and density then follow from geometry as the meeting asked. **C is a diagnostic** that isolates pure scale effects.
 | Mode | Held fixed | What changes with d | Physical meaning |
 |---|---|---|---|
 | A | wall thickness t | φ rises, ρ falls | "bigger holes, same walls" (matches the supervisor's "change hole size → density/porosity follow") |
@@ -110,7 +134,8 @@ docs/
 | Jan–Mar 2027 | Laminate model, load cases, comparison with plates |
 
 ## 9. Decisions needed from the user (defaults in bold)
-1. Sweep mode for the first study: **run all three, headline mode C**.
+1. Sweep mode for the first study: **run all three; headline A or B (council to advise), C as diagnostic**. Changed from the earlier "headline C" default, see §0.
 2. Language/tooling: **Python**, with an optional ANSYS/COMSOL cross-check.
-3. Cell shape: **hex thin-wall honeycomb**; circular pores kept as the supervisor's "simple" case and for verification.
+3. Cell shape: **hollow cell with homogeneous thin wall** as primary; circular pores kept as the supervisor's "simple" case and for verification.
+5. Fixed composition for the pore-size study (no ratio was confirmed in the meeting). **Default: the aerogel-only BN/CNF/MTMS surface-layer recipe at a mid-range BN fraction, labelled hypothetical, until the user or supervisor names one.**
 4. Whether the B-series substrate includes the carbon-free interlayer (guide issue E09), needed only from v0.3.
