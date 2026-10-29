@@ -1,0 +1,30 @@
+{
+  "checked_on": "2026-10-29",
+  "main_reference": "A01",
+  "full_pdf_ids": [
+    "U02"
+  ],
+  "note_and_link_ids": [
+    "A01",
+    "U25",
+    "C07",
+    "C08",
+    "C06",
+    "N01",
+    "N02",
+    "N03"
+  ],
+  "additional_research_ids": [
+    "N01",
+    "N02",
+    "N03"
+  ],
+  "download_attempts": {
+    "A01": "HTTP 403",
+    "N01": "HTTP 403",
+    "N02": "HTTP 403",
+    "C07": "HTTP 403",
+    "C06": "HTTP 403"
+  },
+  "limitations": "No additional original paper PDFs could be saved. Notes and verified links are included; these must not be labelled full papers."
+}

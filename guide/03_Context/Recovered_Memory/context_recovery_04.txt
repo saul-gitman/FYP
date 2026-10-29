@@ -1,0 +1,21 @@
+[convo search]
+- [USER_CONSTRAINT] [c0][c2] U@2026-10-05T16:06:21Z, -23d: FYP map must be single editable HTML, white background/black text; fixed categories 1 Processing/Control Parameters, 2 Resulting Structure, 3 Resulting Properties; items editable; 1→3 experiment, 2→3 simulation; “...” marks literature gaps.
+- [USER_FACT] [c2] U@2026-10-05T15:51:35Z, -23d: project concerns fabrication, structure, performance of material system; examples BN/C ratio, freezing temperature/time; possible hexagonal morphology, density; tensile, thermal, reflectivity/radiative properties.
+- [USER_CONSTRAINT] [c2] U@2026-10-05T15:51:35Z, -23d: preserve exact PSP categories and relationships; RAG/literature is supporting layer, not fourth category; requested `design.md` first and eventual self-contained HTML; later clarified “graphene” and static HTML flowchart.
+- [PRIOR_ASSISTANT_OUTPUT] [c0][c2] A@2026-10-05T16:13:31Z, -23d: prior editable map included seed items BN/C ratio, freezing temperature/time, pore/cell shape, density, mechanical strength, heat, reflectance; extra
+
+- [USER_FACT] [c1] U@2026-10-05T15:05:24Z, -388d: FYP plate uses BN/CFRP/carbon-aerogel multilayer; experiment measures one effective through-thickness \(k_z\) plus solar reflectance and internal-heating behavior.
+- [PRIOR_ASSISTANT_OUTPUT] [c1] A@2026-10-05T15:04:51Z, -388d: Prior technical conclusion: ordinary constant-\(k\) conduction has \(k_z^\uparrow=k_z^\downarrow\); directional system behavior comes from optical/thermal asymmetry, not validated thermal rectification.
+
+
+[files]
+Sources:
+[f0] design(1).md
+[f1] BN_C_Aerogel_Simulation_Plan.xlsx
+
+Evidence:
+- [FILE_METADATA] [f0] Dated 5 October 2026; planning document, not a verbatim message archive. It records the requested framework as three categories: “Processing / Control Parameters,” “Resulting Structure,” and “Resulting Properties,” with fixed links 1→2 process–structure, 2→3 simulation, 1→3 experiment.
+- [FILE_CONTENT] [f0] The documented user-specified inputs are BN/C ratio, freezing temperature, and freezing time; structure items are shape/morphology and density; properties are tensile stress/strength, heat/effective thermal conductivity, and reflectance.
+- [FILE_CONTENT] [f0] The document specifies a clean editable/self-contained HTML/SVG deliverable, white/black-style diagram planning, and distinguishes proposed simulation scope from an approved solver. It says model inputs require geometry, constituent properties, interfaces, gas environment, and boundary conditions.
+- [FILE_CONTENT] [f1] The first-pass simulator plan uses baseline porosity 98%, channel width/layer spacing 30–75 µm, density 25 mg/cm³, BN fraction 25%, and BN:C 1:1; exploratory ratios are 1:3, 1:1, 3:1, 9:1.
+- [CONFLICT] [f0] No retrieved file contains the user’s actual original messages verbatim, the Sep 24 aerogel/hexagon/ANSYS request, the Oct 14 mathematical-reference request, or the CNF/CNT/MTMS/BN-in-CFRP experiment-plan wording. The retrieved material is a later planning/interpretation document, not evidence that existing code was validated; it explicitly labels the solver scope as “not an approved solver specification.”

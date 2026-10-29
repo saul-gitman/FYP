@@ -1,0 +1,24 @@
+{
+  "export_date_Hong_Kong": "2026-10-28",
+  "type": "FYP_context_handover",
+  "canonical_entrypoint": "summary.md",
+  "compatibility_entrypoint": "summary.nd",
+  "historical_chat_export": "partial_retrieved_context_not_verbatim_archive",
+  "recording_transcript": "NOT_YET_PROVIDED",
+  "paper_records_original": 49,
+  "paper_records_current": 53,
+  "user_supplied_paper_records": 27,
+  "offline_paper_PDFs": [
+    "05_References/PDFs/U02_Chan_2022_Additive_Freeze_Casting.pdf"
+  ],
+  "other_papers": "LINK_ONLY_not_complete_offline",
+  "experiment_guide": "original_bytes_preserved",
+  "simulation": "handover_specification_not_implemented_or_calibrated",
+  "measured_project_results": "NOT_AVAILABLE",
+  "excluded_as_unrelated": [
+    "AAE4203 coordinate transformation coursework",
+    "coordinate transformation image",
+    "prior pasted agent-infrastructure / AI-news advice"
+  ],
+  "unresolved_guide_issues": "02_Experiment/Experiment_Parameters_and_Issues.md"
+}

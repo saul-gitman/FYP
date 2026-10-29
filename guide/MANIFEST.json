@@ -1,0 +1,631 @@
+{
+  "package_date": "2026-10-29",
+  "file_count_excluding_manifests": 125,
+  "files": [
+    {
+      "path": "01_Project/Project_Proposal_original.pdf",
+      "size_bytes": 216071,
+      "sha256": "74748f2e54f72bfc154d9651adf9d26f5246d62f354002fd62652586be9f683d"
+    },
+    {
+      "path": "01_Project/Project_Proposal_text_extraction.txt",
+      "size_bytes": 3696,
+      "sha256": "d0ddd0d54f4cc525e158d1535089a29c83acf0442a1f78962ff88c7112dbc1b0"
+    },
+    {
+      "path": "02_Experiment/Experiment_Guide_original.docx",
+      "size_bytes": 40279,
+      "sha256": "e055e31e005ae71ab3cf9e75433dddd80013aa387323274b309050a0db715f5a"
+    },
+    {
+      "path": "02_Experiment/Experiment_Guide_text_extraction.txt",
+      "size_bytes": 9248,
+      "sha256": "2b373c334be7870aa6868d4b785d33a43a8b4ee521033eb419f262370989bba8"
+    },
+    {
+      "path": "02_Experiment/Experiment_Parameters_and_Issues.md",
+      "size_bytes": 7711,
+      "sha256": "126b76c42630acffd4b983c25b19cb097dce1ee532a592f4735e6d45a323d016"
+    },
+    {
+      "path": "02_Experiment/recipe_mass_balance_derived.csv",
+      "size_bytes": 774,
+      "sha256": "530f23cda3127759a5683d83e39a6956c9b03864593a1b0bb44a08fd854ae43d"
+    },
+    {
+      "path": "03_Context/Current_User_Request_verbatim.txt",
+      "size_bytes": 792,
+      "sha256": "e248223d262e70bf2c1ed386cf51eda35b9a1c496de641d3b815ca92b27b5d5e"
+    },
+    {
+      "path": "03_Context/Recovered_Memory/context_recovery_01.txt",
+      "size_bytes": 9620,
+      "sha256": "b49b57d3e6e5cd3985554174712567db58e261b7259cc01b1fb1d3de228206de"
+    },
+    {
+      "path": "03_Context/Recovered_Memory/context_recovery_02.txt",
+      "size_bytes": 7202,
+      "sha256": "0bf9a07891baeec88890b9dafe2ac43f30cad4c74169d967ea1a86d84c6c133c"
+    },
+    {
+      "path": "03_Context/Recovered_Memory/context_recovery_03.txt",
+      "size_bytes": 2271,
+      "sha256": "1c2ec6b62481c6b4d7f5eb98af26ab2f6f7ce81eece8fb7959c5b5a757c20576"
+    },
+    {
+      "path": "03_Context/Recovered_Memory/context_recovery_04.txt",
+      "size_bytes": 3211,
+      "sha256": "3c872d894756594003c35688e886df626df626c6238747ca1bea5576075352a1"
+    },
+    {
+      "path": "03_Context/Screenshot_User_Excerpt.txt",
+      "size_bytes": 553,
+      "sha256": "45d5d002626cef3cd2558b4ef7cc9fc8347ff8a142e3a30752249869f7155842"
+    },
+    {
+      "path": "03_Context/User_Context_and_Decisions.md",
+      "size_bytes": 6951,
+      "sha256": "55f127efc1963ca531e549afa0e8b557df0a0decfaf6aa28d710046fb9ef8ccf"
+    },
+    {
+      "path": "04_Simulation/Build_Brief.md",
+      "size_bytes": 8186,
+      "sha256": "80d5218857d6dd8775d2bb7b9d08c538e1ebda98a94f4b48eba9d4897ee214f3"
+    },
+    {
+      "path": "04_Simulation/Previous_Work_Cautions.md",
+      "size_bytes": 1401,
+      "sha256": "38f33da7f00c1e59060f6a25fcc0af11f26aaa6d0125e97829031a43725f58e8"
+    },
+    {
+      "path": "04_Simulation/Requirements_Extracted_From_Transcript.md",
+      "size_bytes": 8551,
+      "sha256": "cbfdbf1170cae543b65194a88ce981cf746ba15ed02617cdc45b0fa227808970"
+    },
+    {
+      "path": "05_References/PDF_Acquisition_Manifest.json",
+      "size_bytes": 1685,
+      "sha256": "cd5972e7e769a6f3dddf30d87bf40c17b8393e6cb0c93780bdb1732aeca79a4b"
+    },
+    {
+      "path": "05_References/PDFs/U02_Chan_2022_Additive_Freeze_Casting.pdf",
+      "size_bytes": 1900798,
+      "sha256": "2c4f7e2a02c5b6dbd85b3e78b2146298be8cffeaa9ddc843c3fc869dfcdb42df"
+    },
+    {
+      "path": "05_References/Records/A01.md",
+      "size_bytes": 1412,
+      "sha256": "a2f917ff324366435977d7877351045601c61ca922781823b9843f4e7184bb7d"
+    },
+    {
+      "path": "05_References/Records/A02.md",
+      "size_bytes": 820,
+      "sha256": "d823b6ae06542f2ba379911c89f42104724f887a8882b5c6a1726029216fa619"
+    },
+    {
+      "path": "05_References/Records/A03.md",
+      "size_bytes": 828,
+      "sha256": "e4a628b3ec49b97af302e3f2659de3355234ccb81468dd8f048d1b1cdaa2b563"
+    },
+    {
+      "path": "05_References/Records/A04.md",
+      "size_bytes": 908,
+      "sha256": "d1db4854f812895c2672a2d815047ba9b0afd124479f99ec2eba167125966b0c"
+    },
+    {
+      "path": "05_References/Records/C01.md",
+      "size_bytes": 899,
+      "sha256": "db3d9defc832da494547b9d3173f2614bd50a5d5b09dc52764e6da6fa85c15e5"
+    },
+    {
+      "path": "05_References/Records/C02.md",
+      "size_bytes": 865,
+      "sha256": "657c9bf8efcd34a5b52acaa85493e1dceb2a63c4f91bcffc5028940840ea23b9"
+    },
+    {
+      "path": "05_References/Records/C03.md",
+      "size_bytes": 847,
+      "sha256": "8aa5e706e4d62a3020261af6db97ef7b79522879a1cb06195725066e13a684ac"
+    },
+    {
+      "path": "05_References/Records/C04.md",
+      "size_bytes": 848,
+      "sha256": "b67a8323004a99d039617f1ee8db1d7f4055c3a51f4a263888e9b0a0e07669ff"
+    },
+    {
+      "path": "05_References/Records/C05.md",
+      "size_bytes": 883,
+      "sha256": "efdc8fa57adc0427800d9d7ebc5b33b94335718a040bba30c4a3d3651df5e09c"
+    },
+    {
+      "path": "05_References/Records/C06.md",
+      "size_bytes": 1011,
+      "sha256": "3d74ebabe15c5ca26507a30f0b6fa9eefd26481fa350d6465968c1a6a9ee5f78"
+    },
+    {
+      "path": "05_References/Records/C07.md",
+      "size_bytes": 976,
+      "sha256": "11762a6ff286466330340bdab1797ece9138a7301f231c9a39835e5d40dc032e"
+    },
+    {
+      "path": "05_References/Records/C08.md",
+      "size_bytes": 973,
+      "sha256": "eace20236af92ed5235398d1f61a2bc1c819cbd7bcaf025ec2283e733f69c68c"
+    },
+    {
+      "path": "05_References/Records/C10.md",
+      "size_bytes": 895,
+      "sha256": "2c74ef188dfac10618d8a3b40e0c52280853d99a0cb65b62bb75ae7901345d7a"
+    },
+    {
+      "path": "05_References/Records/C11.md",
+      "size_bytes": 901,
+      "sha256": "bffd4dda8cd033788bf0605b7599e15d16a954182b816114e24abe3a2d1240ef"
+    },
+    {
+      "path": "05_References/Records/C12.md",
+      "size_bytes": 843,
+      "sha256": "8acdca42378a1c27a34935218acbbd0897a6a65dfaacff1f81c950d7be21d6bc"
+    },
+    {
+      "path": "05_References/Records/C13.md",
+      "size_bytes": 913,
+      "sha256": "4810b2578b783d57303a7ff6a4e50e9fed97a266bd55e30b8dab1d024d9c1c25"
+    },
+    {
+      "path": "05_References/Records/C14.md",
+      "size_bytes": 910,
+      "sha256": "9d418c61b4a410c2f3d9816cdff44f0b4bfe05870e19c20009b7c70ab8cb0559"
+    },
+    {
+      "path": "05_References/Records/C15.md",
+      "size_bytes": 880,
+      "sha256": "581dd0eb3d928817be0d1221d5d782722cf277258708976381ea98bc7f378eab"
+    },
+    {
+      "path": "05_References/Records/C16.md",
+      "size_bytes": 879,
+      "sha256": "0025619130cbb359cb70bcc510693476a41f30e723161567999e783870d31b0b"
+    },
+    {
+      "path": "05_References/Records/K01.md",
+      "size_bytes": 741,
+      "sha256": "f870aaf2b8094682c7c2bda7c20348b0bc28c580e69c1432e379985a865db492"
+    },
+    {
+      "path": "05_References/Records/K02.md",
+      "size_bytes": 787,
+      "sha256": "52712ebf31264f14c107ffd291b781cd32fbe5557e5779ded450473d3aa511c1"
+    },
+    {
+      "path": "05_References/Records/K03.md",
+      "size_bytes": 824,
+      "sha256": "dc59626fe946ee0b246d45f83e4b8663b94c667d0c491dd969e3b5276394cf9b"
+    },
+    {
+      "path": "05_References/Records/N01.md",
+      "size_bytes": 1220,
+      "sha256": "926013d24820c6d9062c8d7c0016945db6ed67296a28e6ad698beaee0d02b5e5"
+    },
+    {
+      "path": "05_References/Records/N02.md",
+      "size_bytes": 1261,
+      "sha256": "64f9df72183e5f9a62e02927ee69ac940803bc36e4eda101aad882be3b361939"
+    },
+    {
+      "path": "05_References/Records/N03.md",
+      "size_bytes": 1324,
+      "sha256": "ccc5c34fd2c31734e34578e6c7cbfd1d50efd41c6df4c87da25c9affa3dcd383"
+    },
+    {
+      "path": "05_References/Records/U01.md",
+      "size_bytes": 869,
+      "sha256": "ae2b44523e4741b99938a5c5d2409649e8e0a41482704977a379c0a7954f44dd"
+    },
+    {
+      "path": "05_References/Records/U02.md",
+      "size_bytes": 606,
+      "sha256": "6a51654f0aeca85c55fcc6809ca70f17a7e5198866f85cd204e9f5671f5464ac"
+    },
+    {
+      "path": "05_References/Records/U03.md",
+      "size_bytes": 785,
+      "sha256": "d3a1f9b433fcb440cd1a09df5750d6013c3790fef36973c1422fbba29836b8af"
+    },
+    {
+      "path": "05_References/Records/U04.md",
+      "size_bytes": 802,
+      "sha256": "74b6ab7f6d468c789865ded041185dfffd81255819c908dde3f9712814cdff6f"
+    },
+    {
+      "path": "05_References/Records/U05.md",
+      "size_bytes": 780,
+      "sha256": "497279f50e3d95a926964db3adc25dcd9add2ca4101b2ad82046129948336587"
+    },
+    {
+      "path": "05_References/Records/U06.md",
+      "size_bytes": 807,
+      "sha256": "c12511d1bab674ce5caa725688be2d2b40bef30846575ef5161533bc0cb52da6"
+    },
+    {
+      "path": "05_References/Records/U07.md",
+      "size_bytes": 815,
+      "sha256": "01769f45ed320824456dc8e327f591641936a58d6f1045d40732fa80de509e04"
+    },
+    {
+      "path": "05_References/Records/U08.md",
+      "size_bytes": 809,
+      "sha256": "6532ef64ad8c250dc01d16599574782719b112cf2a2a01a9f9aa6feb6e9b95ac"
+    },
+    {
+      "path": "05_References/Records/U09.md",
+      "size_bytes": 727,
+      "sha256": "4992de7bc1186944518989adc88d564367c197a3335c43bea04cee0b2dbf8f2a"
+    },
+    {
+      "path": "05_References/Records/U10.md",
+      "size_bytes": 801,
+      "sha256": "7ca4c9fdbc125ebbd0944ca2dee20826e30e96f98c3d24e108ce51f5d1fcc3f0"
+    },
+    {
+      "path": "05_References/Records/U11.md",
+      "size_bytes": 723,
+      "sha256": "7642d7ee5c5e54d6cb36f70d1f80c238ee838eeb2d707af316eae4e4b68be8cb"
+    },
+    {
+      "path": "05_References/Records/U12.md",
+      "size_bytes": 840,
+      "sha256": "e2b7899e2161c0063d0cd7b9619196bcec2623625bc6f4da08cb06970f324fec"
+    },
+    {
+      "path": "05_References/Records/U13.md",
+      "size_bytes": 804,
+      "sha256": "182230eef29ad532a12245b7a6d15b9b94fbd813905bb983ab6cd62bf043cff1"
+    },
+    {
+      "path": "05_References/Records/U14.md",
+      "size_bytes": 814,
+      "sha256": "5723c2879dad753bea668bf45da03cf8b83cfb477a625e9f131d6caea020032a"
+    },
+    {
+      "path": "05_References/Records/U15.md",
+      "size_bytes": 748,
+      "sha256": "7961cd8b17d4f8ca76950fe86a8d44cd38f259c418366a65101d9bd53a2e5f3f"
+    },
+    {
+      "path": "05_References/Records/U16.md",
+      "size_bytes": 721,
+      "sha256": "ef96e810d764e3c87668a5ae35d9f1e3c7c05d7d87398d3b0714cd9d4aba6975"
+    },
+    {
+      "path": "05_References/Records/U17.md",
+      "size_bytes": 702,
+      "sha256": "c30085791882e707b2cc0b160222c4a7a4c6f99bc5eefac01c086c8e6d5fb59f"
+    },
+    {
+      "path": "05_References/Records/U18.md",
+      "size_bytes": 762,
+      "sha256": "bcf9b7ce97d44d7d4d79bbb69c137464490ddd06c17e78a72d6b516a0ee2f96a"
+    },
+    {
+      "path": "05_References/Records/U19.md",
+      "size_bytes": 754,
+      "sha256": "290c2c3174320651695000ee527da09fbafc4259426aa4e88593f87e248d026a"
+    },
+    {
+      "path": "05_References/Records/U20.md",
+      "size_bytes": 761,
+      "sha256": "e6670d549919ff2e314ccefc619194ba1599133084928d46da1253fc4b026dc5"
+    },
+    {
+      "path": "05_References/Records/U21.md",
+      "size_bytes": 730,
+      "sha256": "3400d51e0a7abc63bf7ab61949fff3750e710985dad32f935df647fe43d80ba6"
+    },
+    {
+      "path": "05_References/Records/U22.md",
+      "size_bytes": 688,
+      "sha256": "923cc035d855495889f8a71fdcadc575de46180df0d531c128b60000a5bccdfa"
+    },
+    {
+      "path": "05_References/Records/U23.md",
+      "size_bytes": 720,
+      "sha256": "2029f49e7335b1780dff3dc9dc0d78ae9af95e674e5bd071ce42749e6c85adaf"
+    },
+    {
+      "path": "05_References/Records/U24.md",
+      "size_bytes": 691,
+      "sha256": "8547ab8d07565152fdb12b9f92539f761853787a9ef71730f801ad75f9f8e560"
+    },
+    {
+      "path": "05_References/Records/U25.md",
+      "size_bytes": 959,
+      "sha256": "9067a0c0f5b6a1fe7d59b9450c67e7b16db3444cccd7d59f045b0c0c4b4534aa"
+    },
+    {
+      "path": "05_References/Records/U26.md",
+      "size_bytes": 761,
+      "sha256": "ce39c35989bedd5d4fda0d2a8bafd9e919d57a6c86ecd354ee06f5d48ec67473"
+    },
+    {
+      "path": "05_References/Records/U27.md",
+      "size_bytes": 778,
+      "sha256": "6bc275e21eff310471a1e86864be8d133629cb523d5503bedfb18597666a0546"
+    },
+    {
+      "path": "05_References/Records/W01.md",
+      "size_bytes": 752,
+      "sha256": "a9cef02d9c6309c7242919937fd389628ba102226142df69561619b827fd4106"
+    },
+    {
+      "path": "05_References/Records/W02.md",
+      "size_bytes": 699,
+      "sha256": "6d4aef1912f0f4cf4a791ed6f6ab181194829f45f221fc6a40ca8c364d1acdf0"
+    },
+    {
+      "path": "05_References/Records/W03.md",
+      "size_bytes": 675,
+      "sha256": "f8ec06ac4c677ad548fb82a7a400202de173c9c69b524f2d1a9a7644a2594ca3"
+    },
+    {
+      "path": "05_References/Records/W04.md",
+      "size_bytes": 745,
+      "sha256": "05e9bb915e524429c4fb516845d2f8f33f62bde93059c5e239d156a33199d6fc"
+    },
+    {
+      "path": "05_References/Reference_Availability_2026-10-29.json",
+      "size_bytes": 573,
+      "sha256": "dc6a48c2536b509db990e73e2aa0624aa48f0b5f74cbd3572d5eb09a7a4ecd14"
+    },
+    {
+      "path": "05_References/Reference_Roadmap.md",
+      "size_bytes": 8851,
+      "sha256": "574fe09b9692f800847c0a4f9d1f7b25b1964ddb313a27f6cb9527c5373202a1"
+    },
+    {
+      "path": "05_References/START_HERE.md",
+      "size_bytes": 3575,
+      "sha256": "83f7c38f2c65254a591544722940166e8211e5573fa0bd97d09ba4d9c247d7d9"
+    },
+    {
+      "path": "05_References/download_reference_pdfs.py",
+      "size_bytes": 2755,
+      "sha256": "9d9294f3696c5d0ad57f801b33aac6d763bcc57b8fdf843c2b066c38bda85abe"
+    },
+    {
+      "path": "05_References/references_catalog.csv",
+      "size_bytes": 27728,
+      "sha256": "fb507fae4e28344117403126413b5caf9f10037002d3cce11a2a1939e6911ffd"
+    },
+    {
+      "path": "05_References/references_catalog.json",
+      "size_bytes": 45695,
+      "sha256": "24a0a99776d9a7d8f55d5b44161b78fd4f3a859558685cfffad5b67f70d5788a"
+    },
+    {
+      "path": "06_Previous_Work/BN_C_Aerogel_Simulation_Plan.xlsx",
+      "size_bytes": 12528,
+      "sha256": "4bf573fea88abd3b97ff242ca3741513fe9546e5dea54d053be981115c4770d8"
+    },
+    {
+      "path": "06_Previous_Work/Maps_and_Demos/FYP_PSP_triangle_framework.html",
+      "size_bytes": 8194,
+      "sha256": "dd4dc22c00926ab9a7f42362f04663aeeed9e08c24e7ad700c00a8de5330e7b6"
+    },
+    {
+      "path": "06_Previous_Work/Maps_and_Demos/FYP_editable_research_map.html",
+      "size_bytes": 22435,
+      "sha256": "d67e6c7ff4f7b7fd93d157047cd5a174eb829225cd2dd371b2755fbfd5584b29"
+    },
+    {
+      "path": "06_Previous_Work/Maps_and_Demos/bn_c_aerogel_hexagon_demo.html",
+      "size_bytes": 21595,
+      "sha256": "ae45e168386aa89ebe0d48074807b28285874c658fb13168b227c51748f9062c"
+    },
+    {
+      "path": "06_Previous_Work/Maps_and_Demos/bn_c_aerogel_hexagon_demo_fixed.html",
+      "size_bytes": 19884,
+      "sha256": "cba3e7689c12a46d6c333f1b99bd0c7bb9bf82529e0c02ca15beeb8b9f65f330"
+    },
+    {
+      "path": "06_Previous_Work/Maps_and_Demos/bn_c_aerogel_parameter_demo.html",
+      "size_bytes": 19539,
+      "sha256": "390fa8161dea06bc51da46632ed85e81b821224575ca7689425284c3d0754c33"
+    },
+    {
+      "path": "06_Previous_Work/Original_Images/IMAGE_INDEX.md",
+      "size_bytes": 1218,
+      "sha256": "b64924b42014310fbebba905ddfc98ec74c7ffcae319e16c3cb9c42e0509e423"
+    },
+    {
+      "path": "06_Previous_Work/Original_Images/IMG_1131.png",
+      "size_bytes": 909401,
+      "sha256": "6f765c42e72eb700d7e914156e2d788d25ba3e5d462d84f694ac87a2fdc462d5"
+    },
+    {
+      "path": "06_Previous_Work/Original_Images/image(1).png",
+      "size_bytes": 43689,
+      "sha256": "d17737e1cf7ddd0cb016710d9d1f6293b4ebbb9e904edac06a6ca4c63b268e2d"
+    },
+    {
+      "path": "06_Previous_Work/Original_Images/image(2).png",
+      "size_bytes": 49468,
+      "sha256": "32e1cd43b0874a5c0e7ceca5366920235a16cc4fef38bd3c886acfdd483f2704"
+    },
+    {
+      "path": "06_Previous_Work/Original_Images/image.png",
+      "size_bytes": 67045,
+      "sha256": "a1a8627087a8644719dc49aeddb86d3f9a07aa9b40532c145bdd9f34eab6d40c"
+    },
+    {
+      "path": "06_Previous_Work/Simulation_Plan_text_extraction.txt",
+      "size_bytes": 9836,
+      "sha256": "f4651f71c1f34d1c6cdd9d94935c2c927971317bc00082b58e5fbe692a9d972a"
+    },
+    {
+      "path": "06_Previous_Work/fyp_literature_database(1).json",
+      "size_bytes": 32557,
+      "sha256": "0ec3911707fd1e0957e7b5d49902b1c11307f7c814451cf89343100773de844c"
+    },
+    {
+      "path": "06_Previous_Work/fyp_literature_database.json",
+      "size_bytes": 32557,
+      "sha256": "0ec3911707fd1e0957e7b5d49902b1c11307f7c814451cf89343100773de844c"
+    },
+    {
+      "path": "06_Previous_Work/fyp_research_master.md",
+      "size_bytes": 21484,
+      "sha256": "708be90364f038a75481dd3e9e425ccf43357700e9403cf765a9981bde000580"
+    },
+    {
+      "path": "07_Capstone_Requirements/Academic_Context.md",
+      "size_bytes": 1889,
+      "sha256": "e9709963f2f71314ba22bf5d12336d8d768b0fb515a808669ffa95359bd9dea8"
+    },
+    {
+      "path": "07_Capstone_Requirements/Originals/01-Appendix-1_Capstone-Project-Report-Format.docx",
+      "size_bytes": 33459,
+      "sha256": "9c64e4dd2caf56967759c9feeb0fd202f381a3ac8784a70021a44ab6cfe458fc"
+    },
+    {
+      "path": "07_Capstone_Requirements/Originals/02-Appendix-2_Capstone-Project-Guidelines-for-Preparing-Interim-Report.docx",
+      "size_bytes": 25429,
+      "sha256": "81de13fbc5f0bff608e56fad4dc2f9f731f4edfaaf9d4751cdeb65543af82461"
+    },
+    {
+      "path": "07_Capstone_Requirements/Originals/03-Appendix-6_Capstone-Project-Oral-Presentation-Assessment-Form.docx",
+      "size_bytes": 24961,
+      "sha256": "a12a7c8f5067b37dc651ee62b03e6c1f1cd9964b14a572eef156774adda96838"
+    },
+    {
+      "path": "07_Capstone_Requirements/Originals/04-Appendix-4_Capstone-Project-Guidelines-for-Preparing-Final-Report.docx",
+      "size_bytes": 43362,
+      "sha256": "f63f068f8a617400b1922bdcac9b387f9bf07223deec9e38ba94255f18e707f3"
+    },
+    {
+      "path": "07_Capstone_Requirements/Originals/05-2026-27-Capstone-Project-General-Information-for-Students.docx",
+      "size_bytes": 30050,
+      "sha256": "5599a409fdb5a35705fd57dd9052fc803650be70220f8b1a50a786249b65cfb1"
+    },
+    {
+      "path": "07_Capstone_Requirements/Originals/06-Appendix-7_Capstone-Project-Log-Sheet.docx",
+      "size_bytes": 28342,
+      "sha256": "37f3e5416e7107fa33ae45989e4fdb70b9abf120baa64291a1b98367db276755"
+    },
+    {
+      "path": "07_Capstone_Requirements/Originals/07-Appendix-5_Capstone-Project-Final-Report-Assessment-Form.docx",
+      "size_bytes": 51007,
+      "sha256": "3edbeb13ebb4acd6ff4801b260937b6923c91b045b104c7f13e4efad6e77aa84"
+    },
+    {
+      "path": "07_Capstone_Requirements/Originals/08-Appendix-3_Capstone-Project-Interim-Report-Assessment-Form.docx",
+      "size_bytes": 37712,
+      "sha256": "9e35dda797bcccf17d4f1d9968af6583f418e8336564a209efc4fdd11d49e712"
+    },
+    {
+      "path": "07_Capstone_Requirements/Text/01-Appendix-1_Capstone-Project-Report-Format.txt",
+      "size_bytes": 1818,
+      "sha256": "607b21517ee1d41557bacd64ec8276035f024c93ce6e02335699226b6dcf03ae"
+    },
+    {
+      "path": "07_Capstone_Requirements/Text/02-Appendix-2_Capstone-Project-Guidelines-for-Preparing-Interim-Report.txt",
+      "size_bytes": 3901,
+      "sha256": "164c3638932fbb10d05effe0a25b72fe08406adf0271ce7efc8fcb6c6973a52e"
+    },
+    {
+      "path": "07_Capstone_Requirements/Text/03-Appendix-6_Capstone-Project-Oral-Presentation-Assessment-Form.txt",
+      "size_bytes": 2941,
+      "sha256": "861f8de7b3dd6ce49afe012ca32860c3440b7c68444a5e3feef5a51268e1cdb6"
+    },
+    {
+      "path": "07_Capstone_Requirements/Text/04-Appendix-4_Capstone-Project-Guidelines-for-Preparing-Final-Report.txt",
+      "size_bytes": 16587,
+      "sha256": "b3593e1d9f475c45084a6ea7607e4276fd45088d9274913006e4a404e88a9e29"
+    },
+    {
+      "path": "07_Capstone_Requirements/Text/05-2026-27-Capstone-Project-General-Information-for-Students.txt",
+      "size_bytes": 2305,
+      "sha256": "0f942b89de72e1124ab3172cbfd9fd0f7fa149aa1b17bab70e3c3b64438fe31a"
+    },
+    {
+      "path": "07_Capstone_Requirements/Text/06-Appendix-7_Capstone-Project-Log-Sheet.txt",
+      "size_bytes": 878,
+      "sha256": "e72258b9ff6da24ab85be56b2da2cd9d20b46d446952b07d54be8207ce9d1c7b"
+    },
+    {
+      "path": "07_Capstone_Requirements/Text/07-Appendix-5_Capstone-Project-Final-Report-Assessment-Form.txt",
+      "size_bytes": 10918,
+      "sha256": "85d699e1dbf158dc6ba51e9da8fcc1e09400557f19e26bc85ce543374a443d42"
+    },
+    {
+      "path": "07_Capstone_Requirements/Text/08-Appendix-3_Capstone-Project-Interim-Report-Assessment-Form.txt",
+      "size_bytes": 9441,
+      "sha256": "e883b072480070a02100ce06cb3b5c4e1024cd8edfc51f7fbd1cd7e0a80e16c5"
+    },
+    {
+      "path": "08_Transcripts/transcript_English.md",
+      "size_bytes": 26365,
+      "sha256": "86ed959ab2f83923a5ab6e630c0157d46ca94f67bf5e872ca180fb0af0f4b571"
+    },
+    {
+      "path": "09_Archive/2026-10-28_Instructions/AGENT_START_HERE.md",
+      "size_bytes": 1283,
+      "sha256": "4ab6fdddfe8db81a14c0baeadcfad698e4d01a405d38e852b5a086adaf8670a7"
+    },
+    {
+      "path": "09_Archive/2026-10-28_Instructions/PACKAGE_STATUS.json",
+      "size_bytes": 969,
+      "sha256": "38d88420eb481ab5f1bea3ba6e399064a09e1bb09c115bc7ec433ab573f1eaec"
+    },
+    {
+      "path": "09_Archive/2026-10-28_Instructions/Simulation_Handover.md",
+      "size_bytes": 14282,
+      "sha256": "b621b0c3189b101b851ae74af4ed4b9c9e1aa32090a05fdd7905e15094eca87a"
+    },
+    {
+      "path": "09_Archive/2026-10-28_Instructions/TRANSCRIPT_PENDING.md",
+      "size_bytes": 907,
+      "sha256": "5b988f09a09397243ef1555b27becbe4028b814080d59c68cacff8ba9734f645"
+    },
+    {
+      "path": "09_Archive/2026-10-28_Instructions/model_input_template.json",
+      "size_bytes": 3576,
+      "sha256": "6b47a058ae0d767bab3ba38960c10e9c4e2bc09afcf34ad3ab9dd8d04ff4c675"
+    },
+    {
+      "path": "09_Archive/2026-10-28_Instructions/parameter_register.csv",
+      "size_bytes": 1764,
+      "sha256": "1255b7727e93d3aac0b27b1e504c76842ca9d318c8c5509dc3532f687a69f6ef"
+    },
+    {
+      "path": "09_Archive/2026-10-28_Instructions/summary.md",
+      "size_bytes": 12080,
+      "sha256": "04e571ee4e612a7f54162d5a01f3fb2e5ff86ccd1dc93067f0f8a69e25670d42"
+    },
+    {
+      "path": "09_Archive/2026-10-28_Instructions/summary.nd",
+      "size_bytes": 12080,
+      "sha256": "04e571ee4e612a7f54162d5a01f3fb2e5ff86ccd1dc93067f0f8a69e25670d42"
+    },
+    {
+      "path": "AGENT_START_HERE.md",
+      "size_bytes": 757,
+      "sha256": "037bda792fb29d8d42b34404e3f6f76906d44b882b6826d5a381855fd2d984be"
+    },
+    {
+      "path": "PACKAGE_STATUS.json",
+      "size_bytes": 850,
+      "sha256": "29419b47c093c87cc7ec3a670bc11bbecaa9e137e9fa6a543ed7a0b3ac4d8e80"
+    },
+    {
+      "path": "summary.md",
+      "size_bytes": 3123,
+      "sha256": "40ebba0af453d25fac0bb3765fbcf498dd638cdc202a0befa5c48e9de95bea1a"
+    },
+    {
+      "path": "summary.nd",
+      "size_bytes": 3123,
+      "sha256": "40ebba0af453d25fac0bb3765fbcf498dd638cdc202a0befa5c48e9de95bea1a"
+    }
+  ]
+}

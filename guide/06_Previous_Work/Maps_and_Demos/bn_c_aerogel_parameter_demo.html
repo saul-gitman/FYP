@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BN/C Aerogel Parameter Demo</title>
+  <style>
+    :root{
+      --bg:#f5f5f2;
+      --panel:#ffffff;
+      --text:#1f2428;
+      --muted:#687078;
+      --line:#d9dde1;
+      --accent:#2457d6;
+      --soft:#eef3ff;
+      --bn:#e8e2cf;
+      --carbon:#2f3439;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:var(--bg);
+    }
+    .wrap{
+      max-width:1280px;
+      margin:0 auto;
+      padding:22px;
+    }
+    .top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+    }
+    h1{font-size:24px;margin:0 0 6px}
+    .subtitle{margin:0;color:var(--muted);max-width:780px;line-height:1.55}
+    .notice{
+      border:1px solid #e1c96a;
+      background:#fff9dc;
+      color:#5c4c13;
+      padding:10px 12px;
+      border-radius:10px;
+      font-size:13px;
+      line-height:1.45;
+      max-width:430px;
+    }
+    .layout{
+      display:grid;
+      grid-template-columns:minmax(280px,360px) minmax(0,1fr);
+      gap:18px;
+      align-items:start;
+    }
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+    .controls{padding:18px}
+    .controls h2,.viewer-head h2,.info h2{
+      font-size:16px;
+      margin:0;
+    }
+    .control{
+      padding:16px 0;
+      border-bottom:1px solid #edf0f2;
+    }
+    .control:last-child{border-bottom:0}
+    .control-head{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:baseline;
+      margin-bottom:8px;
+    }
+    .control-name{font-weight:700;font-size:14px}
+    .value{
+      font-variant-numeric:tabular-nums;
+      color:var(--accent);
+      font-weight:700;
+      font-size:14px;
+      text-align:right;
+    }
+    .hint{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.45;
+      margin:8px 0 0;
+    }
+    input[type="range"]{width:100%;accent-color:var(--accent)}
+    .viewer{overflow:hidden}
+    .viewer-head{
+      padding:14px 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      border-bottom:1px solid var(--line);
+    }
+    .viewer-help{font-size:12px;color:var(--muted)}
+    #stage{
+      height:580px;
+      min-height:420px;
+      background:linear-gradient(180deg,#fafaf8,#efefeb);
+      position:relative;
+    }
+    #stage canvas{display:block;width:100%;height:100%}
+    .legend{
+      position:absolute;
+      left:14px;
+      bottom:14px;
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:9px 11px;
+      font-size:12px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+      pointer-events:none;
+    }
+    .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+    .bn{background:var(--bn);border:1px solid #aaa48e}
+    .c{background:var(--carbon)}
+    .summary{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:10px;
+    }
+    .chip{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:12px;
+      min-width:0;
+    }
+    .chip span{display:block;color:var(--muted);font-size:11px;margin-bottom:4px}
+    .chip strong{font-size:15px;overflow-wrap:anywhere}
+    .info{
+      margin-top:18px;
+      padding:18px;
+    }
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .info-card{
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+    }
+    .info-card h3{font-size:14px;margin:0 0 7px}
+    .info-card p{font-size:13px;line-height:1.55;color:var(--muted);margin:0}
+    .bottom-actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    button{
+      border:1px solid var(--line);
+      background:white;
+      color:var(--text);
+      border-radius:10px;
+      padding:10px 14px;
+      cursor:pointer;
+      font-weight:700;
+      min-height:42px;
+    }
+    button:hover{background:#f6f7f8}
+    button:focus-visible,input:focus-visible{outline:3px solid rgba(36,87,214,.25);outline-offset:2px}
+    #status{
+      color:var(--muted);
+      font-size:12px;
+      margin-top:10px;
+      min-height:18px;
+    }
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr}
+      #stage{height:500px}
+      .summary{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .info-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:520px){
+      .wrap{padding:12px}
+      #stage{height:430px}
+      .summary{grid-template-columns:1fr}
+    }
+  </style>
+
+  <script type="importmap">
+  {
+    "imports":{
+      "three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>BN/C Aerogel — Parameter Demo</h1>
+      <p class="subtitle">
+        只睇 BN/C aerogel 本身。拖動參數，睇一個簡化 3D 結構點樣改變。可以用滑鼠旋轉、縮放同平移。
+      </p>
+    </div>
+    <div class="notice">
+      <strong>Demo only：</strong>呢個模型係用嚟理解參數，唔係物理預測。
+      真實世界入面 concentration、porosity、density 等會互相影響；呢度刻意分開畀你逐樣玩。
+    </div>
+  </div>
+
+  <div class="layout">
+    <section class="panel controls" aria-label="Aerogel parameters">
+      <h2>Adjustable parameters</h2>
+
+      <div class="control">
+        <div class="control-head">
+          <span class="control-name">BN : C ratio</span>
+          <span class="value" id="ratioValue">50 : 50</span>
+        </div>
+        <input id="ratio" type="range" min="0" max="100" step="1" value="50" />
+        <p class="hint">只代表固體部分入面 BN 同 Carbon 嘅比例。向左 = 多 Carbon；向右 = 多 BN。</p>
+      </div>
+
+      <div class="control">
+        <div class="control-head">
+          <span class="control-name">Total concentration</span>
+          <span class="value" id="concValue">10 wt%</span>
+        </div>
+        <input id="concentration" type="range" min="1" max="25" step="0.5" value="10" />
+        <p class="hint">製作前液體/混合物入面有幾多固體材料。高 concentration = 起步時有更多 BN + C。</p>
+      </div>
+
+      <div class="control">
+        <div class="control-head">
+          <span class="control-name">Porosity</span>
+          <span class="value" id="porosityValue">98.0%</span>
+        </div>
+        <input id="porosity" type="range" min="80" max="99.5" step="0.1" value="98" />
+        <p class="hint">乾咗之後，成個 aerogel 有幾多體積係空位。98% 即係大部分都係空。</p>
+      </div>
+
+      <div class="control">
+        <div class="control-head">
+          <span class="control-name">Pore size</span>
+          <span class="value" id="poreValue">60 μm</span>
+        </div>
+        <input id="poreSize" type="range" min="20" max="200" step="5" value="60" />
+        <p class="hint">孔道大概有幾闊。細 pore = 結構更密；大 pore = 孔道更疏、更闊。</p>
+      </div>
+
+      <div class="control">
+        <div class="control-head">
+          <span class="control-name">Density</span>
+          <span class="value" id="densityValue">25 mg/cm³</span>
+        </div>
+        <input id="density" type="range" min="5" max="100" step="1" value="25" />
+        <p class="hint">同一體積嘅乾 aerogel 有幾重。高 density = 同一大小入面有更多固體質量。</p>
+      </div>
+
+      <div class="bottom-actions">
+        <button type="button" id="resetBtn">Reset demo</button>
+        <button type="button" id="frontBtn">Reset camera</button>
+      </div>
+      <div id="status" aria-live="polite">3D engine loading…</div>
+    </section>
+
+    <section class="panel viewer">
+      <div class="viewer-head">
+        <h2>Simplified 3D aerogel</h2>
+        <div class="viewer-help">Drag = rotate · Wheel/pinch = zoom · Right-drag = pan</div>
+      </div>
+      <div id="stage" aria-label="Interactive 3D aerogel model">
+        <div class="legend">
+          <span><i class="dot bn"></i>BN</span>
+          <span><i class="dot c"></i>Carbon</span>
+          <span>Vertical gaps = pores</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="summary" aria-label="Current values">
+    <div class="chip"><span>BN : C</span><strong id="sRatio">50 : 50</strong></div>
+    <div class="chip"><span>Concentration</span><strong id="sConc">10 wt%</strong></div>
+    <div class="chip"><span>Porosity</span><strong id="sPorosity">98.0%</strong></div>
+    <div class="chip"><span>Pore size</span><strong id="sPore">60 μm</strong></div>
+    <div class="chip"><span>Density</span><strong id="sDensity">25 mg/cm³</strong></div>
+  </section>
+
+  <section class="panel info">
+    <h2>What each parameter actually means</h2>
+    <div class="info-grid">
+      <article class="info-card">
+        <h3>BN : C ratio</h3>
+        <p>
+          呢個係「材料配方」。例如 70:30 即係固體骨架入面，概念上以較多 BN、較少 Carbon 組成。
+          <strong>佢唔代表總共落咗幾多料。</strong>
+        </p>
+      </article>
+      <article class="info-card">
+        <h3>Total concentration</h3>
+        <p>
+          呢個係「一開始混合物有幾濃」。例如 10 wt% 即係製作前混合物中，固體 BN + C 佔一定重量比例。
+          真實製作時佢會影響最後骨架、孔同密度，但呢個 demo 暫時分開顯示。
+        </p>
+      </article>
+      <article class="info-card">
+        <h3>Porosity</h3>
+        <p>
+          呢個係「最後有幾空」。Porosity 越高，代表同一體積入面空間越多、固體越少。
+          3D demo 會用更薄嘅骨架去表示高 porosity。
+        </p>
+      </article>
+      <article class="info-card">
+        <h3>Pore size</h3>
+        <p>
+          呢個係「一個孔大概有幾闊」。Pore size 越大，畫面中孔道間距會變大、孔數會減少。
+          呢個只係簡化表示，唔係 SEM 重建。
+        </p>
+      </article>
+      <article class="info-card">
+        <h3>Density</h3>
+        <p>
+          Density 係「每一個體積有幾多質量」。同樣大小嘅 aerogel，density 越高就越重。
+          Demo 會用更多/更實嘅固體粒子去表示。
+        </p>
+      </article>
+      <article class="info-card">
+        <h3>Why these are separate here</h3>
+        <p>
+          真實材料入面呢幾個數值唔係完全獨立，例如 concentration 改咗，最後 porosity 同 density 通常都會跟住變。
+          但第一版 demo 分開控制，目的係先搞清楚「每一粒掣究竟代表咩」。
+        </p>
+      </article>
+    </div>
+  </section>
+</div>
+
+<script type="module">
+(async()=>{
+  const status = document.getElementById('status');
+
+  let THREE, OrbitControls;
+  try{
+    THREE = await import('three');
+    ({OrbitControls} = await import('three/addons/controls/OrbitControls.js'));
+  }catch(err){
+    status.textContent = '3D library failed to load. Please open this HTML with internet access.';
+    console.error(err);
+    return;
+  }
+
+  const stage = document.getElementById('stage');
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0xf4f4f0);
+
+  const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+  camera.position.set(8.5, 6.5, 9.5);
+
+  const renderer = new THREE.WebGLRenderer({antialias:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  stage.prepend(renderer.domElement);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.07;
+  controls.target.set(0,0,0);
+  controls.minDistance = 5;
+  controls.maxDistance = 24;
+
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x7b7b72, 2.3));
+  const key = new THREE.DirectionalLight(0xffffff, 2.5);
+  key.position.set(6,8,7);
+  scene.add(key);
+
+  const rim = new THREE.DirectionalLight(0xd9e5ff, 1.4);
+  rim.position.set(-7,3,-5);
+  scene.add(rim);
+
+  const frame = new THREE.LineSegments(
+    new THREE.EdgesGeometry(new THREE.BoxGeometry(7.2,7.2,7.2)),
+    new THREE.LineBasicMaterial({color:0x7f858b, transparent:true, opacity:0.28})
+  );
+  scene.add(frame);
+
+  const group = new THREE.Group();
+  scene.add(group);
+
+  const inputs = {
+    ratio: document.getElementById('ratio'),
+    concentration: document.getElementById('concentration'),
+    porosity: document.getElementById('porosity'),
+    poreSize: document.getElementById('poreSize'),
+    density: document.getElementById('density')
+  };
+
+  function clamp(v,min,max){ return Math.max(min,Math.min(max,v)); }
+  function lerp(a,b,t){ return a+(b-a)*t; }
+
+  function clearGroup(){
+    while(group.children.length){
+      const obj = group.children.pop();
+      if(obj.geometry) obj.geometry.dispose();
+      if(obj.material){
+        if(Array.isArray(obj.material)) obj.material.forEach(m=>m.dispose());
+        else obj.material.dispose();
+      }
+    }
+  }
+
+  function values(){
+    return {
+      bn: Number(inputs.ratio.value),
+      conc: Number(inputs.concentration.value),
+      por: Number(inputs.porosity.value),
+      pore: Number(inputs.poreSize.value),
+      dens: Number(inputs.density.value)
+    };
+  }
+
+  function updateLabels(v){
+    const carbon = 100 - v.bn;
+    const ratioTxt = `${Math.round(v.bn)} : ${Math.round(carbon)}`;
+    const concTxt = `${v.conc.toFixed(v.conc % 1 ? 1 : 0)} wt%`;
+    const porTxt = `${v.por.toFixed(1)}%`;
+    const poreTxt = `${Math.round(v.pore)} μm`;
+    const densTxt = `${Math.round(v.dens)} mg/cm³`;
+
+    document.getElementById('ratioValue').textContent = ratioTxt;
+    document.getElementById('concValue').textContent = concTxt;
+    document.getElementById('porosityValue').textContent = porTxt;
+    document.getElementById('poreValue').textContent = poreTxt;
+    document.getElementById('densityValue').textContent = densTxt;
+
+    document.getElementById('sRatio').textContent = ratioTxt;
+    document.getElementById('sConc').textContent = concTxt;
+    document.getElementById('sPorosity').textContent = porTxt;
+    document.getElementById('sPore').textContent = poreTxt;
+    document.getElementById('sDensity').textContent = densTxt;
+  }
+
+  function buildModel(){
+    const v = values();
+    updateLabels(v);
+    clearGroup();
+
+    // Visual mapping only:
+    // pore size -> number/spacing of vertical walls
+    // porosity -> wall thickness
+    // concentration + density -> number of visible solid particles
+    // BN:C -> share of light BN vs dark carbon particles
+
+    const poreT = clamp((v.pore - 20) / 180, 0, 1);
+    const wallCount = Math.round(lerp(15, 4, poreT));
+
+    const porT = clamp((v.por - 80) / 19.5, 0, 1);
+    const wallThickness = lerp(0.34, 0.055, porT);
+
+    const wallMat = new THREE.MeshStandardMaterial({
+      color: 0x9b9b92,
+      roughness: 0.88,
+      metalness: 0.02,
+      transparent: true,
+      opacity: clamp(0.32 + v.dens / 180, 0.35, 0.82),
+      side: THREE.DoubleSide
+    });
+
+    const width = 6.4;
+    const depth = 6.3;
+    const height = 6.4;
+
+    for(let i=0;i<wallCount;i++){
+      const x = -width/2 + (i/(Math.max(1,wallCount-1))) * width;
+      const wall = new THREE.Mesh(
+        new THREE.BoxGeometry(wallThickness, depth, height),
+        wallMat.clone()
+      );
+      wall.position.set(x,0,0);
+      group.add(wall);
+    }
+
+    // A few horizontal micro-bridges for visual structure.
+    const bridgeCount = Math.round(lerp(3, 8, clamp(v.conc/25,0,1)));
+    const bridgeMat = wallMat.clone();
+    bridgeMat.opacity *= 0.7;
+    for(let b=0;b<bridgeCount;b++){
+      const z = -height/2 + ((b+1)/(bridgeCount+1))*height;
+      const bridge = new THREE.Mesh(
+        new THREE.BoxGeometry(width, wallThickness*0.7, wallThickness*0.9),
+        bridgeMat.clone()
+      );
+      bridge.position.set(0,0,z);
+      group.add(bridge);
+    }
+
+    const concentrationT = clamp((v.conc - 1) / 24, 0, 1);
+    const densityT = clamp((v.dens - 5) / 95, 0, 1);
+    const particleCount = Math.round(lerp(110, 700, 0.58*concentrationT + 0.42*densityT));
+    const bnCount = Math.round(particleCount * v.bn/100);
+    const cCount = particleCount - bnCount;
+
+    const sphere = new THREE.SphereGeometry(0.055, 7, 6);
+    const bnMat = new THREE.MeshStandardMaterial({color:0xe8e2cf, roughness:0.8, metalness:0.0});
+    const cMat = new THREE.MeshStandardMaterial({color:0x2f3439, roughness:0.62, metalness:0.05});
+
+    const bnMesh = new THREE.InstancedMesh(sphere, bnMat, Math.max(1,bnCount));
+    const cMesh = new THREE.InstancedMesh(sphere, cMat, Math.max(1,cCount));
+    const dummy = new THREE.Object3D();
+
+    function seed(mesh,count,offset){
+      for(let i=0;i<count;i++){
+        const idx = (i*17 + offset) % wallCount;
+        const xBase = -width/2 + (idx/(Math.max(1,wallCount-1))) * width;
+        const a = Math.sin((i+offset)*12.9898)*43758.5453;
+        const b = Math.sin((i+offset)*78.233)*12345.6789;
+        const c = Math.sin((i+offset)*39.425)*24680.1357;
+        const rx = a - Math.floor(a);
+        const ry = b - Math.floor(b);
+        const rz = c - Math.floor(c);
+
+        dummy.position.set(
+          xBase + (rx-.5)*Math.max(0.08,wallThickness*0.9),
+          (ry-.5)*depth*0.96,
+          (rz-.5)*height*0.96
+        );
+        const s = 0.72 + 0.7*((rx+ry+rz)/3);
+        dummy.scale.setScalar(s);
+        dummy.rotation.set(rx*Math.PI,ry*Math.PI,rz*Math.PI);
+        dummy.updateMatrix();
+        mesh.setMatrixAt(i,dummy.matrix);
+      }
+      mesh.instanceMatrix.needsUpdate = true;
+    }
+
+    if(bnCount>0){ seed(bnMesh,bnCount,11); group.add(bnMesh); }
+    if(cCount>0){ seed(cMesh,cCount,29); group.add(cMesh); }
+
+    status.textContent =
+      `Visual mapping: ${wallCount} vertical walls · ${particleCount} visible solid particles · wall thickness scaled by porosity`;
+  }
+
+  function resize(){
+    const w = Math.max(1, stage.clientWidth);
+    const h = Math.max(1, stage.clientHeight);
+    renderer.setSize(w,h,false);
+    camera.aspect = w/h;
+    camera.updateProjectionMatrix();
+  }
+
+  const ro = new ResizeObserver(resize);
+  ro.observe(stage);
+  resize();
+
+  Object.values(inputs).forEach(el=>{
+    el.addEventListener('input', buildModel);
+  });
+
+  document.getElementById('resetBtn').addEventListener('click',()=>{
+    inputs.ratio.value = 50;
+    inputs.concentration.value = 10;
+    inputs.porosity.value = 98;
+    inputs.poreSize.value = 60;
+    inputs.density.value = 25;
+    buildModel();
+  });
+
+  function resetCamera(){
+    camera.position.set(8.5,6.5,9.5);
+    controls.target.set(0,0,0);
+    controls.update();
+  }
+  document.getElementById('frontBtn').addEventListener('click',resetCamera);
+
+  buildModel();
+  status.textContent = 'Ready. Drag the model to rotate it.';
+
+  function animate(){
+    controls.update();
+    renderer.render(scene,camera);
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+</body>
+</html>

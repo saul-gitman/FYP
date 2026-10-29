@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "status": "handover_template_not_calibrated",
+  "project": "Thermo-optically functional CFRP laminates for lightweight electrified systems",
+  "coordinates": {
+    "x": "in_plane",
+    "y": "in_plane",
+    "z": "inside_to_exposed_BN_face"
+  },
+  "geometry": {
+    "fabrication_size_m": [
+      0.05,
+      0.05
+    ],
+    "reported_retained_test_region_m": [
+      0.04,
+      0.04
+    ],
+    "actual_test_size_m": null,
+    "heater_size_m": [
+      0.02,
+      0.02
+    ],
+    "heater_location": "back_centre",
+    "BN_thickness_candidates_m": [
+      0.001,
+      0.0005
+    ],
+    "BN_thickness_m": null,
+    "carbon_interlayer_thickness_m": null,
+    "upper_CFRP_thickness_m": null,
+    "lower_CFRP_thickness_m": null
+  },
+  "layers_outside_to_inside": [
+    {
+      "id": "BN_surface",
+      "materials": [
+        "CNF",
+        "BN_grade_unconfirmed",
+        "MTMS_derived_phase"
+      ],
+      "state": null
+    },
+    {
+      "id": "upper_CFRP",
+      "materials": [
+        "carbon_cloth",
+        "epoxy"
+      ],
+      "state": "cured_planned"
+    },
+    {
+      "id": "CNT_interlayer",
+      "materials": [
+        "CNF",
+        "carboxylated_CNT",
+        "MTMS_derived_phase",
+        "epoxy_if_infiltrated"
+      ],
+      "state": null
+    },
+    {
+      "id": "lower_CFRP",
+      "materials": [
+        "carbon_cloth",
+        "epoxy"
+      ],
+      "state": "cured_planned"
+    }
+  ],
+  "material_property_record_template": {
+    "material_id": null,
+    "state": null,
+    "temperature_K": null,
+    "K_local_W_mK": null,
+    "density_kg_m3": null,
+    "cp_J_kgK": null,
+    "porosity": null,
+    "resin_volume_fraction": null,
+    "solid_mass_fractions": null,
+    "local_basis_columns_global": null,
+    "pore_diameter_m": null,
+    "wall_thickness_m": null,
+    "provenance": {
+      "kind": null,
+      "source": null,
+      "page_or_table": null,
+      "uncertainty": null
+    }
+  },
+  "interfaces": {
+    "area_resistance_m2K_W": null,
+    "adhesive_layers": null
+  },
+  "surface": {
+    "solar_reflectance_spectrum": null,
+    "solar_transmittance_spectrum": null,
+    "solar_weighting_range_nm": [
+      300,
+      2500
+    ],
+    "thermal_emissivity": null,
+    "surface_state": null
+  },
+  "conditions": {
+    "ambient_temperature_K_nominal": 298.15,
+    "ambient_tolerance_K": 2,
+    "convection_h_W_m2K": null,
+    "surroundings_temperature_K": null,
+    "initial_temperature_K": null,
+    "load_cases": [
+      {
+        "id": "dark",
+        "heater_power_W": 2,
+        "solar_irradiance_W_m2": 0
+      },
+      {
+        "id": "solar",
+        "heater_power_W": 0,
+        "solar_irradiance_W_m2": 1000
+      },
+      {
+        "id": "combined",
+        "heater_power_W": 2,
+        "solar_irradiance_W_m2": 1000
+      }
+    ],
+    "optional_dark_extension_W": 5,
+    "heater_power_fraction_to_sample": null,
+    "illuminated_area_m2": null
+  },
+  "numerics": {
+    "solver": null,
+    "mesh": null,
+    "time_step_s": null,
+    "convergence_criteria": null
+  },
+  "required_outputs": [
+    "K_global",
+    "temperature_field",
+    "heat_flux",
+    "heater_temperature",
+    "Rsys_dark",
+    "R_area_stack",
+    "energy_balance",
+    "convergence",
+    "uncertainty"
+  ],
+  "unresolved_issue_ids": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E08",
+    "E09",
+    "E10"
+  ],
+  "warnings": [
+    "Guide values are planned, not measured.",
+    "Do not assign dry-aerogel literature k to a cured resin-filled region.",
+    "Null values must be supplied or explicitly assumed."
+  ]
+}

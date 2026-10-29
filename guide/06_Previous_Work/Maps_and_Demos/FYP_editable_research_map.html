@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FYP Research Map</title>
+<style>
+:root{
+  --bg:#ffffff;
+  --ink:#111111;
+  --muted:#666666;
+  --line:#cfcfcf;
+  --soft:#f6f6f6;
+  --soft2:#fafafa;
+  --accent:#111111;
+  --need:#fff4d6;
+  --candidate:#eef2ff;
+  --planned:#eaf7ef;
+  --progress:#eaf4ff;
+  --confirmed:#e9f8ef;
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,Arial,Helvetica,sans-serif;
+}
+body{padding:24px}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+.page{
+  max-width:1500px;
+  margin:0 auto;
+}
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:24px;
+  margin-bottom:18px;
+}
+.title-wrap{min-width:0}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  font-weight:700;
+  margin-bottom:5px;
+}
+h1{
+  margin:0;
+  font-size:32px;
+  line-height:1.1;
+}
+.project-line{
+  margin-top:9px;
+  color:#444;
+  font-size:15px;
+  line-height:1.45;
+  max-width:900px;
+}
+.toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:8px;
+  min-width:300px;
+}
+.btn{
+  border:1px solid #bdbdbd;
+  background:#fff;
+  border-radius:8px;
+  padding:9px 12px;
+  font-size:13px;
+  font-weight:650;
+}
+.btn:hover{background:#f4f4f4}
+.btn.primary{
+  background:#111;
+  color:#fff;
+  border-color:#111;
+}
+.summary{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(120px,1fr));
+  gap:10px;
+  margin:10px 0 20px;
+}
+.metric{
+  border:1px solid #ddd;
+  background:#fff;
+  border-radius:10px;
+  padding:12px 14px;
+}
+.metric .k{font-size:12px;color:var(--muted);margin-bottom:4px}
+.metric .v{font-size:24px;font-weight:800;line-height:1}
+.metric .s{font-size:11px;color:var(--muted);margin-top:6px}
+.logic{
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  padding:14px 0;
+  margin-bottom:22px;
+}
+.logic-row{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr;
+  align-items:center;
+  gap:12px;
+}
+.logic-node{
+  font-weight:800;
+  font-size:14px;
+  text-align:center;
+}
+.logic-arrow{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-width:120px;
+}
+.logic-arrow .line{
+  width:100%;
+  border-top:2px solid #111;
+  position:relative;
+  height:1px;
+}
+.logic-arrow .line::after{
+  content:"";
+  position:absolute;
+  right:-1px;
+  top:-5px;
+  border-left:8px solid #111;
+  border-top:4px solid transparent;
+  border-bottom:4px solid transparent;
+}
+.logic-arrow.sim .line{border-top-style:dashed}
+.logic-arrow .label{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.04em;
+  margin-top:8px;
+}
+.logic-note{
+  margin-top:11px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.logic-note > div{
+  background:var(--soft2);
+  border:1px solid #e2e2e2;
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:12px;
+  line-height:1.45;
+}
+.logic-note b{font-size:12px}
+.board{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  align-items:start;
+}
+.column{
+  border:2px solid #111;
+  border-radius:14px;
+  background:#fff;
+  overflow:hidden;
+  min-width:0;
+}
+.column-head{
+  padding:16px 18px 13px;
+  border-bottom:1px solid #bdbdbd;
+  background:#fff;
+}
+.num{
+  display:inline-grid;
+  place-items:center;
+  width:28px;
+  height:28px;
+  border:2px solid #111;
+  border-radius:50%;
+  margin-right:8px;
+  font-weight:850;
+  font-size:14px;
+  vertical-align:middle;
+}
+.column-title{
+  display:inline;
+  font-size:19px;
+  line-height:1.3;
+  font-weight:850;
+}
+.column-sub{
+  margin:8px 0 0 38px;
+  font-size:12px;
+  line-height:1.45;
+  color:var(--muted);
+}
+.items{
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.item{
+  border:1px solid #d7d7d7;
+  border-radius:10px;
+  background:#fff;
+  overflow:hidden;
+}
+.item-main{
+  display:grid;
+  grid-template-columns:22px 1fr auto;
+  gap:8px;
+  align-items:start;
+  padding:10px;
+}
+.dot{
+  font-size:20px;
+  line-height:28px;
+  text-align:center;
+}
+.item-text{
+  width:100%;
+  min-height:34px;
+  resize:vertical;
+  border:0;
+  outline:0;
+  padding:6px 5px;
+  background:transparent;
+  font-size:14px;
+  line-height:1.35;
+  font-weight:680;
+}
+.item-text:focus{
+  outline:2px solid #111;
+  outline-offset:1px;
+  border-radius:4px;
+}
+.status{
+  min-width:118px;
+  border:1px solid #cfcfcf;
+  border-radius:7px;
+  background:#fff;
+  padding:7px 8px;
+  font-size:12px;
+  font-weight:700;
+}
+.item-extra{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:8px;
+  align-items:start;
+  border-top:1px solid #ececec;
+  background:#fafafa;
+  padding:8px 10px 9px 40px;
+}
+.note{
+  width:100%;
+  min-height:52px;
+  resize:vertical;
+  border:1px solid #ddd;
+  border-radius:7px;
+  background:#fff;
+  padding:8px;
+  font-size:12px;
+  line-height:1.35;
+}
+.actions{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+.icon-btn{
+  width:30px;
+  height:28px;
+  border:1px solid #d0d0d0;
+  background:#fff;
+  border-radius:6px;
+  font-size:13px;
+}
+.icon-btn:hover{background:#eee}
+.add{
+  margin:0 10px 12px;
+  width:calc(100% - 20px);
+  border:1px dashed #aaa;
+  background:#fff;
+  border-radius:8px;
+  padding:10px;
+  font-weight:750;
+  font-size:13px;
+}
+.add:hover{background:#f7f7f7}
+.column-footer{
+  border-top:1px solid #ddd;
+  padding:10px 14px;
+  font-size:12px;
+  color:var(--muted);
+  background:#fafafa;
+}
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid #ddd;
+  color:#666;
+  font-size:12px;
+}
+.status-key{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.key{
+  border:1px solid #ccc;
+  border-radius:999px;
+  padding:4px 8px;
+  background:#fff;
+}
+.presentation .toolbar,
+.presentation .summary,
+.presentation .item-extra,
+.presentation .actions,
+.presentation .add,
+.presentation .footer,
+.presentation .column-footer{
+  display:none !important;
+}
+.presentation .item-main{grid-template-columns:22px 1fr auto}
+.presentation .item{border-color:#ddd}
+.presentation .status{
+  pointer-events:none;
+  border:0;
+  background:transparent;
+  text-align:right;
+  padding-right:2px;
+}
+.presentation .item-text{
+  resize:none;
+  pointer-events:none;
+}
+.presentation .project-line{
+  font-size:16px;
+}
+.presentation .logic{margin-top:10px}
+@media(max-width:1100px){
+  .topbar{flex-direction:column}
+  .toolbar{justify-content:flex-start;min-width:0}
+  .summary{grid-template-columns:repeat(2,1fr)}
+  .board{grid-template-columns:1fr}
+  .logic-row{grid-template-columns:1fr}
+  .logic-arrow{min-width:0;width:90%;margin:0 auto}
+  .logic-note{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  body{padding:12px}
+  h1{font-size:25px}
+  .summary{grid-template-columns:1fr 1fr}
+  .item-main{grid-template-columns:18px 1fr}
+  .status{grid-column:2;width:100%}
+  .item-extra{padding-left:36px;grid-template-columns:1fr}
+  .actions{flex-direction:row}
+}
+@media print{
+  body{padding:0}
+  .toolbar,.summary,.item-extra,.actions,.add,.footer,.column-footer{display:none!important}
+  .page{max-width:none}
+  .board{gap:10px}
+  .column{break-inside:avoid}
+  .status{border:0;background:transparent}
+  .item-text{resize:none}
+}
+</style>
+</head>
+<body>
+<div class="page" id="app">
+  <div class="topbar">
+    <div class="title-wrap">
+      <div class="eyebrow">FYP working map</div>
+      <h1>Processing → Structure → Properties</h1>
+      <div class="project-line" contenteditable="true" id="projectLine" spellcheck="true">
+        How controllable fabrication parameters shape the material structure, and how that structure governs the thermal, optical and mechanical performance of the laminate.
+      </div>
+    </div>
+    <div class="toolbar">
+      <button class="btn" id="presentationBtn">Presentation mode</button>
+      <button class="btn" id="exportBtn">Export snapshot</button>
+      <button class="btn" id="importBtn">Import snapshot</button>
+      <button class="btn" id="printBtn">Print / PDF</button>
+      <button class="btn primary" id="resetBtn">Reset starter map</button>
+      <input id="importFile" type="file" accept=".json" hidden>
+    </div>
+  </div>
+
+  <div class="summary">
+    <div class="metric"><div class="k">Total items</div><div class="v" id="mTotal">0</div><div class="s">across all three parts</div></div>
+    <div class="metric"><div class="k">Need literature</div><div class="v" id="mRead">0</div><div class="s">questions still to resolve</div></div>
+    <div class="metric"><div class="k">In progress</div><div class="v" id="mProgress">0</div><div class="s">currently being worked on</div></div>
+    <div class="metric"><div class="k">Confirmed</div><div class="v" id="mConfirmed">0</div><div class="s">defined / measured / accepted</div></div>
+  </div>
+
+  <section class="logic" aria-label="Research logic">
+    <div class="logic-row">
+      <div class="logic-node">1. Processing / Control Parameters</div>
+      <div class="logic-arrow">
+        <div class="line"></div>
+        <div class="label">SHAPES</div>
+      </div>
+      <div class="logic-node">2. Resulting Structure</div>
+      <div class="logic-arrow sim">
+        <div class="line"></div>
+        <div class="label">SIMULATION</div>
+      </div>
+      <div class="logic-node">3. Resulting Properties</div>
+    </div>
+    <div class="logic-note">
+      <div><b>Experiment: 1 → 3</b><br>Change a controlled preparation variable, then measure how the final performance responds.</div>
+      <div><b>Simulation: 2 → 3</b><br>Use the measured / idealised structure as model input to study how morphology controls performance.</div>
+    </div>
+  </section>
+
+  <main class="board" id="board"></main>
+
+  <div class="footer">
+    <div class="status-key">
+      <span class="key">Need literature</span>
+      <span class="key">Candidate</span>
+      <span class="key">Planned</span>
+      <span class="key">In progress</span>
+      <span class="key">Confirmed</span>
+    </div>
+    <div>Edits are saved automatically in this browser.</div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const STORAGE_KEY = "fyp_psp_working_map_v2";
+
+  const starter = {
+    projectLine: "How controllable fabrication parameters shape the material structure, and how that structure governs the thermal, optical and mechanical performance of the laminate.",
+    columns: [
+      {
+        id: 1,
+        title: "Processing / Control Parameters",
+        subtitle: "What you can deliberately change during material preparation or laminate fabrication.",
+        items: [
+          {text:"BN/C ratio / relative filler composition", status:"Need literature", note:"Seed idea. Decide whether this should be one combined ratio or separate BN and carbon/CNT loadings."},
+          {text:"Freezing temperature", status:"Candidate", note:"One of the original control variables. Define the range after reading and pre-tests."},
+          {text:"Freezing time", status:"Candidate", note:"One of the original control variables. Clarify whether freezing time is independently controllable from freeze-drying duration."},
+          {text:"CNT loading in the carbon-aerogel interlayer", status:"Planned", note:"Current experimental plan uses a CNT-content series."},
+          {text:"BN loading in the reflective surface layer", status:"Planned", note:"Current experimental plan uses a BN-content series."},
+          {text:"Dispersion / sonication condition", status:"Need literature", note:"Potentially controls agglomeration and pore development. Decide which parameter should actually be varied."},
+          {text:"Freeze-drying pressure and duration", status:"Need literature", note:"May affect collapse, shrinkage and final pore structure; likely partly constrained by equipment."},
+          {text:"Aerogel / surface-layer thickness", status:"Candidate", note:"Could be fixed as a control or intentionally varied later."},
+          {text:"Resin infusion / consolidation condition", status:"Need literature", note:"Important because infiltration can alter pores, density and interface quality."}
+        ]
+      },
+      {
+        id: 2,
+        title: "Resulting Structure",
+        subtitle: "What the processing conditions physically produce. These are morphology / microstructure descriptors, not final performance.",
+        items: [
+          {text:"Pore / cell geometry (hexagonal?)", status:"Need literature", note:"Keep the geometry open until microscopy supports a repeatable description; do not assume hexagonal in advance."},
+          {text:"Pore size and pore-size distribution", status:"Need literature", note:"Likely key structural input for heat-transfer modelling."},
+          {text:"Porosity", status:"Need literature", note:"Distinguish open / total porosity if the measurement method allows it."},
+          {text:"Bulk density", status:"Candidate", note:"Original idea. Track both dry aerogel density and final laminate / layer density where useful."},
+          {text:"Pore alignment / anisotropy", status:"Need literature", note:"Important if directional freezing creates aligned channels."},
+          {text:"Drying shrinkage", status:"Candidate", note:"Useful to connect fabrication conditions to final dimensions and density."},
+          {text:"Layer thickness / thickness uniformity", status:"Planned", note:"Measure after fabrication; needed for thermal resistance calculations."},
+          {text:"BN / CNT dispersion and agglomeration", status:"Need literature", note:"Can be assessed through microscopy / image analysis if practical."},
+          {text:"Interface quality / residual voids after resin infiltration", status:"Need literature", note:"Potentially important for both thermal and mechanical behaviour."}
+        ]
+      },
+      {
+        id: 3,
+        title: "Resulting Properties",
+        subtitle: "What the finished material or laminate actually does. These are the outputs to measure, compare or predict.",
+        items: [
+          {text:"Tensile / mechanical strength", status:"Need literature", note:"Original idea. Final test method still needs to be fixed; current plan also considers short-beam / interlaminar behaviour."},
+          {text:"Through-thickness thermal conductivity (kz)", status:"Planned", note:"Core thermal property for the laminate / interlayer system."},
+          {text:"Thermal resistance", status:"Planned", note:"Useful alongside conductivity because thickness matters directly."},
+          {text:"Heat-source temperature rise", status:"Planned", note:"Direct system-level indicator under internal heating."},
+          {text:"Transient heating / cooling response", status:"Candidate", note:"Can complement steady-state results if the time history is useful."},
+          {text:"Spectral reflectance", status:"Planned", note:"Optical response across the measured wavelength range."},
+          {text:"Solar-weighted reflectance", status:"Planned", note:"Condenses the spectrum into one solar-relevant performance metric."},
+          {text:"Temperature rise under irradiation", status:"Planned", note:"Directly communicates whether the BN surface reduces solar heating."},
+          {text:"Thermal–optical coupled cooling performance", status:"Candidate", note:"Combined internal heat source + irradiation case; useful as the final system-level result."},
+          {text:"Mass / areal-density penalty", status:"Need literature", note:"Important for the lightweight-system argument and for comparing performance per added mass."}
+        ]
+      }
+    ]
+  };
+
+  const statuses = ["Need literature","Candidate","Planned","In progress","Confirmed"];
+
+  const clone = obj => JSON.parse(JSON.stringify(obj));
+
+  let state = load();
+
+  function load(){
+    try{
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if(raw) return JSON.parse(raw);
+    }catch(e){}
+    return clone(starter);
+  }
+
+  function save(){
+    state.projectLine = document.getElementById("projectLine").innerText.trim();
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+    updateMetrics();
+  }
+
+  function el(tag, cls, text){
+    const node = document.createElement(tag);
+    if(cls) node.className = cls;
+    if(text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function render(){
+    document.getElementById("projectLine").textContent = state.projectLine || starter.projectLine;
+    const board = document.getElementById("board");
+    board.innerHTML = "";
+
+    state.columns.forEach((col, ci) => {
+      const section = el("section","column");
+      const head = el("div","column-head");
+      const number = el("span","num",String(col.id));
+      const title = el("span","column-title",col.title);
+      const sub = el("div","column-sub",col.subtitle);
+      head.append(number,title,sub);
+      section.appendChild(head);
+
+      const items = el("div","items");
+      col.items.forEach((item, ii) => items.appendChild(renderItem(item, ci, ii)));
+      section.appendChild(items);
+
+      const add = el("button","add","+ Add item");
+      add.type = "button";
+      add.addEventListener("click", () => {
+        col.items.push({text:"New item",status:"Need literature",note:"Add what needs to be decided, measured or verified."});
+        save(); render();
+        const textareas = section.querySelectorAll(".item-text");
+        const last = textareas[textareas.length - 1];
+        if(last){ last.focus(); last.select(); }
+      });
+      section.appendChild(add);
+
+      const footer = el("div","column-footer");
+      footer.innerHTML = "<b>Fixed category.</b> Edit the items, status and notes underneath it.";
+      section.appendChild(footer);
+
+      board.appendChild(section);
+    });
+
+    updateMetrics();
+  }
+
+  function renderItem(item, ci, ii){
+    const box = el("div","item");
+    const main = el("div","item-main");
+    const dot = el("div","dot","•");
+
+    const text = document.createElement("textarea");
+    text.className = "item-text";
+    text.value = item.text;
+    text.rows = 2;
+    text.setAttribute("aria-label","Item");
+    text.addEventListener("input", () => {
+      state.columns[ci].items[ii].text = text.value;
+      save();
+    });
+
+    const select = document.createElement("select");
+    select.className = "status";
+    select.setAttribute("aria-label","Status");
+    statuses.forEach(s => {
+      const op = document.createElement("option");
+      op.value = s; op.textContent = s;
+      if(item.status === s) op.selected = true;
+      select.appendChild(op);
+    });
+    select.addEventListener("change", () => {
+      state.columns[ci].items[ii].status = select.value;
+      save();
+    });
+
+    main.append(dot,text,select);
+
+    const extra = el("div","item-extra");
+    const note = document.createElement("textarea");
+    note.className = "note";
+    note.value = item.note || "";
+    note.placeholder = "Why it matters / what still needs to be checked / measurement or modelling plan";
+    note.setAttribute("aria-label","Notes");
+    note.addEventListener("input", () => {
+      state.columns[ci].items[ii].note = note.value;
+      save();
+    });
+
+    const acts = el("div","actions");
+    const up = el("button","icon-btn","↑");
+    up.type = "button"; up.title = "Move up";
+    up.addEventListener("click", () => move(ci,ii,-1));
+    const down = el("button","icon-btn","↓");
+    down.type = "button"; down.title = "Move down";
+    down.addEventListener("click", () => move(ci,ii,1));
+    const del = el("button","icon-btn","×");
+    del.type = "button"; del.title = "Delete item";
+    del.addEventListener("click", () => {
+      if(confirm("Delete this item?")){
+        state.columns[ci].items.splice(ii,1);
+        save(); render();
+      }
+    });
+    acts.append(up,down,del);
+
+    extra.append(note,acts);
+    box.append(main,extra);
+    return box;
+  }
+
+  function move(ci,ii,delta){
+    const arr = state.columns[ci].items;
+    const ni = ii + delta;
+    if(ni < 0 || ni >= arr.length) return;
+    [arr[ii],arr[ni]] = [arr[ni],arr[ii]];
+    save(); render();
+  }
+
+  function updateMetrics(){
+    const all = state.columns.flatMap(c => c.items);
+    document.getElementById("mTotal").textContent = all.length;
+    document.getElementById("mRead").textContent = all.filter(x => x.status === "Need literature").length;
+    document.getElementById("mProgress").textContent = all.filter(x => x.status === "In progress").length;
+    document.getElementById("mConfirmed").textContent = all.filter(x => x.status === "Confirmed").length;
+  }
+
+  document.getElementById("projectLine").addEventListener("input",save);
+
+  document.getElementById("presentationBtn").addEventListener("click", () => {
+    const app = document.getElementById("app");
+    app.classList.toggle("presentation");
+    document.getElementById("presentationBtn").textContent =
+      app.classList.contains("presentation") ? "Edit mode" : "Presentation mode";
+  });
+
+  document.getElementById("printBtn").addEventListener("click", () => window.print());
+
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    if(confirm("Reset all items, notes and statuses to the starter map?")){
+      state = clone(starter);
+      try{ localStorage.removeItem(STORAGE_KEY); }catch(e){}
+      render();
+    }
+  });
+
+  document.getElementById("exportBtn").addEventListener("click", () => {
+    save();
+    const blob = new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "FYP_research_map_snapshot.json";
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  document.getElementById("importBtn").addEventListener("click", () => {
+    document.getElementById("importFile").click();
+  });
+
+  document.getElementById("importFile").addEventListener("change", e => {
+    const file = e.target.files && e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try{
+        const next = JSON.parse(reader.result);
+        if(!next || !Array.isArray(next.columns) || next.columns.length !== 3) throw new Error("bad");
+        state = next;
+        save(); render();
+      }catch(err){
+        alert("That snapshot is not a valid FYP research-map file.");
+      }
+      e.target.value = "";
+    };
+    reader.readAsText(file);
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
