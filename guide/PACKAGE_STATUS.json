@@ -1,0 +1,23 @@
+{
+  "updated_on": "2026-10-29",
+  "purpose": "Transfer context for a receiving agent to build the aerogel simulator",
+  "transcript": {
+    "language": "English",
+    "source_segments": 78,
+    "translated_segments": 78,
+    "time_segments_match": true,
+    "coverage": "00:00:00\u201300:36:36",
+    "editing": "Context-corrected cleaned translation; all segments retained; uncertain terms marked; no audio verification"
+  },
+  "main_summary": "summary.md",
+  "requirements_extracted_by": "Handover editor",
+  "receiving_agent_role": "Build simulator",
+  "main_reference": "10.3390/gels9030220",
+  "full_paper_pdf_count": 1,
+  "new_reference_notes": [
+    "N01",
+    "N02",
+    "N03"
+  ],
+  "reference_limitations": "Main review and added papers have notes/verified links, but original PDF downloads were blocked. See 05_References/START_HERE.md."
+}

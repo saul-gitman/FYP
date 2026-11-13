@@ -1,0 +1,87 @@
+Project Code: _________
+
+THE HONG KONG POLYTECHNIC UNIVERSITY
+
+BEng(Hons) in Air Transport Engineering/
+
+BEng(Hons) in Aviation Engineering
+
+2026/2027
+
+AAE4002/AAE4012 Capstone Project Interim Report
+
+Project Title
+
+Student Name (SID) 
+
+Student Name (SID)
+
+Student Name (SID)
+
+Academic Supervisor: | 
+
+Industrial Supervisor (if any): | 
+
+Date of Submission: | 
+
+
+
+Leave this page on blank on purpose
+
+Table of Contents
+
+1 Introduction (Heading 1: Times New Roman, Font size 12)3
+
+1.1 Overview (Heading 2: Times New Roman, Font size 10)3
+
+1.2 Objectives3
+
+1.2.1 Objective 13
+
+2 Literature Review3
+
+3 Methodology3
+
+4 Results and Discussion3
+
+5 Conclusion3
+
+References3
+
+Others:3
+
+Abstract
+
+1 Introduction (Heading 1: Times New Roman, Font size 12)
+
+1.1 Overview (Heading 2: Times New Roman, Font size 10) 
+
+Main Context: Times New Roman, Font size 10, Double line space, 
+
+Example: The final year project is a testament to your ability to apply the knowledge and skills you have acquired throughout your studies to a real-world problem or research question. It is an opportunity for you to delve deeply into a topic that interests you, demonstrating your capacity for independent thought, critical analysis, and creative problem-solving.
+
+1.2 Objectives 
+
+1.2.1 Objective 1 (Heading 3: Times New Roman, Font size 10)
+
+2 Literature Review
+
+3 Methodology
+
+4 Results and Discussion
+
+5 Conclusion
+
+References 
+
+Wang, L., Ma, C., Feng, X., Zhang, Z., Yang, H., Zhang, J., ... & Wen, J. (2024). A survey on large language model based autonomous agents. Frontiers of Computer Science, 18(6), 1-26.
+
+Suggested to use APA or Vancouver Style
+
+Others: 
+
+MUST be a margin of approximately 2 cm on the lefthand side and right-hand side.
+
+A margin of around 2.5 cm on the top and bottom side.
+
+Pages should be numbered consecutively.

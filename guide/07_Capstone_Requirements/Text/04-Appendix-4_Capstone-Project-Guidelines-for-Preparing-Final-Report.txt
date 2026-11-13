@@ -1,0 +1,271 @@
+2026/27
+
+Department of Aeronautical and Aviation Engineering
+
+AAE4002/AAE4012 Capstone Project
+
+Guidelines for Preparing Final Report
+
+General Information 
+
+ 
+
+Every group needs to submit one group report. The project report, in its final form, must be submitted not later than the scheduled deadline.
+
+How to submit the Final Report:
+
+Upload the Final Report to Turnitin (via Blackboard). The Originality report will then be generated. 
+
+(Student manual for Turnitin: https://www.polyu.edu.hk/TEAL/en/elearning-support/turnitin-lti-assignment/)
+
+Each group should submit the followings before the scheduled deadline:
+
+Submit the Final Report, Originality Report and Peer Assessment Form (together with Summary of Contribution) of each group member via Final Year Project Management System (https://studentfyp.polyu.edu.hk/).
+
+Submit the Log Sheet of each group member via Final Year Project Management System.
+
+Please refer the “General Information for Students” for the submission deadline.
+
+Students are advised to submit their work before the deadline to avoid any last-minute issues. If technical difficulties (e.g., network or communication problems) prevent submission, students must at least email the required documents to their supervisor by the deadline. Late submissions without prior approval will incur strict penalties.
+
+Final Report Format
+
+Paper is to be good quality A4 size
+
+Typed double sided with double line spacing
+
+MUST be a margin of approximately 2 cm on the left-hand side and right-hand side
+
+Pages should be numbered consecutively
+
+Referencing
+
+Other people’s work should be listed as references if they are referred to in the report.  This list of references is important so as to give credit to other people and that the reader can refer to the reference for further details. The University views plagiarism and unauthorized copying of copyright materials as a serious disciplinary offence. (Student Handbook, Appendix 3)
+
+2.  Writing the Report 
+
+It is advisable to consult the academic supervisor and then prepare a plan of the draft report before you start writing. The academic supervisor may check the complete draft and sufficient time must be allowed for this to be done and for amendments to be made. It should be noted that academic supervisors might well have more than one report to check. It will probably take several weeks to write the report. You must start sufficiently early for preparation. 
+
+The format of the report will vary depending upon the particular project and this should be discussed with the academic supervisor. Please note that the report will be assessed based on elements such as technical content, clarity, layout, standard of English, process and analysis of experimental data or simulation results, depth of discussion, useful conclusions, etc. It is not advisable to draw too many conclusions (say not exceeding 5), which could over flush your major achievements.
+
+3.  Length of the Report 
+
+The report should be written such that it can be read and absorbed by an engineer having a basic knowledge of the subject. It should not contain irrelevant material. There is no page limit to the length of the Final Report, however the report should be kept as concise as possible and avoid unnecessary repetitions.
+
+4.  Report Contents
+
+The contents of a report typically include
+
+Title page
+
+Acknowledgement
+
+Abstract 
+
+Table of contents
+
+Nomenclature
+
+Chapter 1: Introduction
+
+Chapter 2: The main body of the report
+
+      :
+
+Chapter i: ……..
+
+      :
+
+Chapter Q: Conclusions and recommendations for future work
+
+References
+
+Appendices
+
+4.1Title Page
+
+A sample of the title page is shown in Appendix 1. 
+
+4.2 Acknowledgments 
+
+This is where you should acknowledge the various parties who initiate, supervise or make contributions to the project.
+
+4.3 Table of Contents
+
+The purpose of a table of contents is to provide an overview of the material included in the report together with the sequence of presentation. The table of contents includes the following major divisions of the report: the introduction, the chapters with their subsections, and the reference and appendix. Page numbers for each of these divisions should be given. Care should be exercised that titles of chapters and captions of subdivisions within chapters correspond exactly with those included in the body of the report. 
+
+4.4 Abstract 
+
+An abstract consists of the following parts: A short statement of the problem, a brief description of the methods and procedures used in collecting data, and a condensed summary of the findings of the study. Normally, the length of abstract should range from 200 to 400 words.
+
+4.5 Nomenclature
+
+Nomenclature is not always necessary, but for report in which many mathematical symbols are used, it is preferable to include such a section in the report.
+
+4.6Introduction 
+
+An introduction should be written with considerable care with two major aims in mind. Firstly, describe the problem in a suitable context. Secondly, give rise to and stimulate readers' interest.
+
+An introductory chapter may follow the following structure: 
+
+Background. You may include a description of an engineering problem and literature review.
+
+Issues to be addressed or problems to be resolved in your project.
+
+Objectives of the project.
+
+Major work outline.
+
+4.7The Main Content
+
+The main content may contain chapters such as:
+
+Theoretical consideration
+
+Project management
+
+Experimental details (including error analysis), if applicable
+
+Numerical method, if applicable
+
+Results and discussions
+
+In writing the main body of the report, there are certain general principles, which should be followed:
+
+Organize the presentation of the argument or findings in a logical and orderly way in order to achieve the objectives stated in Introduction.
+
+Substantiate arguments or findings based on your data or those available in the literature. 
+
+Be accurate in documentation. 
+
+In writing report, every effort should be made to write clearly and forcefully within a logical framework. This framework is provided in the report by a division of the material into appropriate chapters.
+
+Figures, graphs, photographic plates, tables and appendices should be identified in the text in a proper numerical sequence, e.g. Figure 1, Table 1, etc.
+
+4.8Conclusions and recommendations for future work
+
+This section serves the important function to conclude the whole report. In summary form, the developments of the previous chapters should be succinctly restated, important findings discussed and conclusions drawn from the whole study. In addition, the writer may list unanswered questions that have occurred in the course of the study and which require further research beyond the limits of the project being reported. The conclusion should leave the reader with the impression of completeness and of positive gain.
+
+4.9References
+
+This is a list of the references referred to in the report.  The APA citation style shall be used.  APA is an author/date-based citation style. It emphasizes on the author and the date of a piece of work to uniquely identify it.  Do not include references which are not referred to the text of the report 
+
+For example: 
+
+Kim, H. J. & Durbin, P. A. 1988 Investigation of the flow between a pair of circular cylinders in the flopping regime. Journal of Fluid Mechanics 196, 431-448.
+
+(The bold face number represents the volume no of a journal and ‘431-448’ indicates page numbers.)
+
+Zdravkovich, M. M. 1997 Flow around circular cylinders Vol. 1: Fundamentals. Oxford University Press, England, pp 6-13.
+
+(The book title is given in italic and ‘pp 6-13’ indicates pages referred to in report).
+
+Other format of references is acceptable but must be consistent throughout report. More examples are given in Appendix I.
+
+When you are citing a particular document or piece of information from a website, the in-text citation shall again follow the APA citation style.  The reference list entry shall provide at minimum the following four pieces of information: 
+
+Author, A. Year. Title of document [Format description]. Retrieved from http://xxxxxxxxx
+
+4.10Appendices
+
+It is usual to include in an appendix such materials as original data, tables that present supporting evidence, tests that have been constructed by the research, parts of documents or any supportive evidence that would detract from the major line of argument and would make the body of the text unduly large and poorly structured. Each appendix should be clearly separated from the next and listed in the table of contents.
+
+5.  Assessment of Individual Contribution
+
+Each student is required to submit a summary of his contribution to the project and state the chapters written by her/him. A sample is shown in Appendix II. The summary should be submitted together with the Peer Assessment Form. In additional, each student has to conduct a peer assessment on her/his partners (1 copy separated from the report). The assessment form is shown in Appendix III. The peer assessment will be kept confidential.
+
+ Appendix I
+
+Examples on Quoting Reference (1)
+
+The Turbulent Wake of Two Side-by-Side Circular Cylinders
+
+Introduction
+
+The flow around two side-by-side cylinders is inherently important and practically significant in many branches of engineering (Zdravkovich 1977; Sumner et al. 1999). The type of flow behind two side-by-side cylinders depends on the ratio T/d (T is the centre-to-centre cylinder spacing and d is the cylinder diameter) and other parameters, e.g. initial conditions, pressure gradient and Reynolds number (Re). At T/d < 1.2, the two cylinders behave like one structure, generating a single street (Sumner et al. 1999). For 1.5 < T/d < 2.0, the gap flow between the cylinders is deflected, resulting in one wide and one narrow wake. The deflected gap flow is bi-stable and randomly changes over from one side to the other (Ishigai et al. 1972; Bearman & Wadcock 1973). The timescale for the changeover is several orders of magnitude longer than that of vortex shedding and of the instability of the separated shear flows (Kim & Durbin 1988). The deflected gap flow nature is nominally independent of Re. As T/d is increased beyond 2, two distinct vortex streets have been observed (Landweber 1942). The two streets are coupled, with a definite phase relationship. Williamson (1985) showed at Re (Re  , where  is the free stream velocity and  is the kinematic viscosity) = 100 ~ 200 that the two streets may occur in phase or in antiphase. The vortex centres and saddle points of two in-phase streets are anti-symmetrical about the flow centreline, but symmetrical for the antiphase case. The in-phase streets eventually merged downstream to form a single street, while the in-antiphase streets remained distinct farther downstream. 
+
+References
+
+Bearman, P. W. & Wadcock, A. J. 1973 The interference between a pair of circular cylinders normal to a stream. J. Fluid Mech. 61, 499-511.
+
+Ishigai, S., Nishikawa, E., Nishmura, K. & Cho, K. 1972 Experimental study on structure of gas flow in tube banks with tube axes normal to flow (Part 1, Kármán vortex flow around two tubes at various spacings. Bull. JSME 15, 949-956.
+
+Kim, H.J. & Durbin, P.A. 1988 Investigation of the flow between a pair of circular cylinders in the flopping regime, J. Fluid Mech. 196, 431-448.
+
+Landweber, L. 1942 Flow about a pair of adjacent, parallel cylinders normal to a stream. D. W. Taylor Model Basin, Department of the Navy, Report 485, Washington, D.C.
+
+Sumner, D., Wong, S.S.T., Price, S.J. & Padoussis, M.P. 1999 Fluid Behaviour of side-by-side circular cylinders in steady cross-flow. J. Fluids Structures 13, 309-338.
+
+Williamson, C. H. K. 1985 Evolution of a single wake behind a pair of bluff bodies. J. Fluid Mech. 159, 1-18.
+
+Zdravkovich, M. M. 1977 Review of flow interference between two circular cylinders in various arrangements. ASME J. Fluids Engng. 99, 618-633. 
+
+Examples on Quoting Reference (2)
+
+Heat transfer from an impinging premixed butane/air slot flame jet
+
+Introduction
+
+Impinging jets have been of much interest because they are widely used in heating, cooling, and drying processes to produce high heat and mass transfer rates. It has been recognized that nozzle geometry will have great influence on the operation of the impingement system [1]. Although the jets can be emitted from nozzles of any configuration, the most commonly used are axisymmetric circular and two-dimensional rectangular slot jets in practice, which are arranged either individually or in a multiple manner depending on the application [1-4]. Most of the investigations so far have concentrated on the circular jets. Furthermore, the studies on rectangular slot jets are mostly related to air jets [5]. Much less information about the impinging slot flame jet is available.
+
+Huber [6] concluded that the hydrodynamics of an impinging slot jet is similar to that of the circular jet, with the major difference in the length of the potential core region. 
+
+Conclusions:
+
+References:
+
+[1] A.S. Mujumdar, Impingement drying, in: A.S. Mujumdar (Ed). Handbook of Industrial Drying, McGill University, 1987, pp. 461-474. 
+
+[2] T. Cziesla, E. Tandogan, N.K. Mitra, Large-eddy simulation of heat transfer from impinging slot jets, Numerical Heat Transfer, Part A 32 (1997) 1-17. 
+
+[3] H. Hardisty, An experimental investigation into the effect of changes in the geometry of a slot nozzle on the heat transfer characteristics of an impinging air jet, in: Proc. Instn. Mech. Engrs. 197C, 1984, pp. 7-15.
+
+[4] N.R. Saad, S. Polat, J.M. Douglas, Confined multiple impinging slot jets without crossflow effects, International Journal of Heat & Fluid Flow 13 (1992) 2-14. 
+
+[5] I. Sezai, A.A. Mohamad, Three-dimensional simulation of laminar rectangular impinging jets, flow structure, and heat transfer, Journal of Heat Transfer 121 (1999) 50-56.
+
+[6] A. M. Huber, Heat transfer with impinging gaseous jet systems, PhD thesis, Purdue University, 1993.
+
+Appendix II
+
+Summary of Contribution
+
+Project Code:
+
+Project Title: 
+
+Student Name (Student No)
+
+Group mate(s): Student Name (Student No) and Student Name (Student No)
+
+This project involves the following tasks: (1) searching for background material; (b) setting up a test rig for conducting the tests; (c) measurement of diesel particles with a Scanning Mobility Particle Sizer based on the R49 13-mode test method; (d) measure the exhaust gas concentrations with different gas analyzers based on the R49 13-mode test method; (e) assess the effectiveness of a diesel oxidation catalyst in reducing pollutant emissions from the engine, again based on the R49 13-mode method; (f) evaluation of the particulate data; (g) evaluation of the exhaust gas data based on SAE standard; (h) writing the report.
+
+We worked together in searching for background material and I concentrated on reviewing emission testing methods as contained in section 1.5 of Chapter 1. Section 1.5 was written by me. 
+
+I was mainly responsible for designing and setting up the test rig as described in Chapter 2 of the report; and Chapter was is written by me. The design was carried out in accordance SAE Standard XX. 
+
+The experiments were carried out by my group-mates. I was responsible for analyzing the experimental data based on the R49 13-mode test procedure. Chapter 3 on Methodology of data analysis was written by me. Also, results and discussion contained in Chapter 4 and Chapter 5 were done by me and the corresponding sections in these chapters were written by me (sections 4.3 and 4.4; sections 5.3 and 5.4).
+
+We worked together on the conclusions and we have equal contribution in this part. Appendix III
+
+Peer Assessment Form 
+
+CONFIDENTIAL
+
+A project can be divided into different tasks. The students are required to assess the contributions of their peers in both conducting the project and writing the report. You are required to assess your peers’ contribution in each task. The contribution rating varies from 0% to 100%. 0% means no contribution at all, while 100% means all the work are carried out by the student concerned. 
+
+Project Code & Title: | (         )
+
+
+
+Distribution of contribution (%)
+
+ | Name of Assessor[                   ] | Name of Assessee A [                    ] | Name of Assessee B [                    ] | Total
+
+Contribution | 30%Tasks:- Literature review- Project planning- Analysis the data | 40%Tasks:- Set up test rig- Conduct test | 30%Task:- Literature review- Mathematical model | 100%
+
+
+
+Name of Student: |  |  | 
+
+Signature of Student: |  | Date: |

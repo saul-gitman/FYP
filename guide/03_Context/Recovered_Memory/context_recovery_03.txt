@@ -1,0 +1,16 @@
+[convo search]
+- [PRIOR_ASSISTANT_OUTPUT] [c0] A@2026-10-14T08:15:26Z, -14d: mathematical/model guidance cited Lou et al. (2023), Gels 9(3), 220 (review; exact title/DOI not given); orthotropic tensor \(K_\mathrm{eff}=\mathrm{diag}(k_x,k_y,k_z)\), \(k_z=q_zL/(A\Delta T)\), \(k=\alpha\rho C_p\), and series resistance \(R''=\sum L_i/k_{z,i}+\sum R''_\mathrm{contact}\). Inputs: \(k_x,k_y,k_z,\rho,C_p,\phi\), pore alignment, layer thickness, contact resistance, solar absorptance, emissivity.
+- [PRIOR_ASSISTANT_OUTPUT] [c0] A@2026-10-14T08:15:26Z, -14d: referenced Obori et al. (2019), Physical Review Applied, for an open-cell solid/gas/radiation effective-conductivity model; Wang et al. (2024), Carbohydrate Polymers (CNF/CNT; 0.17 W/(m·K)); Villière et al. (2013), Composites Part A (dry/resin-impregnated/cured carbon-epoxy conductivity); Yang et al
+
+[files]
+Sources:
+[f0] design(1).md
+[f1] BN_C_Aerogel_Simulation_Plan.xlsx
+[f2] 貼上的文字 (1).txt
+
+Evidence:
+- [FILE_FACT] [f0] 2026-10-05 PSP map fixed three headings: “Processing / Control Parameters,” “Resulting Structure,” “Resulting Properties”; links are 1→2 process–structure, 2→3 simulation, 1→3 experiment. The file says the exact formulation and FYP methodology were not established.
+- [FILE_FACT] [f1] Simulation baseline inputs: porosity 95–99% (baseline 98%); channel width/layer spacing 20–200 µm (baseline 30–75 µm); density 20–40 mg/cm³; BN fraction 10–75%; BN:C ratio 1:3–9:1.
+- [FILE_FACT] [f1] Equations/results specified: \(k=qL/\Delta T\); \(k_\parallel/k_\perp\); \(\Delta T=T_\mathrm{hot}-T_\mathrm{cold}\). Required outputs include heat flux \(q\), temperature field \(T(x,y,z)\), and directional effective conductivities.
+- [FILE_CONTENT] [f1] Listed references include Adegun et al. (2023), Chan et al. (2022), Yang et al. (2022), Zhou et al. (Si-CNF/BNNS), Liu et al. (2023), Zeng et al. (2015), and Nag et al. (2015); no uniquely identified “actual mathematical model paper” title/DOI is shown in the retrieved excerpt.
+- [INSUFFICIENT] [f2] confirms the FYP topic and source-tracking plan, but the retrieved files do not contain the 2026-10-14 discussion, the original experiment steps, a 27-paper Oct-8 list, or code/workspace filenames.

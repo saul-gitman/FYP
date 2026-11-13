@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FYP Processing–Structure–Property Framework</title>
+<style>
+  :root{
+    --ink:#111;
+    --muted:#555;
+    --line:#111;
+    --paper:#fff;
+    --panel:#fff;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html,body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body{
+    padding:32px;
+  }
+
+  .page{
+    width:min(1500px, 100%);
+    margin:0 auto;
+    position:relative;
+  }
+
+  h1{
+    margin:0;
+    text-align:center;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:.2px;
+  }
+
+  .subtitle{
+    text-align:center;
+    margin:8px 0 24px;
+    color:var(--muted);
+    font-size:14px;
+  }
+
+  .framework{
+    position:relative;
+    height:900px;
+    width:100%;
+    min-width:1000px;
+  }
+
+  .card{
+    position:absolute;
+    background:var(--panel);
+    border:2px solid var(--ink);
+    border-radius:16px;
+    padding:22px 26px 24px;
+    box-shadow:0 5px 16px rgba(0,0,0,.06);
+    z-index:2;
+  }
+
+  .card h2{
+    margin:0 0 14px;
+    padding-bottom:10px;
+    border-bottom:1px solid #bbb;
+    font-size:22px;
+    line-height:1.25;
+  }
+
+  .card ul{
+    margin:0;
+    padding-left:22px;
+    font-size:16px;
+    line-height:1.48;
+  }
+
+  .card li{
+    margin:5px 0;
+  }
+
+  .card .hint{
+    margin-top:14px;
+    padding-top:10px;
+    border-top:1px dashed #bbb;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.4;
+  }
+
+  .p1{
+    width:520px;
+    left:50%;
+    top:38px;
+    transform:translateX(-50%);
+  }
+
+  .p2{
+    width:500px;
+    left:40px;
+    bottom:35px;
+  }
+
+  .p3{
+    width:500px;
+    right:40px;
+    bottom:35px;
+  }
+
+  svg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:1;
+    overflow:visible;
+  }
+
+  .arrow{
+    fill:none;
+    stroke:var(--line);
+    stroke-width:2.6;
+  }
+
+  .arrow.sim{
+    stroke-dasharray:10 7;
+  }
+
+  .edge-label{
+    font-size:15px;
+    font-weight:700;
+    fill:var(--ink);
+  }
+
+  .edge-sub{
+    font-size:12px;
+    fill:var(--muted);
+  }
+
+  .label-bg{
+    fill:#fff;
+    opacity:.96;
+  }
+
+  .legend{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:-6px;
+    font-size:13px;
+    color:#333;
+  }
+
+  .legend span{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  .swatch{
+    width:38px;
+    height:0;
+    border-top:2px solid #111;
+  }
+
+  .swatch.dashed{
+    border-top-style:dashed;
+  }
+
+  .footnote{
+    margin:20px auto 0;
+    max-width:1000px;
+    text-align:center;
+    font-size:13px;
+    line-height:1.45;
+    color:#444;
+  }
+
+  @media (max-width: 1100px){
+    body{ padding:18px; overflow-x:auto; }
+  }
+
+  @media print{
+    body{ padding:0; }
+    .page{ width:100%; }
+    .framework{ height:860px; }
+    .card{ box-shadow:none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Processing–Structure–Property Framework</h1>
+  <div class="subtitle">
+    CFRP with carbon-aerogel interlayer and BN reflective surface
+  </div>
+
+  <div class="framework">
+
+    <!-- Arrow layer -->
+    <svg viewBox="0 0 1500 900" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="10"
+                refX="8" refY="3.5" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L0,7 L9,3.5 z" fill="#111"></path>
+        </marker>
+      </defs>
+
+      <!-- 1 -> 2 -->
+      <path class="arrow"
+            d="M 620 330 C 520 410, 420 500, 340 585"
+            marker-end="url(#arrowhead)" />
+
+      <!-- 1 -> 3 : experiment -->
+      <path class="arrow"
+            d="M 880 330 C 980 410, 1080 500, 1160 585"
+            marker-end="url(#arrowhead)" />
+
+      <!-- 2 -> 3 : simulation -->
+      <path class="arrow sim"
+            d="M 555 720 C 680 650, 820 650, 945 720"
+            marker-end="url(#arrowhead)" />
+
+      <!-- Labels -->
+      <rect class="label-bg" x="378" y="435" width="225" height="48" rx="8"/>
+      <text class="edge-label" x="490" y="454" text-anchor="middle">STRUCTURE FORMATION</text>
+      <text class="edge-sub" x="490" y="474" text-anchor="middle">processing determines morphology</text>
+
+      <rect class="label-bg" x="940" y="435" width="205" height="48" rx="8"/>
+      <text class="edge-label" x="1043" y="454" text-anchor="middle">EXPERIMENT</text>
+      <text class="edge-sub" x="1043" y="474" text-anchor="middle">direct performance validation</text>
+
+      <rect class="label-bg" x="635" y="646" width="230" height="48" rx="8"/>
+      <text class="edge-label" x="750" y="665" text-anchor="middle">SIMULATION</text>
+      <text class="edge-sub" x="750" y="685" text-anchor="middle">structure → property relation</text>
+    </svg>
+
+    <!-- 1 -->
+    <section class="card p1">
+      <h2>1. Processing / Control Parameters</h2>
+      <ul>
+        <li><strong>BN:C ratio / filler composition</strong></li>
+        <li>BN loading in reflective surface layer</li>
+        <li>CNT loading in carbon-aerogel interlayer</li>
+        <li>CNF concentration / total solids content</li>
+        <li>MTMS content</li>
+        <li><strong>Freezing temperature</strong></li>
+        <li><strong>Freezing time</strong></li>
+        <li>Freeze-drying pressure and duration</li>
+        <li>Dispersion / sonication conditions</li>
+        <li>Slurry mixing time and speed</li>
+        <li>Aerogel / surface-layer target thickness</li>
+        <li>Resin infusion pressure and direction</li>
+        <li>Curing / post-curing condition</li>
+      </ul>
+      <div class="hint">
+        Controllable fabrication variables. Keep the category fixed; revise the listed variables as the experimental plan is refined.
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section class="card p2">
+      <h2>2. Resulting Structure</h2>
+      <ul>
+        <li><strong>Pore size and pore-size distribution</strong></li>
+        <li>Pore morphology / geometry</li>
+        <li>Pore alignment and structural anisotropy</li>
+        <li>Porosity</li>
+        <li><strong>Bulk density</strong></li>
+        <li>Drying shrinkage</li>
+        <li>Layer thickness and thickness uniformity</li>
+        <li>BN / CNT dispersion and agglomeration</li>
+        <li>Interfacial bonding with CFRP</li>
+        <li>Resin infiltration / residual void fraction</li>
+        <li>Surface morphology / roughness</li>
+      </ul>
+      <div class="hint">
+        Measured morphology after fabrication. “Hexagonal” should only be used if microscopy actually shows a reproducible hexagonal pore or cell geometry.
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section class="card p3">
+      <h2>3. Resulting Properties</h2>
+      <ul>
+        <li><strong>Through-thickness effective thermal conductivity, k<sub>z</sub></strong></li>
+        <li>Area-normalized thermal resistance, R″<sub>z</sub></li>
+        <li>Steady-state heat-source temperature rise</li>
+        <li>Transient heating / cooling response</li>
+        <li>Surface temperature distribution / heat spreading</li>
+        <li><strong>Solar-weighted reflectance</strong></li>
+        <li>Spectral reflectance (UV–Vis–NIR)</li>
+        <li>Temperature rise under solar irradiation</li>
+        <li>Thermal–optical coupled cooling performance</li>
+        <li>Mechanical performance (e.g. short-beam / interlaminar strength)</li>
+        <li>Areal mass / mass penalty</li>
+      </ul>
+      <div class="hint">
+        Final measurable performance. Use tensile strength only if tensile testing is actually included; the current plan is more directly aligned with short-beam / interlaminar mechanical evaluation.
+      </div>
+    </section>
+  </div>
+
+  <div class="legend">
+    <span><i class="swatch"></i> Experimental / causal pathway</span>
+    <span><i class="swatch dashed"></i> Simulation / model pathway</span>
+  </div>
+
+  <div class="footnote">
+    Categories 1–3 are intentionally fixed. The individual bullet points are the editable part of the framework and should be updated as literature review, pre-tests, microscopy, simulation, and final test selection converge.
+  </div>
+</div>
+</body>
+</html>

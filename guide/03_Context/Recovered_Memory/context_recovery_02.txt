@@ -1,0 +1,42 @@
+[convo search]
+- [USER_FACT] [c0][c2] U@2026-07-13T01:46:53Z, -107d: Project title: “Thermo-optically functional CFRP laminates for lightweight electrified systems”; supervisor Dr CHAN Kit-Ying (earlier email addressed Dr Chan).
+- [USER_FACT] [c5] U@2026-09-17T08:55:40Z, -41d: User’s own understanding: project is mainly aerogel; aerogel is inside/integrated within the CFRP plate; asks why title/proposal foregrounds carbon fiber and omits aerogel wording.
+- [PRIOR_ASSISTANT_OUTPUT] [c2][c5] A@2026-06-23T04:08:14Z, -127d: Prior assistant described asymmetric carbon-rich/BN-rich aerogel interleave, freeze-casting, VARI/resin infusion, and tests of through-thickness thermal conductivity, solar reflectance, and interlaminar shear strength; this is assistant-authored, not user evidence.
+
+- [USER_CONSTRAINT] [c1] U@2026-10-08T03:20:01Z, -20d: Exact literature set includes 27 papers; asks to include Chan Kit-Ying’s papers, workspace articles, and own experiment steps—not the Word document.
+- [USER_FACT] [c1][c7] U@2026-10-08T03:20:01Z, -20d: Project context is PolyU FYP with Dr Chan Kit-Ying; key user-selected materials/topics include CNF, CNT, BN, MTMS, directional freeze-casting, CFRP integration, thermal/optical/mechanical testing, and structure–property simulation.
+- [PRIOR_ASSISTANT_OUTPUT] [c1][c7] A@2026-10-08T03:19:27Z, -20d: Reconstructed user-proposed plan: asymmetric CFRP laminate; carbon-rich inner region for heat spreading and BN-rich outer region for solar reflection; variables BN/C ratio, freezing temperature/time; aligned aerogel fabrication, characterization, CFRP integration, and ANSYS/Python simulation. Recommended Chan paper: “Scalable anisotropic cooling aerogels by additive freeze-casting,” DOI 10.1038/s41467-022-33234-8; second suggested paper: “Anisotropic thermally superinsulating boron nitride composite aerogel for building thermal management,”
+
+- [USER_FACT] [c3] U@2026-07-15T01:07:05Z, -105d: FYP project title: “Thermo-optically functional CFRP laminates for lightweight electrified systems”; user seeks software choice, not confirming current usage.
+- [USER_FACT] [c3] U@2026-07-15T01:16:20Z, -105d: New to ANSYS and carbon fibre; asks whether workflow is material information, geometry/alignment/matrix → ANSYS heat analysis → heat graph/thermal strain.
+- [USER_FACT] [c3] U@2026-07-15T01:26:48Z, -105d: Knows stress/strain calculation, “the big ass matrix,” pre-yield E calculation, and properties under unsymmetric alignment.
+
+- [USER_FACT] [c4] U@2026-09-17T07:28:38Z, -41d: Exact FYP: “Thermo-optically functional CFRP laminates for lightweight electrified systems,” supervised by Kit/Dr CHAN Kit-Ying; user wants literature-review depth and Kit-paper focus.
+- [USER_PREFERENCE] [c4] U@2026-09-17T08:06:00Z, -41d: Wants report-format paper analysis, not overview; asks for mental models, Kit’s BN-layer breakthrough, and a carbon-layer breakthrough/new paper.
+- [PRIOR_ASSISTANT_OUTPUT] [c4] A@2026-09-17T08:06:14Z, -41d: Proposed template: Problem → previous limitation → material/architecture → mechanism → design variables → method → quantitative result → breakthrough → limitation → FYP connection; identified Chan et al. 2022, “Scalable anisotropic cooling aerogels by additive freeze-casting,” and Guo et al. 2022, “Controlling anisotropic thermal properties of graphene aerogel by compressive strain.”
+
+- [USER_FACT] [c12] U@2026-10-11T09:19:50Z, -17d: User says Kit’s moving cold source is mainly to achieve pore alignment and desired heat properties.
+- [USER_FACT] [c12] U@2026-10-11T09:21:16Z, -17d: User asks whether ACA panel is Kit’s aerogel or CFRP with aerogel.
+- [USER_FACT] [c12] U@2026-10-11T09:30:24Z, -17d: User asks whether FTIR is analytical chemistry and quotes the ~805 cm⁻¹ B–N–B passage.
+
+- [PRIOR_ASSISTANT_OUTPUT] [c9] A@2026-09-17T03:25:18Z, -41d: Project physics map: target parameters are through-thickness thermal conductivity, solar reflectance, and interlaminar shear strength; proposal concept is carbon-rich inner domain + BN-rich outer domain.
+- [PRIOR_ASSISTANT_OUTPUT] [c9] A@2026-09-17T03:25:18Z, -41d: Identified “Kit’s” papers: Chan et al., “Scalable anisotropic cooling aerogels by additive freeze-casting” Nature Communications 2022, https://www.nature.com/articles/s41467-022-33234-8; Yang et al./Chan et al., “Superinsulating BNNS/PVA Composite Aerogels with High Solar Reflectance,” https://link.springer.com/article/10.1007/s40820-022-00797-6.
+- [PRIOR_ASSISTANT_OUTPUT] [c9] A@2026-09-17T03:25:18Z, -41d: Other cited references: Wicklein et al., anisotropic nanocellulose/graphene oxide foam, https://www.nature.com/articles/nnano.2014.248; Raman et al., passive daytime radiative cooling, https://www.nature.com/articles/nature13883; CFRP
+
+- [USER_FACT] [c10] U@2026-09-11T07:42:52Z, -47d: FYP is about making a CF plate whose heat direction is one-way; asks how to use ANSYS.
+
+- [USER_FACT] [c11] U@2026-07-09T08:37:38Z, -3mo: FYP is about carbon fiber and heat.
+- [PRIOR_ASSISTANT_OUTPUT] [c11] A@2026-07-09T08:38:11Z, -3mo: assistant described project as thermo-optically functional CFRP laminates for lightweight electrified systems, involving asymmetric aerogel interleaves, through-thickness thermal conductivity, solar reflectance, interlaminar shear strength, IR thermal imaging, and normal-CFRP comparison; no user-authored October excerpts, paper titles/links, filenames, or confirmed material/placement decisions are present.
+
+[files]
+Sources:
+[f0] design(1).md
+[f1] 202627 Project Proposal.pdf
+[f2] s41467-022-33234-8 (1).pdf
+
+Evidence:
+- [FILE_FACT] [f1] Project: “Thermo-optically functional CFRP laminates for lightweight electrified systems”; supervisor: Dr. CHAN Kit-Ying. Proposed asymmetric aerogel interleaves, freeze-casting, CFRP integration via VARI, and testing of through-thickness thermal conductivity, solar reflectance, and interlaminar shear strength.
+- [FILE_CONTENT] [f0] 5 October framework fixes exactly: “Processing / Control Parameters” → “Resulting Structure” → “Resulting Properties”; links are 1→2 process–structure, 2→3 simulation, 1→3 experiment. BN/C ratio, freezing temperature and freezing time are listed as user-specified items; C is explicitly unresolved and must not silently mean CNF, CNT, graphene or polymer.
+- [FILE_CONTENT] [f2] The retrieved October 11 paper is uploaded as `s41467-022-33234-8 (1).pdf`; DOI/link: https://doi.org/10.1038/s41467-022-33234-8. It describes BNNS/WPU additive freeze-casting: a moving liquid-nitrogen cold source, 15-mm freezing gap, opposite movement of the source relative to freezing, block-by-block filling, aligned pores, and freeze-drying.
+- [FILE_FACT] [f1] Placement/fabrication concept: carbon-rich inner domain for heat redistribution and BN-rich outer domain for solar reflection, integrated into CFRP by vacuum-assisted resin infusion.
+- [INSUFFICIENT] No retrieved file exposes the user’s raw 8, 11, or 14 October messages, the “Kit’s two” paper list/second-paper identity, CNF/CNT/MTMS selection decision, or a separate aerogel mathematical-simulation reference article.

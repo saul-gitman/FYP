@@ -1,0 +1,48 @@
+# SHEET: Literature Data
+A1: Class | B1: Paper / Material | C1: BN:C / Actual Formulation | D1: Pore Size / Spacing | E1: Porosity | F1: Density (mg/cm³) | G1: Thermal Conductivity | H1: How to Use | I1: Source URL
+A2: A | B2: Adegun et al. (2023), aligned BNNS/PVA aerogel | C2: 10 wt% BNNS; PVA 20 mg/mL | D2: ≈20–75 µm | E2: 98.2% | F2: 22.3 | G2: Transverse: 0.0203 W/mK | H2: Strong reference for insulation baseline / pore scale | I2: https://ira.lib.polyu.edu.hk/bitstream/10397/99475/1/Adegun_Antiotropic_Thermally_Superinsulating.pdf
+A3: A | B3: Chan et al. (2022), BNNS/WPU cooling aerogel | C3: 10 wt% BNNS; 1.4 wt% WPU | D3: ≈30 µm | E3: 98.2% | F3: 20.2 | G3: Thickness: 0.0169 W/mK; anisotropy ≈5.8× | H3: Best low-k target / anisotropy reference | I3: https://ira.lib.polyu.edu.hk/bitstream/10397/99466/1/s41467-022-33234-8.pdf
+A4: A | B4: Yang et al. (2022), BNNS/PVA aerogel | C4: 20 wt% BNNS; 2 wt% PVA; 5 vol% acetone | D4: Wall mesopore avg 5.4 nm; wall scale ≈134 µm | E4: 97.4% | F4: 37.5 | G4: Transverse: 0.0235 W/mK | H4: Useful density / porosity upper-side reference | I4: https://link.springer.com/article/10.1007/s40820-022-00797-6
+A5: A | B5: Zhang et al. (2023), vertically aligned BNNS/PVA aerogel | C5: BNNS/PVA; ratio NR | D5: NR | E5: NR | G5: Transverse: 0.022 W/mK; along channel: 0.071 W/mK | H5: Direct directional-k reference | I5: https://www.sciencedirect.com/science/article/pii/S2352492823014332
+A6: A | B6: Zhou et al., Si-CNF/BNNS aerogel | C6: Si-CNF:BNNS = 3:1; BN:carbon-based skeleton ≈1:3 | D6: Layer spacing 40–190 µm | E6: 98.23% | F6: 32.59 | G6: Transverse: 0.0339 W/mK; along channel: 0.0621 W/mK | H6: Closest BN + carbon skeleton reference | I6: https://assets-eu.researchsquare.com/files/rs-1780431/v1/65157f33-5f26-4470-807a-28012007ac2f.pdf?c=1658768633
+A7: A | B7: Liu et al. (2023), BNNS-g/CNF aerogel | C7: BNNS-g:CNF = 15:5 = 3:1 | D7: NR | E7: NR | G7: 0.052 W/mK; direction not clearly stated | H7: Upper end of low-k insulation target | I7: https://pubmed.ncbi.nlm.nih.gov/37595711/
+A8: A | B8: Zeng et al. (2015), ordered BNNS aerogel | C8: Mostly BNNS; no carbon | D8: NR | E8: NR | F8: 21 | G8: NR | H8: Structure / density reference only | I8: https://pubs.acs.org/doi/10.1021/acs.chemmater.5b00505
+A9: A / Reference | B9: Nag et al. (2015), pure BN aerogel | C9: Pure BN; no carbon | D9: Fine pores 2–50 nm; macro-pores not quantified | E9: NR | F9: 1.4–20 | G9: NR | H9: Extreme low-density reference; not ideal straight-channel geometry | I9: https://pmc.ncbi.nlm.nih.gov/articles/PMC4674780/
+A10: B | B10: An et al. (2018), aligned RGO/BN hybrid aerogel + epoxy | C10: Final composite: BN 39.8 wt%, graphene 4.2 wt%; BN:C ≈9.5:1 | D10: NR; long-range ordered channels | E10: High; exact NR | G10: 11.01 W/mK (epoxy-filled composite) | H10: Architecture reference only; DO NOT mix with empty-aerogel low-k target | I10: https://www.sciencedirect.com/science/article/pii/S0008622317310023
+A11: B | B11: Pan et al. (2021), carbonized-cellulose/BN aerogel + epoxy | C11: Final composite has 9.6 wt% BN; carbonized cellulose ratio NR | D11: NR | E11: NR | G11: 2.11 W/mK (final epoxy composite) | H11: Conductive-composite reference only | I11: https://doi.org/10.1007/s42114-021-00362-6
+A12: B | B12: Li et al. (2024), BN/graphene aerogel + PEG | C12: BN:graphene ratio NR; CMC support | D12: Hierarchical directional pores; numeric NR | E12: NR | G12: Up to 0.390 W/mK after PEG filling | H12: Directional architecture reference only | I12: https://research.polyu.edu.hk/en/publications/anisotropic-and-hierarchical-porous-boron-nitridegraphene-aerogel/
+# SHEET: Simulation Decision
+A1: FIRST-PASS SIMULATION DECISION
+A3: 1. Baseline model
+A4: Input | B4: Baseline | C4: First sweep range | D4: Suggested levels | E4: Why | F4: Decision
+A5: Porosity | B5: 98% | C5: 95–99% | D5: 95%, 97%, 98%, 99% | E5: Most insulation papers cluster around very high porosity | F5: PRIMARY INPUT
+A6: Channel width / layer spacing | B6: 30–75 µm | C6: 20–200 µm | D6: 20, 30, 50, 75, 100, 150, 200 µm | E6: Covers aligned-aerogel literature without using a needlessly huge first-pass range | F6: PRIMARY INPUT
+A7: Density | B7: 25 mg/cm³ | C7: 20–40 mg/cm³ | D7: 20, 25, 30, 40 mg/cm³ | E7: Literature cluster; mainly a consistency / sensitivity parameter | F7: SECONDARY INPUT
+A8: BN fraction | B8: 25% starting case | C8: 10–75% | D8: 10%, 25%, 50%, 75% | E8: Exploratory because exact BN+C optimum is not established | F8: EXPLORATORY
+A9: BN:C ratio | B9: 1:1 starting case | C9: 1:3 to 9:1 | D9: 1:3, 1:1, 3:1, 9:1 | E9: Literature-informed exploration; not a proven optimum | F9: EXPLORATORY
+A11: 2. Results that the simulation MUST produce
+A12: Result | B12: Symbol / Unit | C12: Target / Expected Range | D12: How to Calculate / Extract | E12: Why Needed | F12: Priority
+A13: Low-conductivity effective thermal conductivity | B13: k⊥ (W/mK) | C13: Target ≈ 0.017–0.052 W/mK | D13: Steady-state heat flux and ΔT across low-k direction; k = q·L/ΔT | E13: Main insulation performance metric | F13: CORE
+A14: High-conductivity directional thermal conductivity | B14: k∥ (W/mK) | C14: Must be > k⊥; literature examples ≈0.062–0.071 W/mK | D14: Repeat extraction along aligned-channel / high-k direction | E14: Needed to prove directional heat-transfer behavior | F14: CORE
+A15: Anisotropy ratio | B15: k∥ / k⊥ | C15: Target ≈ 2–6 | D15: Calculate from the two effective conductivities | E15: Single comparable metric for directional behavior | F15: CORE
+A16: Temperature drop across aerogel | B16: ΔT (K or °C) | C16: Compare under identical heat load and thickness | D16: T_hot − T_cold at steady state | E16: Shows actual insulation effect in the plate configuration | F16: REQUIRED
+A17: Heat flux through aerogel | B17: q (W/m²) | C17: Lower is better for insulation under fixed ΔT | D17: Surface-averaged normal heat flux | E17: Needed for k_eff calculation and energy comparison | F17: REQUIRED
+A18: Temperature field / centerline profile | B18: T(x,y,z) | C18: No single numeric target | D18: Steady-state contour plus centerline profile | E18: Checks hotspots, edge effects and validity of 1D assumptions | F18: DIAGNOSTIC
+A20: 3. Final first-pass decision
+A21: Baseline geometry | B21: 98% porosity | C21: 30–75 µm straight aligned channels | D21: 25 mg/cm³ density
+A22: Composition strategy | B22: Start BN:C = 1:1 | C22: Then sweep 1:3, 1:1, 3:1, 9:1 | D22: BN fraction 10/25/50/75%
+A23: Success criterion | B23: k⊥ = 0.017–0.052 W/mK | C23: k∥ / k⊥ = 2–6 | D23: Stable directional temperature gradient
+A24: Do NOT mix | B24: Empty / air-filled aerogel low-k data | C24: with epoxy/PEG-filled conductive composite k values | D24: Use B-class papers only for architecture/composition inspiration
+# SHEET: Results Template
+A1: Run ID | B1: Porosity (%) | C1: Channel Size (µm) | D1: Density (mg/cm³) | E1: BN Fraction (%) | F1: BN:C | G1: k⊥ (W/mK) | H1: k∥ (W/mK) | I1: Anisotropy k∥/k⊥ | J1: ΔT (K) | K1: Heat Flux q (W/m²) | L1: Low-k Target? | M1: Anisotropy Target? | N1: Notes | P1: Acceptance targets
+A2: B00 | B2: 98 | C2: 30–75 | D2: 25 | E2: 25 | F2: 1:1 | I2: =IF(OR(G2="",H2=""),"",H2/G2) | L2: =IF(G2="","",IF(AND(G2>=0.017,G2<=0.052),"PASS","OUT")) | M2: =IF(I2="","",IF(AND(I2>=2,I2<=6),"PASS","OUT")) | N2: Baseline | P2: Metric | Q2: Target
+A3: R01 | B3: 95 | C3: 30–75 | D3: 25 | E3: 25 | F3: 1:1 | I3: =IF(OR(G3="",H3=""),"",H3/G3) | L3: =IF(G3="","",IF(AND(G3>=0.017,G3<=0.052),"PASS","OUT")) | M3: =IF(I3="","",IF(AND(I3>=2,I3<=6),"PASS","OUT")) | N3: Porosity sweep | P3: k⊥ | Q3: 0.017–0.052 W/mK
+A4: R02 | B4: 97 | C4: 30–75 | D4: 25 | E4: 25 | F4: 1:1 | I4: =IF(OR(G4="",H4=""),"",H4/G4) | L4: =IF(G4="","",IF(AND(G4>=0.017,G4<=0.052),"PASS","OUT")) | M4: =IF(I4="","",IF(AND(I4>=2,I4<=6),"PASS","OUT")) | N4: Porosity sweep | P4: k∥/k⊥ | Q4: 2–6
+A5: R03 | B5: 99 | C5: 30–75 | D5: 25 | E5: 25 | F5: 1:1 | I5: =IF(OR(G5="",H5=""),"",H5/G5) | L5: =IF(G5="","",IF(AND(G5>=0.017,G5<=0.052),"PASS","OUT")) | M5: =IF(I5="","",IF(AND(I5>=2,I5<=6),"PASS","OUT")) | N5: Porosity sweep
+A6: R04 | B6: 98 | C6: 20 | D6: 25 | E6: 25 | F6: 1:1 | I6: =IF(OR(G6="",H6=""),"",H6/G6) | L6: =IF(G6="","",IF(AND(G6>=0.017,G6<=0.052),"PASS","OUT")) | M6: =IF(I6="","",IF(AND(I6>=2,I6<=6),"PASS","OUT")) | N6: Channel sweep
+A7: R05 | B7: 98 | C7: 50 | D7: 25 | E7: 25 | F7: 1:1 | I7: =IF(OR(G7="",H7=""),"",H7/G7) | L7: =IF(G7="","",IF(AND(G7>=0.017,G7<=0.052),"PASS","OUT")) | M7: =IF(I7="","",IF(AND(I7>=2,I7<=6),"PASS","OUT")) | N7: Channel sweep
+A8: R06 | B8: 98 | C8: 100 | D8: 25 | E8: 25 | F8: 1:1 | I8: =IF(OR(G8="",H8=""),"",H8/G8) | L8: =IF(G8="","",IF(AND(G8>=0.017,G8<=0.052),"PASS","OUT")) | M8: =IF(I8="","",IF(AND(I8>=2,I8<=6),"PASS","OUT")) | N8: Channel sweep
+A9: R07 | B9: 98 | C9: 200 | D9: 25 | E9: 25 | F9: 1:1 | I9: =IF(OR(G9="",H9=""),"",H9/G9) | L9: =IF(G9="","",IF(AND(G9>=0.017,G9<=0.052),"PASS","OUT")) | M9: =IF(I9="","",IF(AND(I9>=2,I9<=6),"PASS","OUT")) | N9: Channel sweep
+A10: R08 | B10: 98 | C10: 30–75 | D10: 25 | E10: 25 | F10: 1:3 | I10: =IF(OR(G10="",H10=""),"",H10/G10) | L10: =IF(G10="","",IF(AND(G10>=0.017,G10<=0.052),"PASS","OUT")) | M10: =IF(I10="","",IF(AND(I10>=2,I10<=6),"PASS","OUT")) | N10: BN:C sweep
+A11: R09 | B11: 98 | C11: 30–75 | D11: 25 | E11: 25 | F11: 3:1 | I11: =IF(OR(G11="",H11=""),"",H11/G11) | L11: =IF(G11="","",IF(AND(G11>=0.017,G11<=0.052),"PASS","OUT")) | M11: =IF(I11="","",IF(AND(I11>=2,I11<=6),"PASS","OUT")) | N11: BN:C sweep
+A12: R10 | B12: 98 | C12: 30–75 | D12: 25 | E12: 25 | F12: 9:1 | I12: =IF(OR(G12="",H12=""),"",H12/G12) | L12: =IF(G12="","",IF(AND(G12>=0.017,G12<=0.052),"PASS","OUT")) | M12: =IF(I12="","",IF(AND(I12>=2,I12<=6),"PASS","OUT")) | N12: BN:C sweep

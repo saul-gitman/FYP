@@ -1,0 +1,21 @@
+parameter,value,unit,status,source,notes
+plate_fabrication_size,0.05 x 0.05,m,guide_planned,02_Experiment/Experiment_Guide_original.docx,E06 actual tested size unresolved
+retained_test_region,0.04 x 0.04,m,guide_planned,same,E06
+heater_size,0.02 x 0.02,m,guide_planned,same,back centre
+heater_power,2; optional 5,W,guide_planned,same,electrical input; heat split unknown
+solar_irradiance,1000,W/m2,guide_planned,same,illuminated area unknown
+ambient,298.15 +/- 2,K,guide_planned,same,record actual history
+BN_layer_thickness,0.001 OR 0.0005,m,source_conflict,same,E01
+CNT_interlayer_thickness,,m,unknown,same,measure dry and cured
+K_tensor_all_layers,,W/mK,unknown,none,state and axes required
+density_all_layers,,kg/m3,unknown,none,state-specific
+cp_all_layers,,J/kgK,unknown,none,needed for transients
+contact_area_resistance,,m2K/W,unknown,none,avoid double counting adhesive
+thermal_emissivity,,1,unknown,none,cannot derive from solar R
+convection_coefficient,,W/m2K,unknown,none,fixture/environment dependent
+porosity_exploration,0.95 to 0.99; baseline 0.98,1,historical_exploration,06_Previous_Work/BN_C_Aerogel_Simulation_Plan.xlsx,not project measurement
+channel_size_exploration,20 to 200; baseline 30 to 75,um,historical_exploration,same,not wall mesopore size
+density_exploration,20 to 40; baseline 25,kg/m3,historical_exploration,same,1 mg/cm3 = 1 kg/m3; enforce mass balance
+BN_fraction_exploration,0.10 to 0.75; baseline 0.25,basis_unknown,historical_exploration,same,inconsistent with same-basis 1:1 BN:C
+BN_to_C_exploration,1:3; 1:1; 3:1; 9:1,basis_unknown,historical_exploration,same,C identity and basis unresolved
+dry_low_k_context,0.017 to 0.052,W/mK,historical_literature_context,same,not success criterion for cured CFRP

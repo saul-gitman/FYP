@@ -1,0 +1,97 @@
+2026/27
+
+Department of Aeronautical and Aviation Engineering
+
+AAE4002/AAE4012 Capstone Project
+
+Final Report Assessment
+
+(For the use by Academic Supervisor and Independent Assessor)
+
+The Final Report is 50 marks in total. The Final Report is assessed by (1) the Academic Supervisors (or Industrial and Academic Supervisors shall work together to provide one assessment) and (2) one Independent Assessor.
+
+The assessments of the Final Report by the Academic Supervisors and the Independent Assessor each weigh 50% of the Final Report marks, i.e. 25 marks each of the total marks.
+
+The assessment methods and the associated marks of AAE4002/AAE4012 are shown in Table 1.
+
+Table 1: Assessment methods and the associated marks
+
+ | Assessments | Marks
+
+1 | Interim Report | 20
+
+2 | Final Report | 50
+
+3 | Oral Presentation | 30
+
+ | Total | 100
+
+
+
+2026/27
+
+Department of Aeronautical and Aviation Engineering
+
+AAE4002/AAE4012 Capstone Project
+
+Final Report Assessment Form
+
+  Project Code & Title: | (  ) 
+
+Academic Supervisor / Independent Assessor: | 
+
+
+
+Turnitin Submission: Y / NPlagiarism detected: ___________%
+
+ | Maximum Marks |   Criteria (Refer to the Rubric for Final Report Assessment) | Name & SID | Name & SID | Name & SID
+
+ |  |  | Marks | Marks | Marks
+
+Abstract and Introduction | 5 | Provides reader a clear overview of the project Identification of problemsRationale for carrying out the project is explained clearlyAims and objectives are explicitly stated | ______/5 | ______/5 | ______/5
+
+Literature Review | 5 | Literature review is thorough, comprehensive, relevant and consistent with the research topic Literatures are critically evaluated; original thinking is evidentReview of literature is presented in a logical and coherent mannerThe work of others is acknowledged and referencedSource material is up to date and comprehensive | ______/5 | ______/5 | ______/5
+
+Methodology | 12.5 | Work scope is justifiable and workableAwareness of various possible investigative methodsMain tasks, difficulties and problems are listed and explainedIdentification, justification, explanation and use of appropriate tools and techniques/approaches Identification of appropriate project milestonesEvidence of planning and organization to achieve the milestones and demonstrate the problem solving skills | ______/12.5 | ______/12.5 | ______/12.5
+
+Results and Discussions | 15 | Clear presentation of test conditions and test dataApproach, analysis/investigative scope are appropriate (in line with the aim and objectives) Discrepancies between theoretical and experimental results were analyzed and explained Results supported by full documentationResults are effectively interpreted with consistent focus on the aim Interpretation are well-integrated into existing literatureEvidence of self-determined effort to acquire additional knowledge and skills to achieve aim | ______/15 | ______/15 | ______/15
+
+Conclusion and Recommendations | 5 | Conclusion addresses the research question/issue and achievement of aim and objectivesConclusions are drawn from analysis and are supported by dataClear understanding of the potentials State limitations of final productRealistic recommendations for future development | ______/5 | ______/5 | ______/5
+
+Overall Presentation of the Report | 7.5 | Free from spelling mistake and grammatical errorLayout, format and outline of the report are consistent with the requirements Proper presentation of charts, diagrams, tables and referencesInteresting to read and visually pleasant | ______/7.5 | ______/7.5 | ______/7.5
+
+Total | ______/50 | ______/50 | ______/50
+
+
+
+Comments (required):  
+
+
+
+
+
+
+
+
+
+Signature:   |  |  | Date of Assessment: | 
+
+
+
+Rubric for Capstone Project Final Report Assessment
+
+ | Unacceptable | Marginal | Acceptable | Good | Excellent
+
+Abstract | Irrelevant to the projectConfusing and self- contradicting descriptions | Project objectives/ tasks accomplished and/or conclusions are missing | Give a rough overview of the project, some points are unclear | Give a clear overview of the project | Give a very effective overview of the project
+
+Introduction | Introduction extremely underdeveloped or missingAims and objectives are not statedRationale for carrying out the project is unclear | Introduction either underdeveloped or awkwardAims and/or objectives are either not stated or unclearNot all important problems are identified | Most information is presented in logical order which is easy to follow.Aims and objectives are stated but the rationale for carrying out the project is not explained clearly | Effective introduction brings audience to topicAims and objectives are statedIdentification of problems | Highly effective introduction brings audience to topicAims and objectives are explicitly statedIdentification of problemsRationale for carrying out the project is explained clearly
+
+Literature Review | No or irrelevant literature review | Insufficient literature review or irrelevant materials includedReview of literature is presented in a confusing mannerSource material is outdated | Literature review is relevant and consistent with the research topicLiteratures are evaluated though original thinking is not evidentReview of literature is presented in a logical but sometimes not coherent manner | Thorough, relevant and consistent with the research topicLiteratures are evaluated; original thinking is evident to some degreesReview of literature is presented in a logical and coherent mannerThe work of others is acknowledged and referenced | Thorough, comprehensive, relevant and consistent with the research topicLiteratures are critically evaluated; original thinking is evidentReview of literature is presented in a logical and coherent mannerThe work of others is acknowledged and referencedSource material is up to date and comprehensive
+
+Methodology | The research problem cannot be comprehendedWork scope is either unrealistic and not justifiableDo not aware of various possible investigative methodsNo progress in solving the problemEngineering analysis infrequently used or appears trivial and leads to obvious conclusionsNo or very poor technical (software/hardware/mathematical)skills are demonstrated during the project. | The research problem under study can be describedSome research methods are used to solve the problem and the problem is partly solvedIncluded some analysis, but not very detailed or challenging; many steps seem not supported by calculationsPoor or very basic technical (software/hardware/ mathematical) skills are demonstrated during the project | The research problem under study is describedSome research methods are used to solve the problem and the problem is partly solvedIncluded some analysis; but some steps seem not supported by calculationBasic technical (software/hardware/ mathematical) skills are demonstrated during the project | Causes of the problem under study can be fully explained; The pros and cons of each proposed solution found in the literature can also be explainedSuitable research methods are used to solve the problem and the problem is reasonably solvedDetailed & challenging engineering analysis; but a few steps seem not supported by calculationGood technical (software/hardware/ mathematical) skills are demonstrated during the project | The problem under study is fully analyzed with solution being proposedSuitable research methods are used to solve the problem and the problem is fully solvedDetailed & challenging engineering analysis at every stage of the design processExcellent technical (software/hardware/ mathematical) skills are demonstrated during the project
+
+Results and Discussions | Lack of test conditions and test dataNo explanation about any discrepancy between theoretical and experimental resultsLack of results | Unclear presentation of test conditions and test dataLittle effort in explaining the discrepancy between theoretical and experimental results is not investigatedAnalysis is of trivial calculations & poorly explained | Basically clear presentation of test conditions and test dataFor many discrepancies between theoretical and experimental results, an analysis is done to explain itResults supported by full documentationResults are interpreted but do not have consistent focus on the aim | Clear presentation of test conditions and test dataFor any discrepancy between theoretical and experimental results, an analysis is done to explain itResults supported by full documentationResults are interpreted with consistent focus on the aim | Clear presentation of test conditions and test dataFor any discrepancy between theoretical and experimental results, an analysis is done to explain itResults supported by full documentationResults are effectively interpreted with consistent focus on the aimInterpretation are well- integrated into existing literatureOutput having thepotential for academic publication
+
+Conclusion and Recommendations | No conclusions or wrong conclusions | Conclusions drawn are inappropriate or irrelevant to the projectNo recommendations for future development | Conclusions addresses the research question/issue and some of the aims and objectives are achievedConclusions are drawn from analysis and are partially supported by dataRecommendations for future development are somewhat unrealistic | Conclusion addresses the research question/issue and achievement of aim and objectivesConclusions are drawn from analysis and are mostly supported by dataClear understanding of the potentialsRealistic recommendations for future development | Conclusion addresses the research question/issue and achievement of aim and objectivesConclusions are drawn from analysis and are fully supported by dataClear understanding of the potentialsState limitations of final productRealistic recommendations for future development
+
+Overall Presentation | Disorganized to the extent preventing understanding.Full of misspellings and/or grammatical errors. | Introduction either underdeveloped or awkwardOrganizational structure occasionally unclearConclusion underdeveloped, obvious, or fails to match content and project objectivesA number of misspellings and/or grammatical errors | Most information is presented in logical order which is easy to follow.Some misspellings and/or grammatical errors.Presentation of charts, diagrams, tables and references is sometimes improper or erroneousLayout, format and outline of the report are sometimes inconsistentwith the requirements | Organization is generally good, but some parts seem out of placeMinor misspellings and/or grammatical errors.Layout, format and outline of the report are mostly consistent with the requirements | Written work is well organized and easy to understandFree from spelling mistake and grammatical errorLayout, format and outline of the report are consistent with the requirementsProper presentation of charts, diagrams, tables and references

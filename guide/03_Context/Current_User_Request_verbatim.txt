@@ -1,0 +1,11 @@
+I need a export of the context(more is better, of the things i said)
+Purpose: a handover notes/zip
+Include: a zip with the followings: 
+A summary.nd(what is my project is about, the main thing is: how to plant the CFRP and aerogel, and what aerogels, and what functions of the aero gel), and this core documents should be the road map the the other documents
+The word file, of the experiment guide
+The recording transcript i give u later, transcript only, don’t summarize to the exact task
+Reference article, included but not limited to kit’s two, the math simulation model for the aerogel)
+
+
+All papers should serve the goal: give a enough context for the model to build the simulation of aero and for retain enough memory for the WHOLE project
+Goal: for my agent to build the simulatot

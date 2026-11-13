@@ -1,0 +1,105 @@
+PDF page 1
+Mar 2026 
+Department of Aeronautical and Aviation Engineering (AAE) 
+The Hong Kong Polytechnic University 
+BEng (Hons) in Air Transport Engineering (Code: 48403-ATE, 48403-SYT) 
+BEng (Hons) in Aviation Engineering (Code: 48403-AE, 48403-SYA) 
+ 
+2026/27 Capstone Project Proposal (Group Project) 
+ 
+Note: The Capstone Project is a group project intended for a team of nominally three final year students.   
+Please take the above-mentioned into consideration when designing, planning and preparing the scope of the project. 
+ 
+Project Type 
+(Please check the correct box) 
+ 
+Internally Proposed Capstone Project 
+ 
+Industrial Partner Proposed Capstone Project 
+Name of organization  
+(if project is an Industrial Partner 
+Proposed Capstone Project.) 
+/ 
+Project Title 
+Thermo-optically functional CFRP laminates for lightweight 
+electrified systems 
+Eligible Candidate 
+AE / ATE 
+Supervisor(s) 
+ 
+Dr. CHAN Kit-Ying 
+Supervisor email 
+address(s) 
+kit-
+y.chan@polyu.edu.hk 
+Industrial advisor (if any) 
+/ 
+Objective(s) (e.g 
+(i) To design and develop… 
+(ii) To investigate… 
+(iii) To experimentally 
+evaluate…) 
+ 
+• 
+To design and fabricate asymmetric aerogel interleaves using freeze-casting 
+techniques for structural integration into CFRP laminates via resin infusion. 
+• 
+To conduct a comprehensive engineering analysis of the multifunctional 
+properties, specifically quantifying through-thickness thermal conductivity, 
+solar reflectance, and interlaminar shear strength. 
+• 
+To prototype a representative thermo-optically functional CFRP component 
+and experimentally evaluate its performance under simulated UAV operating 
+conditions, comparing its heat dissipation and solar-shielding effectiveness 
+against standard CFRP benchmarks. 
+Description of Works 
+(The capstone project must 
+include engineering design 
+and/or engineering analysis 
+and/or manufacturing and 
+prototyping and engineering 
+testing elements) 
+ 
+Electrified aviation and UAVs require multifunctional airframe materials 
+capable of managing internal heat from electronics while resisting external 
+solar radiation. While carbon fibre reinforced polymer (CFRP) composites 
+offer superior mechanical properties, their poor through-thickness thermal 
+conductivity leads to heat accumulation. This project involves the 
+engineering design and prototyping of a structurally integrated interleave 
+to provide asymmetric thermo-optical regulation within CFRP laminates. 
+The manufacturing phase focuses on creating a dual-layered porous 
+architecture using freeze-casting. The design features a carbon-rich inner 
+domain to redistribute internal heat and a boron-nitride-rich outer domain 
+to reflect solar radiation. These interleaves will be integrated into CFRP via 
+vacuum assisted resin infusion (VARI). A key engineering challenge is 
+ensuring the resin infusion process preserves the porosity of aerogels while 
+maintaining structural integrity. To validate these models, engineering 
+testing will be performed for thermal transport, solar reflectance, and 
+infrared thermography to monitor real-time heat dissipation. 
+The outcome will be a validated framework for thermo-optically functional 
+CFRPs. By replacing heavy active cooling systems with lightweight, 
+passive interleaves, this project provides a scalable solution to enhance the 
+thermal reliability and efficiency of next-generation electrified mobility 
+platforms. 
+Scope of Work 
+(i) 
+Composite design 
+AAE12
+
+
+PDF page 2
+Mar 2026 
+(e.g. Design standards and 
+regulation, FEM, Dynamic 
+Analysis, programming, and 
+prototyping) 
+ 
+(ii) 
+Composite manufacturing 
+(iii) 
+Materials characterization 
+(iv) 
+Prototyping 
+ 
+ 
+AAE12

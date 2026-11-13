@@ -2,5 +2,8 @@
 
 Structure → property simulation tool for the freeze-cast BN/CNF/CNT aerogel layers of a thermo-optical CFRP laminate (PolyU AAE capstone 2026/27).
 
-- `docs/PLAN.md` — build plan (under review)
-- `docs/COUNCIL_BRIEF.md` — self-contained brief for external model review
+- `docs/PLAN.md` — build plan v0.2 (under review; §0 lists what the meeting settled and left open)
+- `docs/COUNCIL_BRIEF.md` — self-contained brief for the council members (v2)
+- `docs/COUNCIL_SETUP.md` — orchestrator instructions, session memory, connector status
+- `guide/` — full contents of the handover zip `FYP_Handover_2026-10-29.zip` (checksums verified; start at `guide/summary.md`)
+- everything else (code, tests, configs) is the simulator itself, built after the council review

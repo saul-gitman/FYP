@@ -1,0 +1,653 @@
+{
+  "project": "Thermo-optically functional CFRP laminates for lightweight electrified systems",
+  "updated": "2026-10-08",
+  "summary": {
+    "user_supplied": 27,
+    "verified_Chan_journal_and_review": 16,
+    "Chan_overlap_with_user_list": 1,
+    "verified_Chan_conferences": 3,
+    "additional_workspace_review": 4,
+    "distinct_records": 49,
+    "Chan_official_output_count": 30,
+    "Chan_full_listing_status": "Full PolyU publication subpage inaccessible during research; only 19 distinct Chan output titles individually verified (16 journal/review, 3 conference). Do not claim full 30 individually enumerated."
+  },
+  "papers": [
+    {
+      "id": "U01",
+      "title": "Directional fabricating of flexible and compressible cellulose nanofibril composite cryogel with excellent thermal insulation, flame-retardancy and radiative cooling for efficient thermal management",
+      "url": "https://link.springer.com/article/10.1007/s10570-022-04861-7",
+      "theme": "Freeze-casting and insulation",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U02",
+      "title": "Scalable anisotropic cooling aerogels by additive freeze-casting",
+      "url": "https://www.nature.com/articles/s41467-022-33234-8",
+      "theme": "Directional freeze-casting",
+      "priority": "Critical",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": "Chan publication",
+      "prof_chan_coauthor": true,
+      "publication_year": 2022
+    },
+    {
+      "id": "U03",
+      "title": "Boron nitride–nanosheet enhanced cellulose nanofiber aerogel with excellent thermal management properties",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0144861720305993",
+      "theme": "BN and nanocellulose aerogel",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U04",
+      "title": "Ice-Templated Anisotropic Flame-Resistant Boron Nitride Aerogels Enhanced through Surface Modification and Cellulose Nanofibrils",
+      "url": "https://pubs.acs.org/aapmcd/article/3/3/1358/394195/Ice-Templated-Anisotropic-Flame-Resistant-Boron",
+      "theme": "BN and nanocellulose aerogel",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U05",
+      "title": "Freeze-casting production of thermal insulating and fire-retardant lightweight aerogels based on nanocellulose and boron nitride",
+      "url": "https://www.sciencedirect.com/science/article/pii/S014181302303266X",
+      "theme": "Freeze-casting and insulation",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U06",
+      "title": "Vertically aligned cellulose nanofiber/carbon nanotube aerogel-infused epoxy nanocomposites for highly efficient solar-thermal-electric conversion",
+      "url": "https://www.jmst.org/EN/10.1016/j.jmst.2024.07.018",
+      "theme": "CNT aerogel epoxy integration",
+      "priority": "Critical",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U07",
+      "title": "A multifunctional epoxy composites based on cellulose nanofiber/carbon nanotube aerogels: Simultaneously enhancing fire-safety, thermal conductive and photothermal performance",
+      "url": "https://doi.org/10.1016/j.compositesa.2024.108514",
+      "theme": "CNT aerogel epoxy integration",
+      "priority": "Critical",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U08",
+      "title": "Large-scale preparation of electrically conducting cellulose nanofiber/carbon nanotube aerogels: Ambient-dried, recyclable, and 3D-Printable",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0008622322002287",
+      "theme": "CNT aerogel preparation",
+      "priority": "Medium",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U09",
+      "title": "Cellulose-carbon nanotube composite aerogels as novel thermoelectric materials",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0266353818301556",
+      "theme": "CNT aerogel preparation",
+      "priority": "Medium",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U10",
+      "title": "Surfactant Assisted In Situ Synthesis of Nanofibrillated Cellulose/Polymethylsilsesquioxane Aerogel for Tuning Its Thermal Performance",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/marc.202200628",
+      "theme": "Aerogel chemistry and insulation",
+      "priority": "Medium",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U11",
+      "title": "Robust Superhydrophobic Cellulose Nanofiber Aerogel for Multifunctional Environmental Applications",
+      "url": "https://www.mdpi.com/2073-4360/11/3/495",
+      "theme": "Aerogel durability",
+      "priority": "Low",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U12",
+      "title": "Enhanced delamination resistance and through-thickness thermal conductivity of carbon fiber epoxy resin composites by in situ generation of interconnected thick oriented matrix-carbon nanotube layer",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1359836825001878",
+      "theme": "CFRP interlaminar thermal design",
+      "priority": "Critical",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U13",
+      "title": "Enhancement of mechanical and thermal properties of carbon fiber epoxy composite laminates reinforced with carbon nanotubes interlayer using electrospray deposition",
+      "url": "https://www.sciencedirect.com/science/article/pii/S266668202030075X",
+      "theme": "CFRP interlaminar thermal design",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U14",
+      "title": "Increasing the interlaminar fracture toughness and thermal conductivity of carbon fiber/epoxy composites interleaved with carbon nanotube/polyimide composite films",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1872580523607383",
+      "theme": "CFRP interlaminar thermal design",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U15",
+      "title": "Through-thickness thermal conductivity enhancement of carbon fiber composite laminate by filler network",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0017931019305782",
+      "theme": "CFRP interlaminar thermal design",
+      "priority": "Critical",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U16",
+      "title": "Thermal Conductivity of Carbon Nanotube Array Laminated Composite Materials",
+      "url": "https://journals.sagepub.com/doi/10.1177/0021998310373512",
+      "theme": "CFRP interlaminar thermal design",
+      "priority": "Medium",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U17",
+      "title": "Interlaminar toughening in structural carbon fiber/epoxy composites interleaved with carbon nanotube veils",
+      "url": "https://arxiv.org/abs/1905.09080",
+      "theme": "CFRP mechanical integration",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U18",
+      "title": "Robust, thermal insulated cellulose porous films for durable and efficient radiative cooling",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0144861726001670",
+      "theme": "Radiative cooling",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U19",
+      "title": "Ultralight thermally insulating boron nitride aerogels for passive daytime radiative cooling",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0254058426005262",
+      "theme": "Radiative cooling",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U20",
+      "title": "Scalable Liquid-Phase Exfoliation of h-BN for Solar-Reflective and Thermally Stable Polymer Aerogels",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aesr.202500328",
+      "theme": "BN materials and solar reflectance",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U21",
+      "title": "Large scalable, ultrathin and self-cleaning cellulose aerogel film for daytime radiative cooling",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2369969823000439",
+      "theme": "Radiative cooling",
+      "priority": "Medium",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U22",
+      "title": "Reflective and transparent cellulose-based passive radiative coolers",
+      "url": "https://link.springer.com/article/10.1007/s10570-021-04112-1",
+      "theme": "Radiative cooling",
+      "priority": "Medium",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U23",
+      "title": "Highly Compressible, Anisotropic Aerogel with Aligned Cellulose Nanofibers",
+      "url": "https://pubs.acs.org/doi/10.1021/acsnano.7b04246",
+      "theme": "PSP and structural mechanics",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U24",
+      "title": "Thermally Insulating Nanocellulose-Based Materials",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202001839",
+      "theme": "Heat-transfer fundamentals",
+      "priority": "High",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U25",
+      "title": "Parametric Model to Analyze the Components of the Thermal Conductivity of a Cellulose-Nanofibril Aerogel",
+      "url": "https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.11.024044",
+      "theme": "Heat-transfer fundamentals",
+      "priority": "Critical",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U26",
+      "title": "Freeze casting – A review of processing, microstructure and properties via the open data repository, FreezeCasting.net",
+      "url": "https://www.dunand.northwestern.edu/pdf/scotti2018a.pdf",
+      "theme": "Freeze-casting fundamentals",
+      "priority": "Critical",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "U27",
+      "title": "Freeze Casting: From Low-Dimensional Building Blocks to Aligned Porous Structures—A Review of Novel Materials, Methods, and Applications",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adma.201907176",
+      "theme": "Freeze-casting fundamentals",
+      "priority": "Critical",
+      "source": "User-provided list",
+      "kind": "Journal/review/preprint as supplied",
+      "verification": "User supplied; metadata not independently checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "C01",
+      "title": "A heterogeneous nanocomposite architecture with contrasting thermal conductivity and hydrophilicity for synergistic solar-thermal storage and evaporation",
+      "year": 2025,
+      "url": "https://research.polyu.edu.hk/en/publications/a-heterogeneous-nanocomposite-architecture-with-contrasting-therm/",
+      "theme": "Heterogeneous structure and transport",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C02",
+      "title": "Anisotropic Hygroscopic Hydrogels with Synergistic Insulation-Radiation-Evaporation for High-Power and Self-Sustained Passive Daytime Cooling",
+      "year": 2025,
+      "url": "https://research.polyu.edu.hk/en/publications/anisotropic-hygroscopic-hydrogels-with-synergistic-insulation-rad/",
+      "theme": "Thermo-optical cooling",
+      "priority": "High",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C03",
+      "title": "Enhancing the thermal conductivity and dielectric properties of polymer composite film through segregated boron nitride nanosheets",
+      "year": 2025,
+      "url": "https://research.polyu.edu.hk/en/publications/enhancing-the-thermal-conductivity-and-dielectric-properties-of-p/",
+      "theme": "BN composites",
+      "priority": "High",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C04",
+      "title": "Size-Insensitive Vapor Diffusion Enabled by Additive Freeze-Printed Aerogels for Scalable Desalination",
+      "year": 2025,
+      "url": "https://research.polyu.edu.hk/en/publications/size-insensitive-vapor-diffusion-enabled-by-additive-freeze-print/",
+      "theme": "Additive freeze-printing",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C05",
+      "title": "Tree-Inspired Structurally Graded Aerogel with Synergistic Water, Salt, and Thermal Transport for High-Salinity Solar-Powered Evaporation",
+      "year": 2024,
+      "url": "https://research.polyu.edu.hk/en/publications/tree-inspired-structurally-graded-aerogel-with-synergistic-water-/",
+      "theme": "Porous transport",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C06",
+      "title": "Anisotropic thermally superinsulating boron nitride composite aerogel for building thermal management",
+      "year": 2023,
+      "url": "https://research.polyu.edu.hk/en/publications/anisotropic-thermally-superinsulating-boron-nitride-composite-aer/",
+      "theme": "Directional freeze-casting",
+      "priority": "Critical",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C07",
+      "title": "Engineering anisotropic structures of thermally insulating aerogels with high solar reflectance for energy-efficient cooling applications",
+      "year": 2023,
+      "url": "https://research.polyu.edu.hk/en/publications/engineering-anisotropic-structures-of-thermally-insulating-aeroge/",
+      "theme": "Freeze-temperature effects",
+      "priority": "Critical",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C08",
+      "title": "Superinsulating BNNS/PVA Composite Aerogels with High Solar Reflectance for Energy-Efficient Buildings",
+      "year": 2022,
+      "url": "https://research.polyu.edu.hk/en/publications/superinsulating-bnnspva-composite-aerogels-with-high-solar-reflec/",
+      "theme": "BN aerogel optical thermal",
+      "priority": "Critical",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C10",
+      "title": "Tailoring mechanical and electrical properties of graphene oxide film for structural dielectric capacitors",
+      "year": 2021,
+      "url": "https://research.polyu.edu.hk/en/publications/tailoring-mechanical-and-electrical-properties-of-graphene-oxide-/",
+      "theme": "Structural functional interleaves",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C11",
+      "title": "Graphene oxide thin film structural dielectric capacitors for aviation static electricity harvesting and storage",
+      "year": 2020,
+      "url": "https://research.polyu.edu.hk/en/publications/graphene-oxide-thin-film-structural-dielectric-capacitors-for-avi/",
+      "theme": "CFRP integration",
+      "priority": "High",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C12",
+      "title": "Structural Electrolytes Based on Epoxy Resins and Ionic Liquids: A Molecular-Level Investigation",
+      "year": 2020,
+      "url": "https://www.polyu.edu.hk/aae/people/academic-staff/prof-chan-kit-ying/",
+      "theme": "Polymer resin mechanics",
+      "priority": "Low",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C13",
+      "title": "Boosting the Electrical and Mechanical Properties of Structural Dielectric Capacitor Composites via Gold Nanoparticle Doping",
+      "year": 2019,
+      "url": "https://research.polyu.edu.hk/en/publications/boosting-the-electrical-and-mechanical-properties-of-structural-d/",
+      "theme": "CFRP multifunctionality",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C14",
+      "title": "Multifunctional Graphene Oxide Paper Embodied Structural Dielectric Capacitor based on Carbon Fibre Reinforced Composites",
+      "year": 2018,
+      "url": "https://research.polyu.edu.hk/en/publications/multifunctional-graphene-oxide-paper-embodied-structural-dielectr/",
+      "theme": "CFRP integration",
+      "priority": "High",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C15",
+      "title": "A critical review on multifunctional composites as structural capacitors for energy storage",
+      "year": 2018,
+      "url": "https://research.polyu.edu.hk/en/publications/a-critical-review-on-multifunctional-composites-as-structural-cap/",
+      "theme": "Structural multifunctionality",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "C16",
+      "title": "Design of a structural power composite using graphene oxide as a dielectric material layer",
+      "year": 2018,
+      "url": "https://research.polyu.edu.hk/en/publications/design-of-a-structural-power-composite-using-graphene-oxide-as-a-/",
+      "theme": "CFRP integration",
+      "priority": "High",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Journal article/review",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "K01",
+      "title": "Multifunctional composites for energy storage",
+      "year": 2017,
+      "url": "https://research.polyu.edu.hk/en/publications/multifunctional-composites-for-energy-storage/",
+      "theme": "Conference publication",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Conference presentation / PolyU classification",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "K02",
+      "title": "Continuous Freeze-Casting for Thermally Insulating Anisotropic Aerogels",
+      "year": 2022,
+      "url": "https://research.polyu.edu.hk/en/publications/continuous-freeze-casting-for-thermally-insulating-anisotropic-ae/",
+      "theme": "Conference publication",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Conference presentation / PolyU classification",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "K03",
+      "title": "INTEGRATED THERMAL ENERGY STORAGE IN GRAPHENEBASED COMPOSITE EVAPORATOR FOR HIGH-EFFICIENCY WATER GENERATION",
+      "year": 2023,
+      "url": "https://research.polyu.edu.hk/en/publications/integrated-thermal-energy-storage-in-graphenebased-composite-evap/",
+      "theme": "Conference publication",
+      "priority": "Medium",
+      "source": "Prof. Kit-Ying Chan (PolyU official profile)",
+      "kind": "Conference presentation / PolyU classification",
+      "verification": "Official listing verified",
+      "duplicate_with": null
+    },
+    {
+      "id": "W01",
+      "title": "Templating strategies for 3D-structured thermally conductive composites: Recent advances and thermal energy applications",
+      "year": 2023,
+      "url": "https://doi.org/10.1016/j.pmatsci.2022.101054",
+      "theme": "Thermal networks and templating",
+      "priority": "Critical",
+      "source": "Additional FYP discussion / literature expansion",
+      "kind": "Journal review",
+      "verification": "Publisher/academic search checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "W02",
+      "title": "Passive daytime radiative cooling: Fundamentals, material designs, and applications",
+      "year": 2022,
+      "url": "https://doi.org/10.1002/eom2.12153",
+      "theme": "Solar reflectance and IR emission",
+      "priority": "High",
+      "source": "Additional FYP discussion / literature expansion",
+      "kind": "Journal review",
+      "verification": "Publisher/academic search checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "W03",
+      "title": "Photonics and thermodynamics concepts in radiative cooling",
+      "year": 2022,
+      "url": "https://www.nature.com/articles/s41566-021-00921-9",
+      "theme": "Radiation physics",
+      "priority": "High",
+      "source": "Additional FYP discussion / literature expansion",
+      "kind": "Journal review",
+      "verification": "Publisher/academic search checked",
+      "duplicate_with": null
+    },
+    {
+      "id": "W04",
+      "title": "Progress of passive daytime radiative cooling technologies towards commercial applications",
+      "year": 2022,
+      "url": "https://www.sciencedirect.com/science/article/pii/S1674200121002133",
+      "theme": "Radiative cooling review",
+      "priority": "Medium",
+      "source": "Additional FYP discussion / literature expansion",
+      "kind": "Journal review",
+      "verification": "Publisher/academic search checked",
+      "duplicate_with": null
+    }
+  ],
+  "experiment_steps": [
+    {
+      "order": 1,
+      "step": "Define research question",
+      "description": "Compare baseline CFRP with an asymmetric CFRP laminate to explore how to reduce external solar heating while improving heat spreading of internal heat sources. Do not claim thermal diode behavior without a directional heat-flow experiment.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 2,
+      "step": "Define composition controls",
+      "description": "Consider BN-to-carbon-rich filler ratio (BN/C), filler/solids concentration, and separate BN-rich exterior vs carbon-rich interior. Carbon type is not finally fixed in the earlier user-specified variables: graphene/CNT are candidate systems; do not equate C with CNF.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 3,
+      "step": "Define freeze-casting controls",
+      "description": "Vary freezing temperature and freezing duration, which the user explicitly named. Evaluate freezing direction/thermal gradient, freezing-front velocity or cooling rate, suspension dispersion, and drying as additional literature-derived candidates rather than confirmed fixed settings.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 4,
+      "step": "Prepare dispersions and aligned porous structures",
+      "description": "Disperse chosen BN and carbon-family fillers in an appropriate binder/solvent, cast and directionally freeze with controlled thermal boundary, then remove ice by freeze-drying. Determine detailed dispersion, binder and freezing protocol from cited papers and pilot trials, not the uploaded Word recipe.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 5,
+      "step": "Characterize resulting morphology",
+      "description": "Check aligned cells/channels, possible honeycomb/hexagonal cross-sections (hypothesis, not guaranteed), pore shape/width, wall alignment, connectivity, porosity, bulk density, shrinkage and thickness; use micrographs and structure measurements.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 6,
+      "step": "Integrate CFRP laminate",
+      "description": "Build a carbon-rich inner interleave for heat distribution and a BN-rich outer-facing porous region for sunlight reflection; combine with carbon-fiber layers and consider vacuum-assisted resin infusion/VARI. Measure how resin intrusion modifies aerogel pore structure and thermal response.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 7,
+      "step": "Baseline and controls",
+      "description": "Prepare normal CFRP plus carbon-domain-only, BN-domain-only and combined constructions at comparable dimensions, layup and test conditions; the exact specimen count is not yet user-confirmed.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 8,
+      "step": "Test properties",
+      "description": "Measure directional/effective conductivity k_x, k_y, k_z or in-plane vs through-thickness; temperature fields via IR thermography; solar spectral reflectance; mid-IR emittance where the equipment permits; mechanical properties (tensile/flexural/interlaminar strength or short-beam); mass/density.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 9,
+      "step": "Run three thermal load cases",
+      "description": "Test external illumination alone, internal heater alone, and combined illumination + internal heater; measure peak and steady-state temperatures, spatial gradients, heat spreading and time to steady state under repeatable boundary conditions.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 10,
+      "step": "Model structure-to-property relationship",
+      "description": "Use analytical thermal resistance baseline plus 2D/3D FEA (ANSYS/Python) to sweep pore alignment, porosity, density, BN/C ratio and laminate thickness; compare k tensor components, equivalent k_eff, heat flux and T fields to experiment. Treat porous-aerogel radiation as an effective heat-transfer component only with stated assumptions.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 11,
+      "step": "Analyse processing–structure–property",
+      "description": "Fix three top-level headings: 1 Processing/Control Parameters → 2 Resulting Structure → 3 Resulting Properties. Draw 1→3 as experiment and 2→3 as simulation, as specified by user; identify missing factors from further reading.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    },
+    {
+      "order": 12,
+      "step": "Optimize and validate",
+      "description": "Compare combined sample against baseline on external heat blocking, internal heat spreading, structural integrity and added weight; identify trade-offs and uncertainties before selecting a preferred architecture.",
+      "status": "User concept plus explicitly differentiated literature-inferred refinements; not a finalized protocol"
+    }
+  ]
+}

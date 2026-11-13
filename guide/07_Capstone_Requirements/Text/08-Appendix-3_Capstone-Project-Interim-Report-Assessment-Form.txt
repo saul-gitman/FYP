@@ -1,0 +1,85 @@
+2026/2027
+
+Department of Aeronautical and Aviation Engineering
+
+AAE4002/AAE4012 Capstone Project
+
+Interim Report Assessment
+
+(For the use by Academic Supervisor and Independent Assessor)
+
+The Interim Report is 20 marks in total. The Interim Report is assessed by (1) the Academic Supervisor and (2) the Independent Assessor. The assessments of the Interim Report by the Academic Supervisor and the Independent Assessor each weigh 50% of the Interim report marks, and hence, 10 marks each of the total marks.
+
+The assessment methods and the associated marks of AAE4002/AAE4012 are shown in Table 1.
+
+Table 1: Assessment methods and the associated marks
+
+ | Assessments | Marks
+
+1 | Interim Report | 20
+
+2 | Final Report | 50
+
+3 | Oral Presentation | 30
+
+ | Total | 100
+
+
+
+2026/27
+
+Department of Aeronautical and Aviation Engineering
+
+AAE4002/AAE4012 Capstone Project
+
+Interim Report Assessment Form
+
+  Project Code & Title: | (  ) 
+
+Academic Supervisor / Independent Assessor: | 
+
+
+
+Turnitin Submission: Y / NPlagiarism detected: ___________%
+
+ | MaximumMarks | Criteria (Refer to the Rubric for Interim Report Assessment) | Name & SID | Name & SID | Name & SID
+
+ |  |  | Marks | Marks | Marks
+
+Abstract and Introduction | 2 | Aims and objectives are explicitly statedIdentification of problemsRationale for carrying out the project is explained clearly | ______/2 | ______/2 | ______/2
+
+Literature Review | 8 | Literature review is thorough, comprehensive, relevant and consistent with the research topicLiteratures are critically evaluated; original thinking is evidentReview of literature is presented in a logical and coherent mannerThe work of others is acknowledged and referencedSource material is up to date and comprehensive | ______/8 | ______/8 | ______/8
+
+Project Management, Methodology and preliminary results | 7 | Work scope is justifiable and workableEvidence of good time and resource management with the use of project management techniques, e.g. Gantt chart, tasks breakdown, schedules, cost and risk analysis, etc.Identification of appropriate project milestones.Awareness of various possible investigative methodsMain tasks, difficulties and problems are listed and explainedIdentification, justification, explanation and use of appropriate tools and techniques/approachesDemonstrate the problem solving skillsClear presentation of test conditions and test dataApproach in the analysis / investigative of results are appropriate Discrepancies between theoretical and experimental results were identifiedPreliminary interpretation and documentation of results | ______/7 | ______/7 | ______/7
+
+OverallPresentation of the Interim report | 3 | Free from spelling mistake and grammatical errorLayout, format and outline of the report are consistent with the requirementsProper presentation of charts, diagrams, tables and referencesInteresting to read and visually pleasant | ______/3 | ______/3 | ______/3
+
+ | Total | _____/20 | _____/20 | _____/20
+
+
+
+
+
+
+
+
+
+
+
+Comments (required):
+
+Signature:   |  |  | Date of Assessment: | 
+
+
+
+Rubric for Capstone Project Interim Report Assessment
+
+ | Unacceptable | Marginal | Acceptable | Good | Excellent
+
+Abstract and Introduction | Introduction extremely underdeveloped or missingAims and objectives are not statedRationale for carrying out the project is unclear | Introduction either underdeveloped or awkwardAims and/or objectives are either not stated or unclearNot all important problems are identified | Most information is presented in logical order which is easy to follow.Aims and objectives are stated but the rationale for carrying out the project is not explained clearly | Effective introduction brings audience to topicAims and objectives are statedIdentification of problems | Highly effective introduction brings audience to topicAims and objectives are explicitly statedIdentification of problemsRationale for carrying out the project is explained clearly
+
+Literature Review | No or irrelevant literature review  | Insufficient literature review or irrelevant materials includedReview of literature is presented in a confusing mannerSource material is outdated | Literature review is relevant and consistent with the research topicLiteratures are evaluated though original thinking is not evidentReview of literature is presented in a logical but sometimes not coherent manner | Thorough, relevant and consistent with the research topicLiteratures are evaluated; original thinking is evident to some degreesReview of literature is presented in a logical and coherent mannerThe work of others is acknowledged and referenced | Thorough, comprehensive, relevant and consistent with the research topicLiteratures are critically evaluated; original thinking is evidentReview of literature is presented in a logical and coherent mannerThe work of others is acknowledged and referencedSource material is up to date and comprehensive
+
+Project Management, Methodology and result | Scope of work is either unrealistic or not justifiableLittle evidence of using project management techniquesThe research problem cannot be comprehendedWork scope is either unrealistic and not justifiableDo not aware of various possible investigative methodsNo progress in solving the problemEngineering analysis infrequently used or appears trivial and leads to obvious conclusionsNo or very poor technical (software /hardware/mathematical) skills are demonstrated during the project.No test conditions and test dataNo explanation about any discrepancy between theoretical and experimental resultsNo results | Scope of work is justifiable but need some improvementDemonstrate some evidence of project planning and management using standard project management techniques The research problem under study can be describedSome research methods are used to solve the problem and the problem is partly solved Included some analysis, but not very detailed or challenging; many steps seem not supported by calculationsPoor or very basic technical (software /hardware/ mathematical) skills are demonstrated during the projectUnclear presentation of test conditions and test dataLittle effort in analyzing test results Analysis is of trivial calculations & poorly explained | Scope of work is justifiable and workable Demonstrate a satisfactory project planning and management using standard project management techniques.The research problem under study is describedSome research methods are used to solve the problem and the problem is partly solved Included some analysis; but some steps seem not supported by calculationBasic technical (software /hardware/ mathematical) skills are demonstrated during the projectAcceptable presentation of test conditions and test dataPreliminary analysis of experimental resultsResults supported by documentationResults are interpreted  | Scope of work is justifiable and workableDemonstrate a good project planning and management using standard project management techniques and effortsCauses of the problem under study can be fully explained; The pros and cons of each proposed solution found in the literature can also be explainedSuitable research methods are used to solve the problem and the problem is reasonably solvedDetailed & challenging engineering analysis; but a few steps seem not supported by calculation Good technical (software /hardware/ mathematical) skills are demonstrated during the projectClear presentation of test conditions and test dataIdentified discrepancies between theoretical and experimental results, and preliminary analysis is done to explain itResults supported by documentationResults are well interpreted | Scope of work is justifiable and workableDemonstrate an excellent project planning and management using standard project management techniquesThe problem under study is fully analyzed with solution being proposed Suitable research methods are used to solve the problem and the problem is fully solvedDetailed & challenging engineering analysis at every stage of the design processExcellent technical (software/hardware/ mathematical) skills are demonstrated during the projectClear presentation of test conditions and test dataClearly identified discrepancies between theoretical and experimental results, and preliminary analysis is done to explain itResults supported by clear documentationResults are effectively interpreted Output having the potential for academic publication
+
+Overall Presentation | Disorganized to the extent preventing understanding.Full of misspellings and/or grammatical errors. | Introduction either underdeveloped or awkwardOrganizational structure occasionally unclearConclusion underdeveloped, obvious, or fails to match content and project objectives | Most information is presented in logical order which is easy to follow.Some misspellings and/or grammatical errors.Presentation of charts, diagrams, tables and references is sometimes improper or erroneousLayout, format and outline of the report are sometimes inconsistent with the requirements | Organization is generally good, but some parts seem out of placeMinor misspellings and/or grammatical errors.Layout, format and outline of the report are mostly consistent with the requirements | Written work is well organized and easy to understandFree from spelling mistake and grammatical errorLayout, format and outline of the report are consistent with the requirementsProper presentation of charts, diagrams, tables and references

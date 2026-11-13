@@ -1,0 +1,83 @@
+2026/2027
+
+Department of Aeronautical and Aviation Engineering
+
+AAE4002/AAE4012 Capstone Project
+
+Guidelines for Preparing Interim Report
+
+Writing the Report
+
+Every group needs to submit one group report. It is advisable to consult the Academic Supervisor in preparing the Interim Report. The Academic Supervisor should check the draft and allow sufficient time for amendments to be made. 
+
+The format of the report will vary depending upon the particular project and this should be discussed with the Academic Supervisor. Please note that the report will be assessed based on the following criteria:
+
+Introduction and understanding of objectives
+
+Relevance of literature review
+
+Appropriateness of methodology and presentation of preliminary results (if any)
+
+Good project management
+
+Making good progress
+
+English standard and overall presentation of report
+
+Length of the Report
+
+The report should be written such that it can be read and absorbed by an engineer having a basic knowledge of the subject. It should not contain any irrelevant materials. 
+
+The report should be clear enough for demonstration.  There is no page limit to the Interim Report.  However, a thorough literature review alone can easily exceed 20 pages of one-and-a-half-line spacing format at this stage. 
+
+Cover Sheet
+
+The cover sheet should specify that the document is an Interim Report and include the date of submission, the name of the Institution, the name of Academic Supervisors, Industrial Supervisor, and student(s) submitting the report (please refer to Appendix 1).
+
+Assessment of Individual Contribution
+
+Contribution by each student is to be clearly indicated on the report. Each student has to conduct a peer assessment on her/his partners. The assessment form is shown in Appendix I. The peer assessment will be kept confidential.
+
+Feedback
+
+ 
+
+The marked copy will be sent back to the project group via the General Office/ Academic Supervisor around the beginning of Semester Two. Students should discuss with their Academic Supervisor on the feedback.
+
+How to submit the Interim Report
+
+Each group should submit the followings before the scheduled deadline:
+
+Upload the Interim Report to Turnitin (via Blackboard). The Originality Report will then be generated. 
+
+(Student manual for Turnitin: https://www.polyu.edu.hk/TEAL/en/elearning-support/turnitin-lti-assignment/)
+
+Submit the Interim Report, Originality Report and Peer Assessment Form of each group member via Final Year Project Management System (https://studentfyp.polyu.edu.hk/).
+
+Please refer to the “General Information for Students” for the submission deadline. 
+
+Students are advised to submit their work before the deadline to avoid any last-minute issues. If technical difficulties (e.g., network or communication problems) prevent submission, students must at least email the required documents to their supervisor by the deadline. Late submissions without prior approval will incur strict penalties.
+
+APPENDIX I: Sample of Peer Assessment Form
+
+Peer Assessment Form 
+
+CONFIDENTIAL
+
+A project can be divided into different tasks. The students are required to assess the contributions of their peers in both conducting the project and writing the report. You are required to assess your peers’ contribution in each task. The contribution rating varies from 0% to 100%. 0% means no contribution at all, while 100% means all the work is carried out by the student concerned. 
+
+Project Code & Title: | (         )
+
+
+
+Distribution of contribution (%)
+
+ | Name of Assessor[                   ] | Name of Assessee A [                    ] | Name of Assessee B [                    ] | Total
+
+Contribution | 30%Tasks:- Literature review- Project planning- Analysis the data | 40%Tasks:- Set up test rig- Conduct test | 30%Tasks:- Literature review- Mathematical model | 100%
+
+
+
+Name of Student: |  |  | 
+
+Signature of Student: |  | Date: |

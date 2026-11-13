@@ -1,0 +1,42 @@
+{
+  "status": "pending_external_PDF_downloads",
+  "attempt_2026_10_28": "External direct download attempts returned HTTP 403; no PDF saved from those attempts. U02 main paper is separately included from an original upload.",
+  "files": [
+    {
+      "id": "C08",
+      "output": "C08_Yang_2022_BNNS_PVA.pdf",
+      "url": "https://link.springer.com/content/pdf/10.1007/s40820-022-00797-6.pdf"
+    },
+    {
+      "id": "U25",
+      "output": "U25_Obori_2019_accepted.pdf",
+      "url": "https://link.aps.org/accepted/10.1103/PhysRevApplied.11.024044"
+    },
+    {
+      "id": "C07",
+      "output": "C07_Kim_2023_Anisotropy.pdf",
+      "url": "https://ira.lib.polyu.edu.hk/bitstream/10397/99470/1/Kim_Engineering_Antisotropic_Structures.pdf"
+    },
+    {
+      "id": "C06",
+      "output": "C06_Adegun_2023_BNNS_PVA.pdf",
+      "url": "https://ira.lib.polyu.edu.hk/bitstream/10397/99475/1/Adegun_Antiotropic_Thermally_Superinsulating.pdf"
+    },
+    {
+      "id": "A01",
+      "output": "A01_Lou_2023_Heat_Transfer_Review.pdf",
+      "url": "https://mdpi-res.com/d_attachment/gels/gels-09-00220/article_deploy/gels-09-00220.pdf"
+    },
+    {
+      "id": "U02_SI",
+      "output": "U02_Chan_2022_Supplement.pdf",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-022-33234-8/MediaObjects/41467_2022_33234_MOESM1_ESM.pdf"
+    },
+    {
+      "id": "C08_SI",
+      "output": "C08_Yang_2022_Supplement.pdf",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1007%2Fs40820-022-00797-6/MediaObjects/40820_2022_797_MOESM1_ESM.pdf"
+    }
+  ],
+  "current_status_file": "Reference_Availability_2026-10-29.json"
+}
