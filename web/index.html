@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aerogel k Simulator</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <header><h1 id="title"></h1><span class="badge" id="badge"></span></header>
+    <div class="reminder" id="reminder"></div>
+    <div class="rows" id="rows"></div>
+    <footer id="footer"></footer>
+  </aside>
+  <main>
+    <div id="view"></div>
+    <div class="legend" id="legend" hidden><b id="legend-name"></b><span id="legend-low"></span><i></i><span id="legend-high"></span></div>
+    <div class="note" id="note"></div>
+  </main>
+</div>
+<div id="tip"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
