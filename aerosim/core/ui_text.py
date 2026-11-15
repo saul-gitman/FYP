@@ -26,6 +26,8 @@ SKIPPED = "{row} not added: already counted in {by}"
 
 # 3D view
 WALL_NOTE = "walls drawn ×{scale} thicker than real · drag to rotate"
+AXIS_PAR = "z · along the channels (k∥)"
+AXIS_TRANS = "x · across the channels (k⊥)"
 
 # Input status dots
 STATUS = {

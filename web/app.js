@@ -169,6 +169,12 @@ const wallMat = new THREE.MeshStandardMaterial({ color: 0xd9dde3, roughness: 0.6
 const DEPTH = 3;   // scene units along the channels
 let box = [1, 1];  // block size in µm, from the backend
 let scale = 1;     // scene units per µm
+let isWall = () => true; // (fx, fy) in 0..1 of the block → is there wall here? (for the field overlay)
+
+// Flat-to-flat size of the hexagon (pointy-top, flats facing ±x) that passes through (dx, dy).
+function hexSize(dx, dy) {
+  return 2 * Math.max(Math.abs(dx), Math.abs(0.5 * dx + 0.866 * dy), Math.abs(-0.5 * dx + 0.866 * dy));
+}
 
 function hexPoints(r, cx, cy) {
   const p = [];
@@ -194,6 +200,11 @@ function buildStructure(geo) {
       return s;
     });
     group.add(new THREE.Mesh(new THREE.ExtrudeGeometry(shapes, { depth: DEPTH, bevelEnabled: false }), wallMat));
+    isWall = (fx, fy) => {
+      const x = fx * box[0], y = fy * box[1];
+      const h = Math.min(...geo.centres.map(([cx, cy]) => hexSize(x - cx, y - cy)));
+      return h > geo.pitch - geo.wall;
+    };
   } else if (geo.kind === "pixels") {
     const ny = geo.wall.length, nx = geo.wall[0].length, w = box[0] / nx * scale, h = box[1] / ny * scale;
     let count = 0;
@@ -208,8 +219,10 @@ function buildStructure(geo) {
       }
     });
     group.add(mesh);
+    isWall = (fx, fy) => geo.wall[Math.min(ny - 1, Math.floor(fy * ny))][Math.min(nx - 1, Math.floor(fx * nx))] === "1";
   }
   group.position.y = -DEPTH / 2;
+  placeAxes();
 }
 
 let fieldMesh = null;
@@ -227,17 +240,40 @@ function showField(field) {
   rows.forEach((line, j) => line.forEach((v, i) => {
     const f = v === null || hi === lo ? 0.5 : (v - lo) / (hi - lo);
     if (f < 0.5) c.lerpColors(blue, white, f * 2); else c.lerpColors(white, red, f * 2 - 1);
-    data.set([c.r * 255, c.g * 255, c.b * 255, 215], (j * nx + i) * 4);
+    const alpha = v === null ? 0 : isWall((i + 0.5) / nx, (j + 0.5) / ny) ? 255 : 70;
+    data.set([c.r * 255, c.g * 255, c.b * 255, alpha], (j * nx + i) * 4);
   }));
   const tex = new THREE.DataTexture(data, nx, ny);
   tex.needsUpdate = true;
   fieldMesh = new THREE.Mesh(new THREE.PlaneGeometry(box[0] * scale, box[1] * scale),
-    new THREE.MeshBasicMaterial({ map: tex, transparent: true, side: THREE.DoubleSide }));
+    new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false, side: THREE.DoubleSide }));
   fieldMesh.position.z = DEPTH + 0.01;
   group.add(fieldMesh);
   document.getElementById("legend-name").textContent = field.name;
   document.getElementById("legend-low").textContent = field.low;
   document.getElementById("legend-high").textContent = field.high;
+}
+
+// Axis arrows: z = along the channels (k∥), x = across (k⊥, the direction of the 2D runs).
+const axisColor = 0x8b94a1;
+const axes = [new THREE.ArrowHelper(new THREE.Vector3(0, 0, 1), new THREE.Vector3(), 1, axisColor, 0.18, 0.1),
+              new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), new THREE.Vector3(), 1, axisColor, 0.18, 0.1)];
+const axisTips = [new THREE.Vector3(), new THREE.Vector3()];
+function placeAxes() {
+  const x0 = -box[0] * scale / 2 - 0.4, y0 = -box[1] * scale / 2 - 0.4;
+  axes[0].position.set(x0, y0, 0); axes[0].setLength(DEPTH + 0.6, 0.18, 0.1);
+  axes[1].position.set(x0, y0, 0); axes[1].setLength(box[0] * scale + 0.6, 0.18, 0.1);
+  axisTips[0].set(x0, y0, DEPTH + 0.95);
+  axisTips[1].set(x0 + box[0] * scale + 0.6, y0 - 0.45, 0);
+  axes.forEach(a => group.add(a));
+}
+function drawAxisLabels() {
+  ["axis-par", "axis-trans"].forEach((id, k) => {
+    const p = axisTips[k].clone().applyMatrix4(group.matrixWorld).project(camera);
+    const el = document.getElementById(id);
+    el.style.left = ((p.x + 1) / 2 * host.clientWidth) + "px";
+    el.style.top = ((1 - p.y) / 2 * host.clientHeight) + "px";
+  });
 }
 
 async function loadStructure() { buildStructure(await api("/api/structure")); }
@@ -250,7 +286,7 @@ function resize() {
 }
 addEventListener("resize", resize);
 resize();
-renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); });
+renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); drawAxisLabels(); });
 controls.addEventListener("start", () => { controls.autoRotate = false; });
 
 // ---------------- start ----------------
@@ -262,6 +298,8 @@ document.title = UI.TITLE;
 document.getElementById("title").textContent = UI.TITLE;
 document.getElementById("badge").textContent = UI.BADGE;
 document.getElementById("reminder").textContent = UI.REMINDER;
+document.getElementById("axis-par").textContent = UI.AXIS_PAR;
+document.getElementById("axis-trans").textContent = UI.AXIS_TRANS;
 ROWS.forEach(buildRow);
 renderFooter();
 await loadStructure();

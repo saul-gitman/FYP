@@ -98,6 +98,24 @@ pyproject.toml         dependencies, ruff style, pytest settings
 
 A **new folder** with an `__init__.py` holding `ROW`, `ORDER`, `HELP`, `COLOR` becomes a **new row**. The structure row must stay first.
 
+## Notes and unfinished issues
+Open questions from the v0.1 build check (2026-11-15). **No more backend methods are planned for now.** These are notes, not tasks in progress.
+
+1. **What "pore size" means for gas in a hex channel.**
+   - Local Kn treats the pore size d as the gap.
+   - Monte Carlo finds that a hex channel behaves like a gap of about d/2, and the pixel staircase lowers it by about 10 % more.
+   - At 1 atm the effect on k is under 1 %, but the definition matters at low pressure. It is a fair point to discuss in the report.
+2. **Ray tracing (0.46 mW/m·K at the defaults) depends entirely on two hypothetical wall inputs:** IR absorption κ_w and reflectance. Replace them once the reflectance spectra are measured. Until then, read the radiation term as an order of magnitude.
+3. **Source page numbers are not verified yet.** Check every citation in `docs/PHYSICS.md` and the method files against the original papers before the interim report. Also check the Collishaw & Evans DOI, which differs between databases, and the author list of the 2021 CNF/BN paper.
+4. **Pixel FV on the ideal honeycomb:** k_x and k_y differ by 5.5 % because of the pixel staircase. Only their mean is checked against the formula.
+5. **Measured vs model gap:**
+   - Chan 2022 measured k⊥ = 16.9 mW/m·K, which is below the air-only floor (≈ 26 mW/m·K) of any air-filled micron-channel model.
+   - Cracks raise the model's anisotropy from 1.6 to about 2.0; the measured value is ≈ 5.8.
+   - Compare trends, not absolute values (see `docs/PLAN.md` §2).
+6. **GitHub housekeeping (repo settings, outside the code):**
+   - Set the repository's default branch to `main` (Settings → Branches).
+   - The merged branches `claude/quirky-thompson-39y288` and `claude/beautiful-tesla-ro162g` still contain the removed AAE4203 GNSS lab folder and can be deleted.
+
 ## Other repo contents
 - [`HANDOVER.md`](HANDOVER.md) — handover: original goal, state, change log, sessions
 - [`guide/`](guide/) — full contents of the handover zip `FYP_Handover_2026-10-29.zip` (start at `guide/summary.md`; read-only)

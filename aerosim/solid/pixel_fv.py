@@ -93,7 +93,7 @@ def run(structure, inputs, conditions):
             "covers solid + gas together: the Gas row is not added again",
         ],
         "field": {
-            "name": "Temperature (K above coldest), ΔT = 1 K per block, heat left → right",
+            "name": "Temperature (heat flows along x, left → right)",
             "values": T[::stride, ::stride].round(3).tolist(),
             "low": "cold",
             "high": "hot",

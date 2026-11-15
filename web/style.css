@@ -58,7 +58,7 @@ footer .line { font-size: 15px; font-weight: 600; margin-top: 3px; }
 footer .small { color: var(--muted); font-size: 11px; margin-top: 4px; }
 footer.stale .line { opacity: .45; }
 footer .stale-text { color: var(--error); font-size: 12px; margin-top: 4px; }
-main { position: relative; min-width: 0; }
+main { position: relative; min-width: 0; overflow: hidden; }
 #view { position: absolute; inset: 0; }
 .note { position: absolute; right: 14px; bottom: 12px; color: var(--muted); font-size: 11px; }
 .legend { position: absolute; right: 14px; top: 14px; font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
@@ -74,3 +74,4 @@ main { position: relative; min-width: 0; }
   .rows { overflow: visible; }
   main { height: 55vh; }
 }
+.axis { position: absolute; left: 0; top: 0; font-size: 11px; color: var(--muted); white-space: nowrap; pointer-events: none; transform: translate(8px, -50%); }

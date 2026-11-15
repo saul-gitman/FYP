@@ -23,8 +23,10 @@ Plan `docs/PLAN.md` (v0.2, plus `docs/COUNCIL_SETUP.md` for the council orchestr
 | 10-29 | `e552301` | Simulator build plan and council review brief |
 | 10-29 | `84ef349` | Plan and brief revised against the meeting transcript; council setup notes |
 | 10-29 | `e2a9de5`, `9f2105b` | Handover zip contents under `guide/`; Legion MCP test results; corrected council model names |
-| 10-30 | `587239f`, `8c01bcb` | GNSS Lab 1 folder: data, processing, report, GIFs, figures, benchmark baseline |
+| 10-30 | `587239f`, `8c01bcb` | GNSS Lab 1 folder: data, processing, report, GIFs, figures, benchmark baseline (removed from this repo on 11-15 in `a72c77a`; it lives in `AAE-4004-lab`) |
 | 11-13 | handover | `main` created by merging both branches above, plus this file |
+| 11-15 | `da8de1a` … `8f10105` | Design session merged; v0.1 simulator built (`aerosim/`, `web/`, `.agent/`) |
+| 11-15 | `a72c77a` | AAE4203 GNSS Lab 1 folder removed (unrelated coursework) |
 
 ## Sessions
 `session_0143oVsKsbxuFFSfjRSorAqD` PolyU exchange simulation tool (10-29, blocked on council) ·
@@ -33,4 +35,4 @@ Plan `docs/PLAN.md` (v0.2, plus `docs/COUNCIL_SETUP.md` for the council orchestr
 `session_0143oVsGXh4V8fwmnWfhskgN` Repository memory search (11-12).
 
 ## Branches
-Before this handover the repo had no `main`; GitHub's default branch is still `claude/compassionate-lamport-ff9nt6` (plan only). Set the default to `main` in Settings, Branches. The old `claude/*` branches (`admiring-pascal`, `quirky-thompson`, `compassionate-lamport`) are merged and can be deleted.
+Before this handover the repo had no `main`; GitHub's default branch is still `claude/compassionate-lamport-ff9nt6` (plan only). Set the default to `main` in Settings, Branches. The old `claude/*` branches (`admiring-pascal`, `quirky-thompson`, `compassionate-lamport`, `beautiful-tesla`, `gifted-volta`) are merged and can be deleted. `quirky-thompson` and `beautiful-tesla` still contain the removed GNSS lab folder.
