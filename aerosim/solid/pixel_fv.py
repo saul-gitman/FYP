@@ -48,7 +48,9 @@ def solve(k):
         cols += [i, j, j, i]
         vals += [g, g, -g, -g]
     # one link from pixel 0 to 0 K fixes the arbitrary temperature level; it carries no heat
-    rows.append([0]), cols.append([0]), vals.append([k.mean()])
+    rows.append([0])
+    cols.append([0])
+    vals.append([k.mean()])
     A = coo_matrix((np.concatenate(vals), (np.concatenate(rows), np.concatenate(cols)))).tocsr()
     b = np.zeros(nx * ny)
     g_jump = gx[:, -1]  # links from the last column to the first column of the next copy
@@ -91,7 +93,7 @@ def run(structure, inputs, conditions):
             "covers solid + gas together: the Gas row is not added again",
         ],
         "field": {
-            "name": "Temperature rise (K) for ΔT = 1 K per block, heat flowing left → right",
+            "name": "Temperature (K above coldest), ΔT = 1 K per block, heat left → right",
             "values": T[::stride, ::stride].round(3).tolist(),
             "low": "cold",
             "high": "hot",
