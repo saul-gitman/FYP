@@ -1,3 +1,0 @@
-# Optional receiver GUI and local plots; the numerical example needs numpy only.
-pyubx2>=1.2
-matplotlib>=3.6

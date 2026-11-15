@@ -23,7 +23,7 @@ markers = ["slow: long runs (lattice Boltzmann onset); run with  python -m pytes
 
 [tool.ruff]
 line-length = 100
-extend-exclude = ["AAE4203_GNSS_Lab1", "guide", "*.md"]  # not simulator code
+extend-exclude = ["guide", "*.md"]  # not simulator code
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B"]  # pycodestyle, pyflakes, import order, common bugs

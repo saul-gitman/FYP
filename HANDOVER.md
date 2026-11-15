@@ -16,7 +16,6 @@ Plan `docs/PLAN.md` (v0.2, plus `docs/COUNCIL_SETUP.md` for the council orchestr
 - **v0.1 built on `main` (2026-11-15):** `aerosim/` backend (13 method files), web UI, tests in `.agent/tests/`, physics in `docs/PHYSICS.md`. See README.md.
 - The council step stalled on 29 Oct: council returned metadata only (no answer text) and "GPT 6.1 sol" was not on the server. Open decision: use a stand-in model (sends the brief off-hardware) or wait. Later commits record the Legion MCP connection test results and corrected council model names.
 - `guide/` holds the contents of the handover zip `FYP_Handover_2026-10-29.zip`.
-- `AAE4203_GNSS_Lab1/` is a copy of the GNSS Lab 1 work (the maintained one is the `AAE-4004-lab` repo).
 
 ## Change log
 | Date | Commit | Change |

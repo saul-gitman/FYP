@@ -141,14 +141,14 @@ Build v0.1 completely, on branch `main`, in `/home/user/FYP`.
      5. **Frontend**
      6. **File system**: tree with one-line descriptions
      7. **How to add a new simulation method**: copy `_template.py`, fill the variables, run tests, refresh the page; a new folder = a new row
-     8. Other repo contents: keep the existing links to `HANDOVER.md`, `guide/`, `AAE4203_GNSS_Lab1/`, `docs/COUNCIL_*`
+     8. Other repo contents: keep the existing links to `HANDOVER.md`, `guide/`, `docs/COUNCIL_*`
    - Update `docs/DESIGN.md` if you changed the contract.
 7. **Commits:** small logical commits on `main`. End each message with:
    ```
    Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
    Claude-Session: https://claude.ai/code/session_0143oVsGXh4V8fwmnWfhskgN
    ```
-   No model identifiers anywhere else. At the end: `git push -u origin main`, retrying network errors up to 4 times with backoff. Do not touch `guide/` or `AAE4203_GNSS_Lab1/`.
+   No model identifiers anywhere else. At the end: `git push -u origin main`, retrying network errors up to 4 times with backoff. Do not touch `guide/`.
 8. **Final report back** (your last message), short:
    - what was built
    - test results (paste the pytest summary line)

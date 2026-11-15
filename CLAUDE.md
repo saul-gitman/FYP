@@ -16,5 +16,5 @@
 - **Method-file contract:** every file in `aerosim/<row>/` (not starting with `_`) follows `_template.py`: `NAME, LEVEL, ORDER, HELP, EQUATION, SOURCE, COST, INPUTS, run()`. Every input has `value, unit, status, source, help`. `.agent/tests/test_contract.py` enforces this. All UI words come from these variables or `aerosim/core/ui_text.py`. The front end has no hard-coded physics or labels.
 - **Scope (v0.1):** structure = Honeycomb and Honeycomb + defects only. The Material row is a placeholder until the user decides.
 - **Honesty:** never invent material constants. Every number has a source or a `hypothetical` status. Do not tune inputs to match literature values; report gaps. Count each heat path once (no double counting when a method resolves several paths).
-- **Do not touch** `guide/` (handover pack, read-only) or `AAE4203_GNSS_Lab1/` (separate coursework).
+- **Do not touch** `guide/` (handover pack, read-only).
 - Commit messages and code must not contain model identifiers.

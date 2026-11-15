@@ -101,6 +101,5 @@ A **new folder** with an `__init__.py` holding `ROW`, `ORDER`, `HELP`, `COLOR` b
 ## Other repo contents
 - [`HANDOVER.md`](HANDOVER.md) — handover: original goal, state, change log, sessions
 - [`guide/`](guide/) — full contents of the handover zip `FYP_Handover_2026-10-29.zip` (start at `guide/summary.md`; read-only)
-- [`AAE4203_GNSS_Lab1/`](AAE4203_GNSS_Lab1/) — separate coursework: AAE4203 GNSS Lab 1 data, processing scripts and results (the maintained copy is the `AAE-4004-lab` repo)
 - [`docs/COUNCIL_BRIEF.md`](docs/COUNCIL_BRIEF.md), [`docs/COUNCIL_SETUP.md`](docs/COUNCIL_SETUP.md) — council review brief and orchestrator notes (written for the earlier FV-solver plan)
 - [`docs/PLAN.md`](docs/PLAN.md), [`docs/DESIGN.md`](docs/DESIGN.md), [`idea.json`](idea.json) — plan, UI/backend design, and the design-session record
