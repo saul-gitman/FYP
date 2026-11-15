@@ -1,5 +1,7 @@
 # Council brief: aerogel simulator plan
 
+> **Note (2026-11-15):** this brief reviews the *v0* plan (FV solver core). PLAN.md v1 replaces it with closed-form per-heat-path formulas and a web UI; refresh this brief before sending it out again.
+
 Paste this whole file to each council member (requested: "6sol" at high effort and "Qwen next" at max effort). It is self-contained.
 
 ---
