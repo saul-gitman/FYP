@@ -1,6 +1,6 @@
 # Aerogel simulator: build plan (v1, revised 2026-11-15)
 
-Status: **plan only, nothing built yet.** This replaces the v0 plan (2026-10-29). The v0 plan made a finite-volume (FV) solver the core. This version swaps that for a set of short, readable formulas, one heat-transfer path per file. It also adds a 3D web UI.
+Status: **v0.1 built 2026-11-15** (see README.md, docs/DESIGN.md, docs/PHYSICS.md); this plan is kept as the physics and timeline reference. This replaces the v0 plan (2026-10-29). The v0 plan made a finite-volume (FV) solver the core. This version swaps that for a set of short, readable formulas, one heat-transfer path per file. It also adds a 3D web UI.
 Project: *Thermo-optically functional CFRP laminates for lightweight electrified systems* (PolyU AAE capstone 2026/27, supervisor Dr CHAN Kit-Ying).
 
 ## 0. What changed from v0, and why

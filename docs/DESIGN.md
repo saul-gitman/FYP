@@ -1,6 +1,6 @@
 # Aerogel simulator: UI + backend design (v1, 2026-11-15)
 
-Status: **design only, nothing built.** This file replaces §5 (UI) and §7 (layout) of `PLAN.md`. Physics, sources and the timeline stay in `PLAN.md`.
+Status: **built as v0.1 (2026-11-15)**; this file stays the design reference, and §3.1 describes the contract as built. This file replaces §5 (UI) and §7 (layout) of `PLAN.md`. Physics, sources and the timeline stay in `PLAN.md`.
 
 Principles from the user:
 - The UI is minimal: **left sidebar + 3D model**, nothing else.
@@ -78,7 +78,7 @@ Principles from the user:
 | Method file | Level | What it does | Reuse from an existing repo | Own code |
 |---|---|---|---|---|
 | `honeycomb.py` | fast | ideal hex tubes; φ = (d/p)², p = d + t | none needed | ~20 lines |
-| `honeycomb_defects.py` | detailed | the same honeycomb as a pixel map, with cell-size spread, wall-thickness variation and **cracks** | NumPy / `scipy.ndimage` | ~80 lines |
+| `honeycomb_defects.py` | detailed | the same honeycomb as a periodic pixel map (4 × 4 cells, walls drawn 4 px wide with conductance kept), with cell-size spread, wall-thickness variation and **cracks** | NumPy / `scipy.spatial` | ~120 lines |
 
 Lamellar, Voronoi and SEM were dropped from v0.1. SEM can come back later as one more file once lab images exist.
 
@@ -86,14 +86,14 @@ Lamellar, Voronoi and SEM were dropped from v0.1. SEM can come back later as one
 | Method file | Level | What it does | Reuse from an existing repo | Own code |
 |---|---|---|---|---|
 | `formula.py` | fast | k∥ = (1−φ)k_w; k⊥ = ½(1−φ)k_w (honeycomb, thin walls) | none | ~30 lines |
-| `pixel_fv.py` | detailed | **every pixel is a resistor**; energy balance per pixel; sparse solve; temperature field | **SciPy** `sparse.linalg` (solver). Cross-check: **NASA PuMA / pumapy** `compute_thermal_conductivity` (finite volume on 3D images) or **TauFactor 2** (MIT, PyTorch, multi-phase conductivity) | ~60 lines (prototype already exists and matched the formula to 1 %) |
+| `pixel_fv.py` | detailed | **every pixel is a resistor**; energy balance per pixel; sparse solve; temperature field | **SciPy** `sparse.linalg` (solver). Cross-check: **NASA PuMA / pumapy** `compute_thermal_conductivity` (finite volume on 3D images) or **TauFactor 2** (MIT, PyTorch, multi-phase conductivity) | ~60 lines. Built with **periodic** boundaries (ΔT per period): within 2.4 % of the formula on the hex picture (the square-cell prototype matched to 1 %; hex walls at ±30° are pixel staircases) |
 
 ### 2.3 Gas conduction
 | Method file | Level | What it does | Reuse from an existing repo | Own code |
 |---|---|---|---|---|
 | `knudsen.py` | fast | k_g = k_air/(1+2βKn), with Kn from mean pore size | none | ~30 lines |
 | `local_knudsen.py` | detailed (cheap) | Kn **per pixel** from the local pore size → map of gas k (narrow cracks conduct less) | **PoreSpy** `filters.local_thickness`, or `scipy.ndimage.distance_transform_edt` | ~30 lines |
-| `monte_carlo.py` | detailed | random molecule flights cut short by walls → real λ_eff in this geometry | possible cross-check: **pumapy** particle-random-walk tortuosity *(exact function to confirm in the docs)* | ~70 lines, NumPy-vectorised |
+| `monte_carlo.py` | detailed | random 3D molecule flights between walls → mean chord 4V/S → equivalent gap d_eff = ℓ̄/2 in the Knudsen formula (built this way because truncated free paths disagree with Knudsen on parallel plates; see PHYSICS.md §3.3) | possible cross-check: **pumapy** particle-random-walk tortuosity *(exact function to confirm in the docs)* | ~70 lines, NumPy-vectorised |
 
 ### 2.4 Radiation
 | Method file | Level | What it does | Reuse from an existing repo | Own code |
@@ -138,8 +138,9 @@ anisotropy = k∥ / k⊥
 aerosim/
   core/
     registry.py        finds every method file and checks it follows the contract
+    state.py           runs methods, keeps the last results, adds k_total once per path, "re-run"
     server.py          JSON API (below) + serves web/
-    units.py           shared constants (σ, k_B) with sources
+    constants.py       shared constants (σ, k_B, air table) with sources
     ui_text.py         the few UI words not tied to a method (title, "Start", footer labels)
   structure/           ← sidebar row 1
     __init__.py        ROW = "Structure", ORDER = 1, HELP = "…"
@@ -166,7 +167,7 @@ web/
   skills/ponytail/     (linked from .claude/skills/ponytail)
   tests/               pytest suite: test_contract.py, test_limits.py, …
   checks/              checker scripts + UI screenshots
-docs/  PLAN.md  DESIGN.md  PHYSICS.md  ADDING_A_METHOD.md  ui-mockup.html
+docs/  PLAN.md  DESIGN.md  PHYSICS.md  ui-mockup.html   (adding a method: README section)
 idea.json              full design-session record
 CLAUDE.md              rules for agents (keep README backend table in sync)
 pyproject.toml         ruff format/lint settings = the house style
@@ -205,27 +206,35 @@ INPUTS = {
 }
 
 
+USES = ["gas"]                       # optional: other rows whose results run() reads
+
+
 def run(structure, inputs, conditions):
     """Return k contributions in W/m·K plus anything worth showing."""
     ...
     return {
         "k_par": k_par,
         "k_trans": k_trans,
-        "field": temperature_map,    # optional: coloured onto the 3D top face
+        "covers": ["solid", "gas"],  # heat paths this result accounts for (counted once)
+        "field": {"name": ..., "values": [[...]], "low": "cold", "high": "hot"},  # optional
         "notes": ["energy balance error 1e-9"],
     }
 ```
 
-- `conditions` = shared values set once in the Structure row: T, pressure, and the structure image/parameters.
-- `registry.py` refuses (with a clear message) any file that is missing a field, has an input without `unit` / `help` / `status`, or whose `run()` does not return `k_par` and `k_trans`. `test_contract.py` runs the same check, so a badly written file never reaches the UI half-broken.
+As built (v0.1):
+- A row's `__init__.py` holds `ROW`, `ORDER`, `HELP`, `COLOR` (and may hold shared input dicts such as `K_WALL`).
+- `structure` = the Structure row's last result (SI units: `phi, rho_bulk, d, t, pitch`, plus `T`, `pressure`). Structure methods return those keys instead of k; a pixel picture travels as internal keys `_s` (solid fraction per pixel), `_wall_t`, `_dx`, and `_geometry` feeds `GET /api/structure`. Keys starting with `_` never leave Python.
+- `conditions` = `{"T": K, "pressure": Pa, "results": {row: last result}}`. A method that reads another row lists it in `USES`, so the footer can ask to "re-run" it when that row changes (a structure change marks every heat row).
+- `covers` ⊆ {solid, gas, rad, conv}. k_total takes, for each path, the result that covers it; a result covering several paths goes first, and a row whose path is already covered is not added (footer note). `covers = []` adds nothing (Material placeholder).
+- `registry.py` refuses (with a clear message) any file that is missing a field, has an input without `value` / `unit` / `status` / `source` / `help`, an unknown status or level, or whose `run()` does not return the keys above. `test_contract.py` runs the same check, so a badly written file never reaches the UI half-broken.
 - `ruff format` keeps the indentation and layout identical across files.
-- `docs/ADDING_A_METHOD.md`: a one-page walkthrough of copying `_template.py`, filling it in, running the tests and refreshing the page.
+- Adding a method: README section "How to add a new simulation method" (instead of a separate `ADDING_A_METHOD.md`).
 
 ### 3.2 The API (the only link between front end and back end)
 | Call | Returns |
 |---|---|
 | `GET /api/models` | every row and method with NAME, HELP, EQUATION, SOURCE, COST, INPUTS: everything the sidebar needs |
-| `POST /api/run/<row>/<method>` | body = inputs; returns the method's result (k values, notes, optional field) |
+| `POST /api/run/<row>/<method>` | body = inputs; returns the method's result (k values, notes, optional field), all rows' last results and the totals (k_total text for the footer, stale rows) |
 | `GET /api/structure` | geometry for the 3D view (cell outlines or a downsampled pixel map) |
 
 The front end never computes physics, and the back end never knows about buttons. Either side can be replaced on its own, e.g. a Jupyter notebook can call the same `run()` functions directly.
