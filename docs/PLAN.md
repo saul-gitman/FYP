@@ -219,6 +219,8 @@ Radiation is still *added* to conduction, which assumes they don't interact much
 
 ## 5. Front end: what the UI shows
 
+> **Superseded by `docs/DESIGN.md` §1** (minimal sidebar + 3D model, per-row method choice, no global "Run detailed" preset, no extra panels). Kept below for history.
+
 **Goal: show which parameters change and what that does to heat flow.** No framework, no build step.
 
 - **Files:** `web/index.html`, `web/app.js`, `web/style.css`. three.js is loaded from a pinned CDN version.
@@ -261,6 +263,8 @@ Layout (one screen):
 6. *(Optional, only if an examiner asks)* a small numerical grid check of the ½ honeycomb factor. Not in v0.1.
 
 ## 7. Proposed layout
+
+> **Superseded by `docs/DESIGN.md` §3** (one folder per heat path, one file per method, auto-discovered by the UI).
 ```
 aerosim/
   geometry.py    porosity, density, pitch

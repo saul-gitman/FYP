@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aerogel k Simulator</title>
+<style>
+:root {
+  --bg: #f6f7f9; --panel: #ffffff; --line: #e3e6eb; --text: #1b1f24; --muted: #6b7380;
+  --accent: #2f6fde; --pill: #eef1f5; --tip: #1b1f24; --tiptext: #ffffff;
+  --solid: #d9822b; --gas: #2f9e8f; --rad: #c2417a; --conv: #7a6fd6; --struct: #59636e;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101317; --panel: #171b21; --line: #2a3038; --text: #e6e9ee; --muted: #8b94a1;
+    --accent: #6ea0ff; --pill: #222831; --tip: #e6e9ee; --tiptext: #101317;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101317; --panel: #171b21; --line: #2a3038; --text: #e6e9ee; --muted: #8b94a1;
+  --accent: #6ea0ff; --pill: #222831; --tip: #e6e9ee; --tiptext: #101317;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--text); font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.app { display: grid; grid-template-columns: minmax(0, 580px) 1fr; height: 100vh; }
+aside { background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; min-width: 0; }
+header { padding: 16px 18px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; }
+header h1 { font-size: 15px; margin: 0; letter-spacing: .02em; }
+.badge { font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 99px; padding: 2px 8px; }
+.rows { flex: 1; overflow-y: auto; }
+.row { border-bottom: 1px solid var(--line); }
+.row-head { display: flex; align-items: center; gap: 10px; padding: 12px 18px; cursor: pointer; user-select: none; }
+.dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.row-title { font-weight: 600; }
+.row-sum { margin-left: auto; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.chev { color: var(--muted); transition: transform .15s; width: 10px; }
+.row.open .chev { transform: rotate(90deg); }
+.row-body { display: none; padding: 2px 18px 16px 37px; }
+.row.open .row-body { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; }
+.left { display: flex; flex-direction: column; gap: 10px; }
+.capsule { display: inline-flex; background: var(--pill); border-radius: 999px; padding: 3px; }
+.capsule button { border: 0; background: transparent; color: var(--text); padding: 6px 13px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; white-space: nowrap; }
+.capsule button.on { background: var(--panel); box-shadow: 0 1px 3px rgba(0,0,0,.18); font-weight: 600; }
+.capsule button .lvl { font-size: 10px; color: var(--muted); margin-left: 4px; }
+.start { align-self: flex-start; border: 0; background: var(--accent); color: #fff; border-radius: 999px; padding: 6px 16px; font: inherit; font-size: 13px; cursor: pointer; }
+.start:disabled { opacity: .6; cursor: progress; }
+.bar { height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; width: 120px; display: none; }
+.bar i { display: block; height: 100%; width: 0; background: var(--accent); }
+.inputs { display: grid; grid-template-columns: auto 72px auto; gap: 6px 8px; align-items: center; }
+.inputs label { color: var(--muted); font-size: 12px; cursor: help; display: flex; align-items: center; gap: 6px; }
+.inputs input { width: 72px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--text); font: inherit; font-size: 13px; font-variant-numeric: tabular-nums; }
+.unit { color: var(--muted); font-size: 12px; }
+.st { width: 7px; height: 7px; border-radius: 50%; }
+.st.measured { background: #2e9d4f; } .st.literature { background: #2f6fde; } .st.derived { background: #d9a400; } .st.hypothetical { background: #d0453b; }
+.result { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+footer { border-top: 1px solid var(--line); padding: 14px 18px; display: flex; gap: 18px; font-variant-numeric: tabular-nums; }
+footer div { display: flex; flex-direction: column; }
+footer b { font-size: 17px; }
+footer span { color: var(--muted); font-size: 11px; }
+main { position: relative; min-width: 0; }
+#view { position: absolute; inset: 0; }
+.note { position: absolute; right: 14px; bottom: 12px; color: var(--muted); font-size: 11px; }
+.legend { position: absolute; right: 14px; top: 14px; font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.legend i { width: 90px; height: 8px; border-radius: 4px; background: linear-gradient(90deg, #2c5bd6, #f2f2f2, #d6452c); }
+#tip { position: fixed; pointer-events: none; max-width: 330px; background: var(--tip); color: var(--tiptext); padding: 9px 11px; border-radius: 8px; font-size: 12.5px; line-height: 1.45; opacity: 0; transition: opacity .1s; z-index: 10; }
+#tip .eq { font-family: ui-monospace, Menlo, monospace; font-size: 11.5px; margin-top: 6px; opacity: .85; }
+#tip .meta { margin-top: 6px; opacity: .7; font-size: 11px; }
+@media (max-width: 760px) {
+  .app { grid-template-columns: 1fr; grid-template-rows: auto 55vh; height: auto; }
+  aside { border-right: 0; border-bottom: 1px solid var(--line); }
+  .rows { overflow: visible; }
+  main { height: 55vh; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <header><h1 id="title"></h1><span class="badge">mockup · fake numbers</span></header>
+    <div class="rows" id="rows"></div>
+    <footer id="footer"></footer>
+  </aside>
+  <main>
+    <div id="view"></div>
+    <div class="legend" id="legend" style="display:none"><span>cold</span><i></i><span>hot</span></div>
+    <div class="note">walls drawn ×10 thicker · drag to rotate</div>
+  </main>
+</div>
+<div id="tip"></div>
+
+<script>
+/* ---------------------------------------------------------------
+   In the real tool this object comes from GET /api/models.
+   Every word below lives in a backend Python file (NAME, HELP, ...).
+---------------------------------------------------------------- */
+const UI_TEXT = { title: "Aerogel k Simulator", start: "Start", running: "Running…" };
+const MODELS = [
+  { row: "structure", ROW: "Structure", color: "--struct", HELP: "The shape of the aerogel's cross-section. Every heat path uses this picture.",
+    methods: [
+      { NAME: "Honeycomb", LEVEL: "fast", HELP: "Ideal hexagonal tubes along the freezing direction. Walls connected all round.", EQUATION: "φ = (d / (d + t))²", SOURCE: "geometry", COST: "instant",
+        INPUTS: { d: { value: 30, unit: "µm", status: "literature", help: "Pore size (flat-to-flat). Chan et al. 2022 report ≈ 30 µm." },
+                  t: { value: 0.27, unit: "µm", status: "derived", help: "Wall thickness. Chosen so porosity ≈ 98.2 % as in Chan et al. 2022." } }, result: "φ 98.2 %" },
+      { NAME: "Lamellar", LEVEL: "fast", HELP: "Parallel sheets, not connected across. The other extreme of freeze-casting.", EQUATION: "φ = d / (d + t)", SOURCE: "geometry", COST: "instant",
+        INPUTS: { d: { value: 30, unit: "µm", status: "literature", help: "Gap between sheets." }, t: { value: 0.55, unit: "µm", status: "derived", help: "Sheet thickness." } }, result: "φ 98.2 %" },
+      { NAME: "Voronoi", LEVEL: "detailed", HELP: "Irregular cells with a size spread and broken walls, closer to real freeze-cast samples.", EQUATION: "cells from a Voronoi tessellation; cracks cut at random", SOURCE: "PoreSpy voronoi_edges", COST: "≈ 1 s",
+        INPUTS: { d: { value: 30, unit: "µm", status: "literature", help: "Mean pore size." }, spread: { value: 20, unit: "%", status: "hypothetical", help: "Spread of pore sizes. Replace with SEM histogram." }, cracks: { value: 5, unit: "%", status: "hypothetical", help: "Fraction of wall length that is broken." } }, result: "φ 98.0 %" },
+      { NAME: "SEM", LEVEL: "detailed", HELP: "Load a thresholded SEM cross-section: black = wall, white = pore.", EQUATION: "threshold → pixel map", SOURCE: "scikit-image, PoreSpy", COST: "≈ 2 s",
+        INPUTS: { scale: { value: 0.1, unit: "µm/px", status: "measured", help: "Scale bar of the image." } }, result: "no image" } ] },
+  { row: "solid", ROW: "Solid conduction", color: "--solid", HELP: "Heat carried through the solid walls (BN / CNF / MTMS).",
+    methods: [
+      { NAME: "Formula", LEVEL: "fast", HELP: "Walls along the heat flow act like resistors in parallel. Across a honeycomb only half of the wall material points the right way.", EQUATION: "k∥ = (1−φ)k_w    k⊥ = ½(1−φ)k_w", SOURCE: "thin-wall cellular model; Collishaw & Evans 1994", COST: "instant",
+        INPUTS: { k_wall: { value: 4.0, unit: "W/m·K", status: "derived", help: "Conductivity of the wall material. Back-calculated from Chan et al. 2022 axial k." } }, result: "k⊥ 36.0 · k∥ 72.0" },
+      { NAME: "Pixel FV", LEVEL: "detailed", HELP: "Each pixel is a small resistor. Heat in = heat out at every pixel gives the temperature field. Sees cracks and irregular cells.", EQUATION: "Σ G_ij (T_j − T_i) = 0,  G_ij = 2k_i k_j/(k_i+k_j)", SOURCE: "finite volume; cross-check NASA PuMA", COST: "≈ 1 s",
+        INPUTS: { k_wall: { value: 4.0, unit: "W/m·K", status: "derived", help: "Conductivity of the wall material." }, pixels: { value: 300, unit: "px", status: "derived", help: "Grid size. More = slower, finer walls." } }, result: "k⊥ 28.4 · k∥ 72.0", field: true } ] },
+  { row: "gas", ROW: "Gas conduction", color: "--gas", HELP: "Heat carried by the air inside the pores.",
+    methods: [
+      { NAME: "Knudsen", LEVEL: "fast", HELP: "Air conducts less when pores are not much bigger than the distance a molecule flies between collisions.", EQUATION: "k_g = k_air / (1 + 2βKn),  Kn = λ/d", SOURCE: "Kaganer 1969; Zeng et al. 1995", COST: "instant",
+        INPUTS: { T: { value: 300, unit: "K", status: "measured", help: "Temperature." }, p: { value: 101.3, unit: "kPa", status: "measured", help: "Gas pressure. Lower it to see vacuum insulation." } }, result: "25.7" },
+      { NAME: "Local Kn", LEVEL: "detailed", HELP: "Knudsen number per pixel from the local pore size, so narrow cracks conduct less.", EQUATION: "Kn(x) = λ / d_local(x)", SOURCE: "PoreSpy local_thickness", COST: "≈ 1 s",
+        INPUTS: { T: { value: 300, unit: "K", status: "measured", help: "Temperature." }, p: { value: 101.3, unit: "kPa", status: "measured", help: "Gas pressure." } }, result: "25.6" },
+      { NAME: "Monte Carlo", LEVEL: "detailed", HELP: "Virtual molecules fly random paths and stop at walls. Their average path gives the real gas conductivity in this shape.", EQUATION: "k_g = k_air · λ_eff / λ", SOURCE: "kinetic theory; Zeng et al. 1995", COST: "≈ 30 s",
+        INPUTS: { molecules: { value: 1e6, unit: "", status: "derived", help: "More molecules = less noise." } }, result: "25.6" } ] },
+  { row: "radiation", ROW: "Radiation", color: "--rad", HELP: "Infrared radiation crossing the pores.",
+    methods: [
+      { NAME: "Opaque", LEVEL: "fast", HELP: "Each pore is a gap between two grey walls that exchange radiation.", EQUATION: "k_r = 4σT³d·ε/(2−ε)", SOURCE: "Incropera, radiation exchange", COST: "instant",
+        INPUTS: { eps: { value: 0.9, unit: "", status: "hypothetical", help: "Wall emissivity." } }, result: "0.2" },
+      { NAME: "Rosseland", LEVEL: "fast", HELP: "Radiation diffuses like heat. Only valid if the sample is optically thick.", EQUATION: "k_r = 16n²σT³ / (3eρ)", SOURCE: "Hrubesh & Pekala 1994", COST: "instant",
+        INPUTS: { e: { value: 30, unit: "m²/kg", status: "hypothetical", help: "Specific extinction. Unknown for BN/CNF." }, L: { value: 3, unit: "mm", status: "measured", help: "Sample thickness, for the validity check." } }, result: "4.1 ⚠ thin" },
+      { NAME: "Ray tracing", LEVEL: "detailed", HELP: "Photon bundles bounce through the structure. What gets through gives the real extinction.", EQUATION: "T(L) = e^(−βL) → k_r", SOURCE: "Randrianalisoa & Baillis 2014; pumapy", COST: "≈ 2 min",
+        INPUTS: { kappa: { value: 1e5, unit: "1/m", status: "hypothetical", help: "Wall absorption coefficient. CNT raises it." }, rays: { value: 1e6, unit: "", status: "derived", help: "Number of photon bundles." } }, result: "0.6" } ] },
+  { row: "convection", ROW: "Convection", color: "--conv", HELP: "Air moving inside the pores. Expected to be zero for small pores.",
+    methods: [
+      { NAME: "Rayleigh", LEVEL: "fast", HELP: "Checks whether buoyancy can start air moving in one pore. Needs Ra above ≈ 1708.", EQUATION: "Ra = gβΔT d³ / (να)", SOURCE: "Incropera; Skochdopole 1961", COST: "instant",
+        INPUTS: { dTdx: { value: 1000, unit: "K/m", status: "hypothetical", help: "Temperature gradient across the sample." } }, result: "0.0 (Ra 1e-9)" },
+      { NAME: "Lattice Boltzmann", LEVEL: "detailed", HELP: "Simulates the air flow in one pore. Nu = 1 means no convection.", EQUATION: "k_c = (Nu − 1)·φ·k_g", SOURCE: "Shan 1997; Mohamad LBM textbook", COST: "≈ 3 min",
+        INPUTS: { steps: { value: 20000, unit: "", status: "derived", help: "Time steps." } }, result: "0.0 (Nu 1.000)" } ] },
+];
+const TOTALS = { trans: "61.9", par: "97.9", ratio: "1.58" };
+
+/* ---------------- sidebar, built only from MODELS ---------------- */
+const tip = document.getElementById("tip");
+function hover(el, html) {
+  el.addEventListener("mouseenter", () => { tip.innerHTML = html; tip.style.opacity = 1; });
+  el.addEventListener("mousemove", e => {
+    const x = Math.min(e.clientX + 14, innerWidth - tip.offsetWidth - 8);
+    tip.style.left = x + "px"; tip.style.top = (e.clientY + 14) + "px";
+  });
+  el.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+}
+const esc = s => String(s).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+document.getElementById("title").textContent = UI_TEXT.title;
+const rowsEl = document.getElementById("rows");
+const state = {};
+
+MODELS.forEach((row, i) => {
+  state[row.row] = 0;
+  const el = document.createElement("div");
+  el.className = "row" + (i < 2 ? " open" : "");
+  el.innerHTML = `
+    <div class="row-head"><span class="chev">▸</span><span class="dot" style="background:var(${row.color})"></span>
+      <span class="row-title">${esc(row.ROW)}</span><span class="row-sum"></span></div>
+    <div class="row-body">
+      <div class="left"><div class="capsule"></div>
+        <button class="start">▶ ${UI_TEXT.start}</button><div class="bar"><i></i></div>
+        <div class="result"></div></div>
+      <div class="inputs"></div>
+    </div>`;
+  rowsEl.appendChild(el);
+  hover(el.querySelector(".row-title"), esc(row.HELP));
+  el.querySelector(".row-head").onclick = () => el.classList.toggle("open");
+  const cap = el.querySelector(".capsule");
+  row.methods.forEach((m, j) => {
+    const b = document.createElement("button");
+    b.innerHTML = `${esc(m.NAME)}<span class="lvl">${m.LEVEL === "detailed" ? "◆" : ""}</span>`;
+    hover(b, `<b>${esc(m.NAME)}</b> · ${m.LEVEL}<br>${esc(m.HELP)}<div class="eq">${esc(m.EQUATION)}</div><div class="meta">${esc(m.SOURCE)} · ${esc(m.COST)}</div>`);
+    b.onclick = () => { state[row.row] = j; render(row, el); };
+    cap.appendChild(b);
+  });
+  el.querySelector(".start").onclick = () => run(row, el);
+  render(row, el);
+});
+
+function render(row, el) {
+  const m = row.methods[state[row.row]];
+  el.querySelectorAll(".capsule button").forEach((b, j) => b.classList.toggle("on", j === state[row.row]));
+  const box = el.querySelector(".inputs"); box.innerHTML = "";
+  Object.entries(m.INPUTS).forEach(([key, v]) => {
+    const lab = document.createElement("label");
+    lab.innerHTML = `<span class="st ${v.status}"></span>${esc(key)}`;
+    hover(lab, `<b>${esc(key)}</b> · ${v.status}<br>${esc(v.help)}`);
+    const inp = document.createElement("input"); inp.value = v.value;
+    const u = document.createElement("span"); u.className = "unit"; u.textContent = v.unit;
+    box.append(lab, inp, u);
+  });
+  el.querySelector(".result").textContent = "";
+  el.querySelector(".row-sum").textContent = `${m.NAME} · ${m.result}`;
+}
+
+function run(row, el) {
+  const m = row.methods[state[row.row]], btn = el.querySelector(".start"), bar = el.querySelector(".bar");
+  const ms = m.LEVEL === "detailed" ? 1400 : 150;
+  btn.disabled = true; btn.textContent = UI_TEXT.running; bar.style.display = "block";
+  const fill = bar.querySelector("i"); fill.style.transition = "none"; fill.style.width = "0";
+  requestAnimationFrame(() => { fill.style.transition = `width ${ms}ms linear`; fill.style.width = "100%"; });
+  setTimeout(() => {
+    btn.disabled = false; btn.textContent = "▶ " + UI_TEXT.start; bar.style.display = "none";
+    el.querySelector(".result").textContent = m.result + (row.row === "structure" ? "" : "  mW/m·K");
+    if (row.row === "structure") buildCells(m.NAME);
+    showField(!!m.field);
+  }, ms);
+}
+
+document.getElementById("footer").innerHTML =
+  `<div><b>${TOTALS.trans}</b><span>k⊥ mW/m·K</span></div><div><b>${TOTALS.par}</b><span>k∥ mW/m·K</span></div><div><b>${TOTALS.ratio}</b><span>anisotropy</span></div>`;
+</script>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+
+const host = document.getElementById("view");
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+host.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
+camera.position.set(7, 6, 9);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true; controls.autoRotate = true; controls.autoRotateSpeed = 0.6;
+scene.add(new THREE.HemisphereLight(0xffffff, 0x445566, 1.6));
+const sun = new THREE.DirectionalLight(0xffffff, 1.4); sun.position.set(5, 10, 6); scene.add(sun);
+
+const group = new THREE.Group(); scene.add(group);
+const wallMat = new THREE.MeshStandardMaterial({ color: 0xd9dde3, roughness: 0.6 });
+let topMats = [];
+
+function hexPts(r) { const p = []; for (let k = 0; k < 6; k++) { const a = Math.PI / 6 + k * Math.PI / 3; p.push(new THREE.Vector2(r * Math.cos(a), r * Math.sin(a))); } return p; }
+function tube(outer, inner) {
+  const s = new THREE.Shape(outer); s.holes.push(new THREE.Path(inner));
+  return new THREE.ExtrudeGeometry(s, { depth: 5, bevelEnabled: false });
+}
+function addMesh(geo, x, y) {
+  const top = new THREE.MeshStandardMaterial({ color: 0xd9dde3, roughness: 0.6 });
+  topMats.push({ m: top, x, y });
+  const mesh = new THREE.Mesh(geo, [top, wallMat]);
+  mesh.position.set(x, y, -2.5); group.add(mesh);
+}
+window.buildCells = function (kind) {
+  group.clear(); topMats = [];
+  const R = 0.62, t = 0.07;
+  if (kind === "Lamellar") {
+    for (let i = -3; i <= 3; i++) {
+      const s = new THREE.Shape([new THREE.Vector2(-2.2, -t), new THREE.Vector2(2.2, -t), new THREE.Vector2(2.2, t), new THREE.Vector2(-2.2, t)]);
+      addMesh(new THREE.ExtrudeGeometry(s, { depth: 5, bevelEnabled: false }), 0, i * 0.7);
+    }
+  } else {
+    const w = Math.sqrt(3) * R;
+    for (let q = -2; q <= 2; q++) for (let r = -2; r <= 2; r++) {
+      if (Math.abs(q + r) > 2) continue;
+      const x = w * (q + r / 2), y = 1.5 * R * r;
+      let rr = R;
+      if (kind === "Voronoi" || kind === "SEM") rr = R * (0.8 + 0.4 * Math.abs(Math.sin(q * 3.1 + r * 1.7)));
+      const outer = hexPts(rr), inner = hexPts(rr - t / Math.cos(Math.PI / 6));
+      if (kind === "Voronoi" || kind === "SEM") outer.forEach((p, k) => p.multiplyScalar(1 + 0.08 * Math.sin(k * 2.3 + q + r)));
+      addMesh(tube(outer, inner), x, y);
+    }
+  }
+  group.rotation.x = -Math.PI / 2;
+};
+window.showField = function (on) {
+  document.getElementById("legend").style.display = on ? "flex" : "none";
+  topMats.forEach(({ m, x }) => {
+    if (!on) { m.color.set(0xd9dde3); return; }
+    const f = (x + 2.5) / 5, c = new THREE.Color();
+    c.lerpColors(new THREE.Color(0xd6452c), new THREE.Color(0x2c5bd6), Math.min(1, Math.max(0, f)));
+    m.color.copy(c);
+  });
+};
+buildCells("Honeycomb");
+
+function resize() { const w = host.clientWidth, h = host.clientHeight; renderer.setSize(w, h); camera.aspect = w / h; camera.updateProjectionMatrix(); }
+addEventListener("resize", resize); resize();
+renderer.setAnimationLoop(() => { controls.update(); renderer.render(scene, camera); });
+</script>
+</body>
+</html>
