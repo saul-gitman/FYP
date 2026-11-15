@@ -1,0 +1,1 @@
+Vendored from https://github.com/DietrichGebert/ponytail (skills/ponytail/SKILL.md, MIT licence, fetched 2026-11-15). Linked from .claude/skills/ponytail so Claude Code discovers it.

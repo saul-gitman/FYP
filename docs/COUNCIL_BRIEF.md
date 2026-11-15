@@ -1,5 +1,7 @@
 # Council brief: aerogel simulator plan
 
+> **Note (2026-11-15):** this brief reviews the earlier FV-solver plan. PLAN.md v1 + DESIGN.md replace it with per-heat-path formulas, detailed pixel/Monte Carlo methods and a web UI; refresh this brief before sending it out again.
+
 Paste this whole file to each council member (requested: "6sol" at high effort and "Qwen next" at max effort). It is self-contained. Version 2, revised against the meeting-transcript constraints. Run order and orchestrator rules are in `COUNCIL_SETUP.md` and are not part of what members see.
 
 ---
