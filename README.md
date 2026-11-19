@@ -121,3 +121,4 @@ Open questions from the v0.1 build check (2026-11-15). **No more backend methods
 - [`guide/`](guide/) — full contents of the handover zip `FYP_Handover_2026-10-29.zip` (start at `guide/summary.md`; read-only)
 - [`docs/COUNCIL_BRIEF.md`](docs/COUNCIL_BRIEF.md), [`docs/COUNCIL_SETUP.md`](docs/COUNCIL_SETUP.md) — council review brief and orchestrator notes (written for the earlier FV-solver plan)
 - [`docs/PLAN.md`](docs/PLAN.md), [`docs/DESIGN.md`](docs/DESIGN.md), [`idea.json`](idea.json) — plan, UI/backend design, and the design-session record
+- [`docs/FUTURE_WORK.md`](docs/FUTURE_WORK.md) — honeycomb slice model (corrected proof, why it is not a method, bounds) and a report checklist for the code

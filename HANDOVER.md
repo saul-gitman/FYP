@@ -27,6 +27,7 @@ Plan `docs/PLAN.md` (v0.2, plus `docs/COUNCIL_SETUP.md` for the council orchestr
 | 11-13 | handover | `main` created by merging both branches above, plus this file |
 | 11-15 | `da8de1a` … `8f10105` | Design session merged; v0.1 simulator built (`aerosim/`, `web/`, `.agent/`) |
 | 11-15 | `a72c77a` | AAE4203 GNSS Lab 1 folder removed (unrelated coursework) |
+| 11-19 | docs | `docs/FUTURE_WORK.md`: honeycomb slice model (corrected proof, bounds, not built) and a report checklist; check script `.agent/checks/slice_model_check.py` |
 
 ## Sessions
 `session_0143oVsKsbxuFFSfjRSorAqD` PolyU exchange simulation tool (10-29, blocked on council) ·
