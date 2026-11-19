@@ -15,6 +15,9 @@ HELP = (
     "At a wall a bundle is reflected, absorbed inside the wall, or passes through it. The "
     "fraction that gets through falls as e^(−βL) (Beer's law); the fit gives the extinction β "
     "of this structure. Then Rosseland if the sample is optically thick, else a two-flux slab."
+    " ⚠ Accuracy: depends entirely on two hypothetical wall inputs, the infrared absorption "
+    "κ_w and the reflectance, and rays stay in the 2-D cross-section. Read the result as an "
+    "order of magnitude until the reflectance spectra are measured."
 )
 EQUATION = (
     "at a wall: reflect R, absorb (1 − R)(1 − e^(−κ t)), else pass;   T(L) = e^(−βL) → β;   "

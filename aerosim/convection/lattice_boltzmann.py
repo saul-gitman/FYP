@@ -14,6 +14,9 @@ HELP = (
     "number. Fluid 'particles' stream to neighbouring lattice nodes and collide; warm air is "
     "pushed up by buoyancy. The Nusselt number Nu compares the heat carried with pure "
     "conduction: Nu = 1 means the air stays still."
+    " ⚠ Accuracy: a flat layer with periodic sides, not the hexagonal pore; real side walls "
+    "only delay the onset, so this is on the safe side. It reproduces published "
+    "Rayleigh–Bénard values (Nu 2.09 and 2.62 against ≈ 2.1 and 2.6 at Ra 5000 and 10 000)."
 )
 EQUATION = (
     "f_k(x + c_k, t + 1) = f_k − (f_k − f_k^eq)/τ (D2Q9 flow, D2Q5 heat, Boussinesq force);   "

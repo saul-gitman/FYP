@@ -16,6 +16,10 @@ HELP = (
     "like wallpaper with a fixed temperature drop per copy, so there are no edge effects. "
     "Sees cracks and irregular cells. Air pixels use the Gas row's result, so solid and gas "
     "are solved together (their coupling included) and the Gas row is not added again."
+    " ⚠ Accuracy: on the ideal honeycomb the pixel staircase makes k⊥ along x and y differ by "
+    "≈ 5.5 % (a honeycomb must give equal values), and their mean is 2.4 % below the formula; "
+    "a 2× finer grid changes k⊥ by < 3 %. 2-D cross-section only, with walls drawn thicker "
+    "than real (see Honeycomb + defects)."
 )
 EQUATION = (
     "Σ_neighbours G_ij (T_j − T_i) = 0,   G_ij = 2 k_i k_j / (k_i + k_j);   "

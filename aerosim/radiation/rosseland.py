@@ -10,6 +10,8 @@ HELP = (
     "If the aerogel absorbs and scatters infrared strongly, radiation moves through it in many "
     "short steps and behaves like heat conduction. Only valid if the sample is optically "
     "thick (τ = e ρ L well above 1); a warning is shown when τ < 3."
+    " ⚠ Accuracy: the specific extinction e is hypothetical (unknown for BN/CNF/MTMS). At the "
+    "defaults τ ≈ 1.8, so the method is outside its valid range there."
 )
 EQUATION = "k_rad = 16 n² σ T³ / (3 e ρ_bulk),   τ = e ρ_bulk L"
 SOURCE = "Hrubesh & Pekala 1994 (J. Mater. Res. 9:731); Lou et al. 2023 (Gels 9:220)"

@@ -11,6 +11,10 @@ HELP = (
     "Ideal hexagonal tubes along the freezing direction z, all the same size, walls connected "
     "all round. Porosity and density follow from the pore size d and the wall thickness t; "
     "they are never set on their own."
+    " ⚠ Accuracy: an idealised shape. Real freeze-cast cells are uneven, partly connected and "
+    "cracked, and the measured values are out of reach of any air-filled model (k⊥ 16.9 "
+    "mW/m·K in Chan et al. 2022, below the ≈ 26 mW/m·K air floor; anisotropy ≈ 5.8 against "
+    "1.58 here). Compare trends, not absolute numbers."
 )
 EQUATION = "p = d + t,   φ = (d / p)²,   ρ_bulk = (1 − φ) ρ_wall"
 SOURCE = "Hexagon geometry (d = inner flat-to-flat width); defaults from Chan et al. 2022"

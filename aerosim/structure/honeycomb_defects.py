@@ -16,6 +16,10 @@ HELP = (
     "sizes, walls of different thickness, and cracks (short gaps cut into the walls). Porosity "
     "is counted from the picture. The detailed methods of the other rows work on this picture. "
     "Set the three defect inputs to 0 for the ideal honeycomb."
+    " ⚠ Accuracy: walls are drawn 1.2 µm (4 px) thick instead of 0.27 µm, keeping the real "
+    "amount of wall in each pixel, and the ±30° walls become pixel staircases: k⊥ along x and "
+    "y then differ by ≈ 5 %, though a honeycomb must give equal values. The defects are "
+    "random draws, not measured."
 )
 EQUATION = (
     "wall pixel: distance to the boundary between its two nearest cell centres < t_draw/2;   "

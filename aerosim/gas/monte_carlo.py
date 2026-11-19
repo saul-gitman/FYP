@@ -15,6 +15,10 @@ HELP = (
     "flight (mean chord) is the pore size the gas really feels in this shape, cracks and "
     "corners included. Half of it is the equivalent plate gap, which goes into the Knudsen "
     "formula; for two parallel plates this gives exactly the Knudsen formula."
+    " ⚠ Accuracy: random sampling, so results carry a few % of noise (the parallel-plate test "
+    "passes within 3 %), and the pixel staircase shortens chords by ≈ 10 %. Its d/2 "
+    "equivalent gap doubles the Knudsen effect of the fast formula; at 30 µm and 1 atm k_gas "
+    "changes by < 1 %."
 )
 EQUATION = (
     "ℓ̄ = 1 / mean(1/ℓ_i) = 4V/S (mean chord),   d_eff = ℓ̄ / 2,   "

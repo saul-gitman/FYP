@@ -10,6 +10,9 @@ HELP = (
     "Free air conductivity from the standard table, reduced when the pore size d is not much "
     "bigger than the molecules' mean free path λ (≈ 66 nm in air at 300 K, 1 atm). The air "
     "fills a fraction φ of the cross-section, in both directions (thin-wall limit)."
+    " ⚠ Accuracy: treats d as a plate gap, but a hexagonal channel behaves like a gap of "
+    "about d/2 (see Monte Carlo), so k_gas comes out slightly high at low pressure. At 30 µm "
+    "and 1 atm the difference is < 1 %. The accommodation coefficient α = 1 is hypothetical."
 )
 EQUATION = (
     "λ = k_B T / (√2 π d_g² p),   Kn = λ / d,   k_gas = k_air / (1 + 2 β Kn),   "

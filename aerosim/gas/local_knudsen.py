@@ -14,6 +14,9 @@ HELP = (
     "Finds the local pore size at every air pixel of the picture: the diameter of the largest "
     "circle that fits in the pore and covers that pixel. Narrow cracks and corners get a small "
     "size, so the air there conducts less. The result is a map of gas conductivity."
+    " ⚠ Accuracy: measured on the drawn walls (1.2 µm instead of 0.27 µm), so the pores are "
+    "slightly narrower than real: 25.95 against 26.11 mW/m·K for wide pores. At 1 kPa it is "
+    "within 10 % of the fast value, and lower because of the corners."
 )
 EQUATION = "d_local(x) = local thickness of the pore,   k_gas(x) = k_air / (1 + 2 β λ / d_local(x))"
 SOURCE = "Local thickness from scipy.ndimage distance transform (cf. PoreSpy local_thickness)"

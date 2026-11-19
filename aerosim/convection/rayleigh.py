@@ -10,6 +10,9 @@ HELP = (
     "Computes the Rayleigh number of one pore: buoyancy pushing warm air up against viscosity "
     "and heat diffusion holding it still. Below Ra ≈ 1708 (a layer heated from below) the air "
     "stays still and k_conv = 0."
+    " ⚠ Accuracy: viscosity and diffusivity are fixed at their 300 K values and the "
+    "temperature gradient is hypothetical. Fine as a yes/no test (Ra ≈ 7 × 10⁻⁸ against 1708 "
+    "at the defaults); above 1708 it cannot give a value (use Lattice Boltzmann)."
 )
 EQUATION = "Ra = g β_T ΔT d³ / (ν α),   β_T = 1/T,   ΔT = (dT/dx) d;   Ra < 1708 → k_conv = 0"
 SOURCE = (

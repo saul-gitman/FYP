@@ -9,6 +9,9 @@ HELP = (
     "Treats each pore as a gap of width d between two opaque grey walls that exchange "
     "radiation, like two large parallel plates. Bigger pores and hotter samples give more "
     "radiation. Used for both directions as a first approximation."
+    " ⚠ Accuracy: order of magnitude only. The emissivity ε = 0.9 is hypothetical, walls this "
+    "thin may let some infrared through, and the same value is used along and across the "
+    "channels."
 )
 EQUATION = "k_rad = 4 σ T³ d · ε / (2 − ε)"
 SOURCE = "Incropera, radiation exchange between parallel grey surfaces, linearised in ΔT"

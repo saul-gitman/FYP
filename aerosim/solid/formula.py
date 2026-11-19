@@ -9,6 +9,10 @@ HELP = (
     "Along the channels the walls are straight strips beside the air, like resistors in "
     "parallel. Across a honeycomb the walls point in three directions (0°, 60°, 120°) and only "
     "their part along the heat flow carries heat; the cos² average of the three is one half."
+    " ⚠ Accuracy: thin-wall limit (t ≪ d). On the ideal honeycomb Pixel FV agrees within 3 %, "
+    "and with the Knudsen gas term it sits ≈ 1 % under the Hashin–Shtrikman upper bound at "
+    "the defaults (docs/FUTURE_WORK.md). It cannot see cracks (5 % cracks lower k⊥ by ≈ 23 % "
+    "in Pixel FV) and ignores solid–gas coupling."
 )
 EQUATION = "k_solid,∥ = (1 − φ) k_wall,   k_solid,⊥ = ½ (1 − φ) k_wall"
 SOURCE = (
