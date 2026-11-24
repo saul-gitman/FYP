@@ -2,6 +2,8 @@
 
 **Project:** Aerogel k Simulator, the FYP simulation tool (PolyU AAE capstone 2026/27, supervisor Dr CHAN Kit-Ying). It predicts the thermal conductivity of a dry freeze-cast honeycomb aerogel skeleton, along (k∥) and across (k⊥) the channels, as separate heat paths: k_total = k_solid + k_gas + k_rad + k_conv.
 
+**Also in this repo:** `K_cond_GPU_solver/` holds a separate one-file Colab solver (wall, then honeycomb conduction) and its plan. It is not part of the aerosim method-file contract. A split that moves the app into `aerosim_html/` and adds `report/` is decided but not yet pushed (see `HANDOVER.md`).
+
 ## Read first
 1. `idea.json`: the full design-session record (why everything is the way it is)
 2. `docs/DESIGN.md`: UI, backend method table, folder structure, method-file contract
